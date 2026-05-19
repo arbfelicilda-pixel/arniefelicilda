@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Arnie Rose | Author & Publisher</title>
+<meta name="description" content="Arnie Rose is the author of the You Were Never Series and founder of Keystone Books. Six books on identity, self-leadership, and behavioral psychology. Supply Chain and Project Management educator.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arniefelicilda.com/about.html">
+<meta property="og:title" content="About — Arnie Rose">
+<meta property="og:description" content="Author of the You Were Never Series. Founder of Keystone Books. Supply Chain and Project Management educator.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arniefelicilda.com/about.html">
+<meta property="og:image" content="https://arniefelicilda.com/author.jpg">
+<meta property="og:site_name" content="Arnie Rose">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5YLNSJGN2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N5YLNSJGN2');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#FFFFFF;
+  --cream:#F9F7F2;
+  --cream-dark:#F0EDE6;
+  --ink:#0D0D0D;
+  --ink-soft:#4A4A4A;
+  --mid:#999;
+  --faint:#E2DED8;
+  --terra:#C2714F;
+  --terra-dark:#8B3A1A;
+  --heading:'Cormorant Garamond',Georgia,serif;
+  --body:'IBM Plex Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(249,247,242,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--faint)}
+.nav-logo{font-family:var(--heading);font-size:22px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:0.01em}
+.nav-right{display:flex;gap:36px;align-items:center}
+.nav-link{font-family:var(--body);font-size:11px;font-weight:400;color:var(--mid);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.nav-link:hover,.nav-link.active{color:var(--ink)}
+.nav-cta{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all 0.2s}
+.nav-cta:hover{background:var(--ink);color:var(--white)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:20px;height:1px;background:var(--ink)}
+.nav-mobile{display:none;position:fixed;top:54px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--faint)}
+
+/* HERO */
+.hero{padding:120px 60px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto}
+.hero-left{}
+.hero-eyebrow{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:20px}
+.hero-name{font-family:var(--heading);font-size:clamp(48px,6vw,80px);font-weight:300;line-height:0.95;letter-spacing:-0.02em;color:var(--ink);margin-bottom:24px}
+.hero-rule{width:32px;height:1px;background:var(--terra);margin-bottom:24px}
+.hero-mission{font-family:var(--heading);font-size:clamp(18px,2vw,24px);font-weight:300;font-style:italic;color:var(--ink-soft);line-height:1.5;margin-bottom:32px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-fill{display:inline-block;font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:12px 28px;background:var(--ink);color:var(--white);text-decoration:none;transition:background 0.2s}
+.btn-fill:hover{background:var(--terra)}
+.btn-outline{display:inline-block;font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;padding:11px 24px;border:1px solid var(--faint);color:var(--ink);text-decoration:none;transition:border-color 0.2s}
+.btn-outline:hover{border-color:var(--ink)}
+.hero-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;filter:grayscale(5%)}
+.hero-photo-cap{font-family:var(--body);font-size:10px;font-weight:300;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-top:10px}
+
+/* SECTIONS */
+.section{padding:80px 60px;max-width:1100px;margin:0 auto}
+.section-full{padding:80px 60px;background:var(--cream-dark)}
+.section-full-inner{max-width:1100px;margin:0 auto}
+.section-dark{padding:80px 60px;background:var(--ink)}
+.section-dark-inner{max-width:1100px;margin:0 auto}
+.s-eyebrow{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
+.s-eyebrow.terra{color:var(--terra)}
+.s-rule{width:32px;height:1px;background:var(--faint);margin-bottom:28px}
+.s-rule.terra{background:var(--terra)}
+.s-heading{font-family:var(--heading);font-size:clamp(32px,4vw,52px);font-weight:300;color:var(--ink);line-height:1.05;letter-spacing:-0.02em;margin-bottom:24px}
+.s-heading.white{color:var(--white)}
+
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.story-label{font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--faint)}
+.story-text p{font-family:var(--body);font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.9;margin-bottom:18px}
+.story-text p:first-child{font-size:16px;font-weight:400;color:var(--ink)}
+.story-pull{font-family:var(--heading);font-size:clamp(22px,2.5vw,32px);font-weight:300;font-style:italic;color:var(--ink);line-height:1.3;letter-spacing:-0.01em;border-left:2px solid var(--terra);padding-left:24px}
+
+/* WHAT I CREATE */
+.create-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:48px}
+.create-card{background:var(--white);padding:36px}
+.create-card-label{font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--faint)}
+.create-card-title{font-family:var(--heading);font-size:26px;font-weight:300;color:var(--ink);margin-bottom:12px;letter-spacing:-0.01em}
+.create-card-desc{font-family:var(--body);font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.8;margin-bottom:20px}
+.create-card-tags{display:flex;flex-wrap:wrap;gap:8px}
+.create-tag{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0.08em;color:var(--mid);border:1px solid var(--faint);padding:4px 10px}
+.create-card-link{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-top:20px;border-bottom:1px solid var(--faint);padding-bottom:2px;transition:border-color 0.2s}
+.create-card-link:hover{border-color:var(--ink)}
+
+/* PHILOSOPHY */
+.philosophy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:48px}
+.phil-item{background:var(--cream);padding:32px}
+.phil-num{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0.12em;color:var(--mid);margin-bottom:12px}
+.phil-title{font-family:var(--heading);font-size:20px;font-weight:300;color:var(--ink);margin-bottom:8px;letter-spacing:-0.01em}
+.phil-desc{font-family:var(--body);font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.7}
+
+/* CREDENTIALS */
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:48px}
+.cred-item{background:var(--white);padding:28px 32px}
+.cred-num{font-family:var(--heading);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--ink);letter-spacing:-0.03em;line-height:1}
+.cred-label{font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid);margin-top:8px}
+
+/* EMAIL */
+.email-section{padding:80px 60px;background:var(--ink);text-align:center}
+.email-inner{max-width:480px;margin:0 auto}
+.email-section h3{font-family:var(--heading);font-size:clamp(30px,4vw,48px);font-weight:300;font-style:italic;color:var(--white);margin-bottom:10px;letter-spacing:-0.01em}
+.email-section p{font-family:var(--body);font-size:13px;font-weight:300;color:rgba(255,255,255,0.4);margin-bottom:32px;line-height:1.7}
+.email-form{display:flex;gap:0;max-width:420px;margin:0 auto}
+.email-form input{flex:1;padding:13px 16px;font-family:var(--body);font-size:13px;font-weight:300;border:none;color:var(--ink);background:var(--white);outline:none;min-width:0}
+.email-form button{padding:13px 20px;background:var(--terra);color:var(--white);font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:background 0.2s}
+.email-form button:hover{background:var(--terra-dark)}
+
+/* FOOTER */
+footer{background:#080808;padding:56px 60px 36px}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand p{font-family:var(--heading);font-size:22px;font-weight:300;color:var(--white);margin-bottom:6px}
+.footer-brand span{font-family:var(--body);font-size:10px;font-weight:300;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.2);display:block;margin-bottom:14px}
+.footer-brand small{font-family:var(--body);font-size:12px;font-weight:300;color:rgba(255,255,255,0.3);line-height:1.8}
+.footer-col h4{font-family:var(--body);font-size:9px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:16px}
+.footer-col a{display:block;font-family:var(--body);font-size:12px;font-weight:300;color:rgba(255,255,255,0.4);text-decoration:none;margin-bottom:10px;transition:color 0.2s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{max-width:1100px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(255,255,255,0.04)}
+.footer-copy{font-family:var(--body);font-size:10px;font-weight:300;color:rgba(255,255,255,0.2)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:14px 24px}
+  .nav-right .nav-link{display:none}
+  .nav-hamburger{display:flex}
+  .hero{grid-template-columns:1fr;padding:100px 24px 60px;gap:40px}
+  .story-grid{grid-template-columns:1fr;gap:40px}
+  .create-grid{grid-template-columns:1fr}
+  .philosophy-grid{grid-template-columns:1fr}
+  .cred-grid{grid-template-columns:1fr 1fr}
+  .section,.section-full,.section-dark{padding:60px 24px}
+  .section-full-inner,.section-dark-inner{padding:0}
+  .email-section{padding:60px 24px}
+  .email-form{flex-direction:column}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  footer{padding:48px 24px 32px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Arnie Rose</a>
+  <div class="nav-right">
+    <a href="books.html" class="nav-link">Books</a>
+    <a href="https://supplychain.arniefelicilda.com" class="nav-link" target="_blank" rel="noopener">Supply Chain</a>
+    <a href="https://projectmanagement.arniefelicilda.com" class="nav-link" target="_blank" rel="noopener">Project Management</a>
+    <a href="about.html" class="nav-link active">About</a>
+    <a href="https://app.kit.com/forms/9328965/subscriptions" class="nav-cta" target="_blank" rel="noopener">Free Chapter</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="books.html">Books</a>
+  <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
+  <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
+  <a href="about.html">About</a>
+  <a href="https://app.kit.com/forms/9328965/subscriptions" target="_blank" rel="noopener">Free Chapter</a>
+</div>
+
+<!-- HERO -->
+<div style="background:var(--cream)">
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Author · Publisher · Educator</p>
+    <h1 class="hero-name">Arnie<br>Rose</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-mission">For creators, professionals, and operators building clarity, leverage, and long-term control. Not motivation. Systems.</p>
+    <div class="hero-btns">
+      <a href="books.html" class="btn-fill">Explore the Books</a>
+      <a href="index.html#ywn" class="btn-outline">The Series</a>
+    </div>
+  </div>
+  <div>
+    <img src="author.jpg" alt="Arnie Rose — Author and Educator" class="hero-photo">
+    <p class="hero-photo-cap">Arnie Rose, M.A.Ed.</p>
+  </div>
+</div>
+</div>
+
+<!-- STORY -->
+<div class="section-full">
+  <div class="section-full-inner">
+    <p class="s-eyebrow terra">The Story</p>
+    <div class="s-rule terra"></div>
+    <div class="story-grid">
+      <div>
+        <p class="story-label">Where It Started</p>
+        <div class="story-text">
+          <p>There was a period in 2019, while working in Bayuquan, China, when the larger questions became impossible to ignore. On paper, everything was functioning: leadership responsibilities, operational discipline, long hours, measurable results. But underneath it was the growing realization that many people spend years optimizing systems they never consciously chose.</p>
+          <p>After more than a decade in supply chain leadership across the Philippines and China, managing procurement, logistics, and industrial operations, the patterns became difficult to unsee. Not just in organizations, but in people: invisible assumptions, inherited standards, behavioral loops, and silent measurements shaping how they worked, led, and evaluated themselves.</p>
+          <p>The You Were Never Series came from those observations. Each book examines one of the hidden narratives people internalize early — about success, identity, visibility, usefulness, authority, and self-worth. The books do not offer reassurance. They offer accuracy.</p>
+        </div>
+      </div>
+      <div>
+        <p class="story-pull">"The books do not offer reassurance. They offer accuracy. The kind that changes what you do next."</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT I CREATE -->
+<div class="section">
+  <p class="s-eyebrow terra">What You Will Find Here</p>
+  <div class="s-rule terra"></div>
+  <h2 class="s-heading">Two brands. One commitment to clarity.</h2>
+  <div class="create-grid">
+    <div class="create-card">
+      <p class="create-card-label">The Keystone House</p>
+      <p class="create-card-title">You Were Never Series</p>
+      <p class="create-card-desc">Six books on behavior, identity, self-leadership, and the invisible structures shaping how people think, work, and evaluate themselves. Not affirmation books. Behavioral nonfiction written for readers who are done confusing motivation with understanding.</p>
+      <div class="create-card-tags">
+        <span class="create-tag">Self-Leadership</span>
+        <span class="create-tag">Behavioral Psychology</span>
+        <span class="create-tag">Identity</span>
+        <span class="create-tag">Dark Psychology</span>
+        <span class="create-tag">Nonfiction</span>
+      </div>
+      <a href="books.html" class="create-card-link">Explore the Series →</a>
+    </div>
+    <div class="create-card">
+      <p class="create-card-label">KeystoneBooks</p>
+      <p class="create-card-title">SCM and Project Management</p>
+      <p class="create-card-desc">Practical frameworks for operations managers and team leads building systems inside real operational environments. Built from over ten years of supply chain and project management leadership across procurement, logistics, and industrial operations.</p>
+      <div class="create-card-tags">
+        <span class="create-tag">Supply Chain</span>
+        <span class="create-tag">Project Management</span>
+        <span class="create-tag">Operations</span>
+        <span class="create-tag">Systems</span>
+        <span class="create-tag">Free Tools</span>
+      </div>
+      <a href="https://supplychain.arniefelicilda.com" class="create-card-link" target="_blank" rel="noopener">Supply Chain Tools →</a>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="section-full">
+  <div class="section-full-inner">
+    <p class="s-eyebrow terra">Philosophy</p>
+    <div class="s-rule terra"></div>
+    <h2 class="s-heading">Clarity over noise. Systems over motivation.</h2>
+    <div class="philosophy-grid">
+      <div class="phil-item">
+        <p class="phil-num">01</p>
+        <p class="phil-title">Clarity over noise</p>
+        <p class="phil-desc">Most content repeats itself. The work here starts with a specific problem, names it accurately, and stops when it is done.</p>
+      </div>
+      <div class="phil-item">
+        <p class="phil-num">02</p>
+        <p class="phil-title">Systems over motivation</p>
+        <p class="phil-desc">Motivation is unstable. Systems are durable. Everything built here is designed to run even when the feeling is gone.</p>
+      </div>
+      <div class="phil-item">
+        <p class="phil-num">03</p>
+        <p class="phil-title">Accuracy over comfort</p>
+        <p class="phil-desc">The goal is not to make the reader feel better about where they are. It is to show them which assumptions, habits, or standards have been distorting the result.</p>
+      </div>
+      <div class="phil-item">
+        <p class="phil-num">04</p>
+        <p class="phil-title">Quiet growth</p>
+        <p class="phil-desc">Real growth is often invisible at first. Systems compound quietly before results become visible.</p>
+      </div>
+      <div class="phil-item">
+        <p class="phil-num">05</p>
+        <p class="phil-title">Practical leverage</p>
+        <p class="phil-desc">The gap between where you are and what you are capable of is not a gap that more effort closes. It is a structural problem. Structural problems have a lever.</p>
+      </div>
+      <div class="phil-item">
+        <p class="phil-num">06</p>
+        <p class="phil-title">Observable behavior</p>
+        <p class="phil-desc">Every idea should describe behavior the reader can observe directly in their own life. If it cannot be observed, it cannot be improved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CREDENTIALS -->
+<div class="section">
+  <p class="s-eyebrow">By the numbers</p>
+  <div class="s-rule"></div>
+  <div class="cred-grid">
+    <div class="cred-item">
+      <p class="cred-num">7</p>
+      <p class="cred-label">Books Published</p>
+    </div>
+    <div class="cred-item">
+      <p class="cred-num">10+</p>
+      <p class="cred-label">Years in Supply Chain Leadership</p>
+    </div>
+    <div class="cred-item">
+      <p class="cred-num">2</p>
+      <p class="cred-label">Active Publishing Brands</p>
+    </div>
+
+
+
+  </div>
+</div>
+
+<!-- EMAIL -->
+<div class="email-section">
+  <div class="email-inner">
+    <h3>Read the first chapter free.</h3>
+    <p>You Were Never Behind. Chapter 1 delivered to your inbox.<br>No pitch. No upsell.</p>
+    <form action="https://app.kit.com/forms/9328965/subscriptions" method="post" class="email-form">
+      <input name="email_address" type="email" placeholder="Your email address" required>
+      <button type="submit">Send Me Chapter 1</button>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <p>Arnie Rose</p>
+      <span>Author · Educator · Keystone Books</span>
+      <small>Author of the You Were Never Series.<br>Supply Chain and Project Management Educator.<br>Founder, Keystone Books.</small>
+    </div>
+    <div class="footer-col">
+      <h4>You Were Never</h4>
+      <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener">The Series</a>
+      <a href="https://a.co/d/0aages6f" target="_blank" rel="noopener">Book 1: Behind</a>
+      <a href="https://a.co/d/07zv44Me" target="_blank" rel="noopener">Book 2: Ordinary</a>
+      <a href="https://www.facebook.com/groups/901922149570968" target="_blank" rel="noopener">Reader Community</a>
+    </div>
+    <div class="footer-col">
+      <h4>Professional</h4>
+      <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain Tools</a>
+      <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management Tools</a>
+      <a href="https://arfelicilda.gumroad.com/l/accidentalprojectmanager" target="_blank" rel="noopener">Accidental PM Book</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="https://ph.pinterest.com/arniebfelicilda" target="_blank" rel="noopener">Pinterest</a>
+      <a href="https://facebook.com/YouWereNeverSeries" target="_blank" rel="noopener">Facebook Page</a>
+      <a href="https://www.instagram.com/youwereneverseries" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.threads.net/@youwereneverseries" target="_blank" rel="noopener">Threads</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Arnie Rose Felicilda. Keystone Books. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hamburger=document.getElementById('nav-hamburger');
+  var mobileNav=document.getElementById('nav-mobile');
+  hamburger.addEventListener('click',function(e){e.stopPropagation();mobileNav.classList.toggle('open');});
+  document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');});});
+  document.addEventListener('click',function(){mobileNav.classList.remove('open');});
+})();
+</script>
+</body>
+</html>
