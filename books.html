@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books — Arnie Rose | Keystone Books</title>
+<meta name="description" content="All books by Arnie Rose. The You Were Never Series — 6 books on identity, self-leadership, and behavioral psychology. The Accidental Project Manager. Available on Amazon and Gumroad.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arniefelicilda.com/books.html">
+<meta property="og:title" content="Books — Arnie Rose | Keystone Books">
+<meta property="og:description" content="All books by Arnie Rose. Self-leadership, behavioral psychology, and project management.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arniefelicilda.com/books.html">
+<meta property="og:image" content="https://arniefelicilda.com/author.jpg">
+<meta property="og:site_name" content="Arnie Rose">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#FFFFFF;
+  --cream:#F9F7F2;
+  --cream-dark:#F0EDE6;
+  --ink:#0D0D0D;
+  --ink-soft:#4A4A4A;
+  --mid:#999999;
+  --faint:#E2DED8;
+  --terra:#C2714F;
+  --blue:#1D6FA4;
+  --heading:'Cormorant Garamond',Georgia,serif;
+  --body:'IBM Plex Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--faint)}
+.nav-logo{font-family:var(--heading);font-size:22px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:0.01em}
+.nav-right{display:flex;gap:36px;align-items:center}
+.nav-link{font-family:var(--body);font-size:11px;font-weight:400;color:var(--mid);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.nav-link:hover,.nav-link.active{color:var(--ink)}
+.nav-cta{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all 0.2s}
+.nav-cta:hover{background:var(--ink);color:var(--white)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:20px;height:1px;background:var(--ink)}
+.nav-mobile{display:none;position:fixed;top:54px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--faint)}
+
+/* PAGE HEADER */
+.page-header{padding:120px 60px 60px;background:var(--cream);border-bottom:1px solid var(--faint)}
+.page-header-inner{max-width:1100px;margin:0 auto}
+.page-label{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0.16em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
+.page-rule{width:32px;height:1px;background:var(--ink);margin-bottom:28px}
+.page-title{font-family:var(--heading);font-size:clamp(48px,6vw,80px);font-weight:300;color:var(--ink);line-height:1;letter-spacing:-0.02em;margin-bottom:16px}
+.page-desc{font-family:var(--body);font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.8;max-width:480px}
+
+/* SECTION LABEL */
+.section-label{padding:48px 60px 0}
+.section-label-inner{max-width:1100px;margin:0 auto;padding-bottom:24px;border-bottom:1px solid var(--faint)}
+.section-label p{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0.16em;text-transform:uppercase;color:var(--mid)}
+.section-label span{font-family:var(--heading);font-size:20px;font-weight:300;color:var(--ink);display:block;margin-top:4px}
+
+/* BOOKS GRID */
+.books-section{padding:48px 60px 80px}
+.books-inner{max-width:1100px;margin:0 auto}
+.books-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:32px}
+.book-item{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:14px}
+.book-cover-wrap{position:relative;overflow:hidden}
+.book-cover{width:100%;aspect-ratio:2/3;object-fit:cover;object-position:right center;display:block;box-shadow:0 4px 20px rgba(0,0,0,0.10);transition:transform 0.4s ease,box-shadow 0.4s ease}
+.book-item:hover .book-cover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,0.16)}
+.book-meta{display:flex;flex-direction:column;gap:4px}
+.book-cat{font-family:var(--body);font-size:9px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid)}
+.book-num{font-family:var(--body);font-size:9px;font-weight:400;letter-spacing:0.10em;text-transform:uppercase;color:var(--terra)}
+.book-title{font-family:var(--heading);font-size:16px;font-weight:300;color:var(--ink);line-height:1.2;letter-spacing:-0.01em}
+.book-cta{font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);padding:8px 0;border-top:1px solid var(--faint);margin-top:4px;display:flex;align-items:center;justify-content:space-between;transition:color 0.2s}
+.book-item:hover .book-cta{color:var(--terra)}
+
+/* PM BOOK */
+.books-grid-pm{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.book-item-pm{text-decoration:none;color:inherit;display:grid;grid-template-columns:120px 1fr;gap:24px;padding:28px;border:1px solid var(--faint);transition:border-color 0.2s,background 0.2s}
+.book-item-pm:hover{border-color:var(--ink);background:var(--cream)}
+.book-cover-pm{width:120px;aspect-ratio:2/3;object-fit:cover;object-position:center top;display:block;box-shadow:0 4px 16px rgba(0,0,0,0.10)}
+.book-meta-pm{display:flex;flex-direction:column;justify-content:space-between;padding:4px 0}
+.book-cat-pm{font-family:var(--body);font-size:9px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue)}
+.book-title-pm{font-family:var(--heading);font-size:22px;font-weight:300;color:var(--ink);line-height:1.15;letter-spacing:-0.01em}
+.book-desc-pm{font-family:var(--body);font-size:12px;font-weight:300;color:var(--ink-soft);line-height:1.65}
+.book-cta-pm{font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);transition:color 0.2s;margin-top:auto}
+.book-item-pm:hover .book-cta-pm{color:var(--blue)}
+
+/* EMAIL */
+.email-section{padding:80px 60px;background:var(--ink);text-align:center}
+.email-inner{max-width:480px;margin:0 auto}
+.email-section h3{font-family:var(--heading);font-size:clamp(30px,4vw,48px);font-weight:300;color:var(--white);margin-bottom:10px;letter-spacing:-0.01em}
+.email-section p{font-family:var(--body);font-size:13px;font-weight:300;color:rgba(255,255,255,0.4);margin-bottom:32px;line-height:1.7}
+.email-form{display:flex;gap:0;max-width:440px;margin:0 auto}
+.email-form input{flex:1;padding:13px 16px;font-family:var(--body);font-size:13px;font-weight:300;border:none;color:var(--ink);background:var(--white);outline:none;min-width:0}
+.email-form button{padding:13px 20px;background:rgba(255,255,255,0.1);color:var(--white);font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.15);cursor:pointer;white-space:nowrap;transition:background 0.2s}
+.email-form button:hover{background:rgba(255,255,255,0.2)}
+
+/* FOOTER */
+footer{background:#080808;padding:56px 60px 36px}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand p{font-family:var(--heading);font-size:22px;font-weight:300;color:var(--white);margin-bottom:6px}
+.footer-brand span{font-family:var(--body);font-size:10px;font-weight:300;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.2);display:block;margin-bottom:14px}
+.footer-brand small{font-family:var(--body);font-size:12px;font-weight:300;color:rgba(255,255,255,0.3);line-height:1.8}
+.footer-col h4{font-family:var(--body);font-size:9px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:16px}
+.footer-col a{display:block;font-family:var(--body);font-size:12px;font-weight:300;color:rgba(255,255,255,0.4);text-decoration:none;margin-bottom:10px;transition:color 0.2s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{max-width:1100px;margin:0 auto;padding-top:28px;border-top:1px solid rgba(255,255,255,0.04)}
+.footer-copy{font-family:var(--body);font-size:10px;font-weight:300;color:rgba(255,255,255,0.2)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav{padding:14px 32px}
+  .nav-right .nav-link{display:none}
+  .nav-hamburger{display:flex}
+  .page-header,.section-label,.books-section,.email-section{padding-left:32px;padding-right:32px}
+  .books-grid{grid-template-columns:repeat(3,1fr);gap:24px}
+  .books-grid-pm{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:640px){
+  nav{padding:12px 20px}
+  .page-header,.section-label,.books-section,.email-section{padding-left:20px;padding-right:20px}
+  .books-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .books-grid-pm{grid-template-columns:1fr}
+  .book-item-pm{grid-template-columns:80px 1fr;gap:16px}
+  .book-cover-pm{width:80px}
+  .footer-grid{grid-template-columns:1fr}
+  footer{padding:48px 20px 32px}
+  .email-form{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Arnie Rose</a>
+  <div class="nav-right">
+    <a href="books.html" class="nav-link active">Books</a>
+    <a href="https://supplychain.arniefelicilda.com" class="nav-link" target="_blank" rel="noopener">Supply Chain</a>
+    <a href="https://projectmanagement.arniefelicilda.com" class="nav-link" target="_blank" rel="noopener">Project Management</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="https://app.kit.com/forms/9328965/subscriptions" class="nav-cta" target="_blank" rel="noopener">Free Chapter</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="books.html">Books</a>
+  <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
+  <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
+  <a href="index.html#about">About</a>
+  <a href="https://app.kit.com/forms/9328965/subscriptions" target="_blank" rel="noopener">Free Chapter</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-label">Keystone Books · All Titles</p>
+    <div class="page-rule"></div>
+    <h1 class="page-title">The Library</h1>
+    <p class="page-desc">Books on identity, self-leadership, behavioral psychology, and operations management. Written for people who were never given the right structure.</p>
+  </div>
+</div>
+
+<!-- YWN SERIES -->
+<div class="section-label">
+  <div class="section-label-inner">
+    <p>The Keystone House</p>
+    <span>You Were Never Series — Identity · Self-Leadership · Behavioral Psychology</span>
+  </div>
+</div>
+
+<div class="books-section">
+  <div class="books-inner">
+    <div class="books-grid">
+      <a href="https://a.co/d/0aages6f" class="book-item" target="_blank" rel="noopener">
+        <div class="book-cover-wrap">
+          <img src="behind.png" alt="You Were Never Behind by Arnie Rose" class="book-cover" loading="lazy">
+        </div>
+        <div class="book-meta">
+          <span class="book-num">YWN · 01</span>
+          <p class="book-title">You Were Never Behind</p>
+          <span class="book-cta">Buy on Amazon <span>→</span></span>
+        </div>
+      </a>
+      <a href="https://a.co/d/07zv44Me" class="book-item" target="_blank" rel="noopener">
+        <div class="book-cover-wrap">
+          <img src="ordinary.png" alt="You Were Never Ordinary by Arnie Rose" class="book-cover" loading="lazy">
+        </div>
+        <div class="book-meta">
+          <span class="book-num">YWN · 02</span>
+          <p class="book-title">You Were Never Ordinary</p>
+          <span class="book-cta">Buy on Amazon <span>→</span></span>
+        </div>
+      </a>
+      <a href="https://a.co/d/0jkHsKWM" class="book-item" target="_blank" rel="noopener">
+        <div class="book-cover-wrap">
+          <img src="invisible.png" alt="You Were Never Invisible by Arnie Rose" class="book-cover" loading="lazy">
+        </div>
+        <div class="book-meta">
+          <span class="book-num">YWN · 03</span>
+          <p class="book-title">You Were Never Invisible</p>
+          <span class="book-cta">Buy on Amazon <span>→</span></span>
+        </div>
+      </a>
+      <a href="https://a.co/d/08HIhwXs" class="book-item" target="_blank" rel="noopener">
+        <div class="book-cover-wrap">
+          <img src="dispensable.png" alt="You Were Never Dispensable by Arnie Rose" class="book-cover" loading="lazy">
+        </div>
+        <div class="book-meta">
+          <span class="book-num">YWN · 04</span>
+          <p class="book-title">You Were Never Dispensable</p>
+          <span class="book-cta">Buy on Amazon <span>→</span></span>
+        </div>
+      </a>
+      <a href="https://a.co/d/0dICGMfl" class="book-item" target="_blank" rel="noopener">
+        <div class="book-cover-wrap">
+          <img src="overruled.png" alt="You Were Never Overruled by Arnie Rose" class="book-cover" loading="lazy">
+        </div>
+        <div class="book-meta">
+          <span class="book-num">YWN · 05</span>
+          <p class="book-title">You Were Never Overruled</p>
+          <span class="book-cta">Buy on Amazon <span>→</span></span>
+        </div>
+      </a>
+      <a href="https://a.co/d/056120mC" class="book-item" target="_blank" rel="noopener">
+        <div class="book-cover-wrap">
+          <img src="mute.png" alt="You Were Never Mute by Arnie Rose" class="book-cover" loading="lazy">
+        </div>
+        <div class="book-meta">
+          <span class="book-num">YWN · 06</span>
+          <p class="book-title">You Were Never Mute</p>
+          <span class="book-cta">Buy on Amazon <span>→</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- PM SERIES -->
+<div class="section-label" style="background:var(--cream)">
+  <div class="section-label-inner">
+    <p>KeystoneBooks</p>
+    <span>Professional Education — Supply Chain · Project Management · Operations</span>
+  </div>
+</div>
+
+<div class="books-section" style="background:var(--cream)">
+  <div class="books-inner">
+    <div class="books-grid-pm">
+      <a href="https://arfelicilda.gumroad.com/l/accidentalprojectmanager" class="book-item-pm" target="_blank" rel="noopener">
+        <img src="ACCIDENTAL_PM.png" alt="The Accidental Project Manager by Arnie Rose" class="book-cover-pm" loading="lazy">
+        <div class="book-meta-pm">
+          <span class="book-cat-pm">PM · 01 · Project Management</span>
+          <p class="book-title-pm">The Accidental Project Manager</p>
+          <p class="book-desc-pm">For the person who was handed a project and told to figure it out. A 15-minute daily system that actually works.</p>
+          <span class="book-cta-pm">Get on Gumroad →</span>
+        </div>
+      </a>
+      <div class="book-item-pm" style="opacity:0.5;cursor:default">
+        <div style="width:120px;aspect-ratio:2/3;background:var(--faint);display:flex;align-items:center;justify-content:center">
+          <span style="font-family:var(--body);font-size:10px;color:var(--mid);letter-spacing:0.08em;text-transform:uppercase">Coming</span>
+        </div>
+        <div class="book-meta-pm">
+          <span class="book-cat-pm">PM · 02 · Project Management</span>
+          <p class="book-title-pm">Scope Creep to Scope Keeper</p>
+          <p class="book-desc-pm">Stop scope from expanding before it starts. Hold the line on every project.</p>
+          <span class="book-cta-pm">Coming Soon</span>
+        </div>
+      </div>
+      <div class="book-item-pm" style="opacity:0.5;cursor:default">
+        <div style="width:120px;aspect-ratio:2/3;background:var(--faint);display:flex;align-items:center;justify-content:center">
+          <span style="font-family:var(--body);font-size:10px;color:var(--mid);letter-spacing:0.08em;text-transform:uppercase">Coming</span>
+        </div>
+        <div class="book-meta-pm">
+          <span class="book-cat-pm">SCM · 01 · Supply Chain</span>
+          <p class="book-title-pm">Inventory Without the Anxiety</p>
+          <p class="book-desc-pm">Inventory control for operations managers tired of stockouts eating their margins.</p>
+          <span class="book-cta-pm">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EMAIL -->
+<div class="email-section">
+  <div class="email-inner">
+    <h3>Get the first chapter free.</h3>
+    <p>You Were Never Behind. Chapter 1 delivered to your inbox.<br>No pitch. No upsell.</p>
+    <form action="https://app.kit.com/forms/9328965/subscriptions" method="post" class="email-form">
+      <input name="email_address" type="email" placeholder="Your email address" required>
+      <button type="submit">Send Me Chapter 1</button>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <p>Arnie Rose</p>
+      <span>Author · Educator · Keystone Books</span>
+      <small>Author of the You Were Never Series.<br>Supply Chain & Project Management Educator.<br>Founder, Keystone Books.</small>
+    </div>
+    <div class="footer-col">
+      <h4>You Were Never</h4>
+      <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener">The Series</a>
+      <a href="https://a.co/d/0aages6f" target="_blank" rel="noopener">Book 1: Behind</a>
+      <a href="https://a.co/d/07zv44Me" target="_blank" rel="noopener">Book 2: Ordinary</a>
+      <a href="https://www.facebook.com/groups/901922149570968" target="_blank" rel="noopener">Reader Community</a>
+    </div>
+    <div class="footer-col">
+      <h4>Professional</h4>
+      <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain Tools</a>
+      <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management Tools</a>
+      <a href="https://arfelicilda.gumroad.com/l/accidentalprojectmanager" target="_blank" rel="noopener">Accidental PM Book</a>
+      <a href="https://arfelicilda.kit.com" target="_blank" rel="noopener">Newsletter</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="https://ph.pinterest.com/arniebfelicilda" target="_blank" rel="noopener">Pinterest</a>
+      <a href="https://facebook.com/YouWereNeverSeries" target="_blank" rel="noopener">Facebook Page</a>
+      <a href="https://www.instagram.com/youwereneverseries" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.threads.net/@youwereneverseries" target="_blank" rel="noopener">Threads</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Arnie Rose Felicilda. Keystone Books. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hamburger=document.getElementById('nav-hamburger');
+  var mobileNav=document.getElementById('nav-mobile');
+  hamburger.addEventListener('click',function(e){e.stopPropagation();mobileNav.classList.toggle('open');});
+  document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');});});
+  document.addEventListener('click',function(){mobileNav.classList.remove('open');});
+})();
+</script>
+</body>
+</html>

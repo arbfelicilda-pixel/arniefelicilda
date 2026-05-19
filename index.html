@@ -116,11 +116,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .s-title{font-family:var(--heading);font-size:clamp(32px,4vw,52px);font-weight:300;color:var(--ink);line-height:1.08;letter-spacing:-0.01em}
 
 /* FEATURED BAR */
-.featured-bar{background:var(--ink);padding:22px 60px}
+.featured-bar{background:var(--ink);padding:28px 60px}
 .featured-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:24px}
 .featured-tag{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;flex-shrink:0}
 .featured-sep{width:1px;height:18px;background:rgba(255,255,255,0.15);flex-shrink:0}
-.featured-title-bar{font-family:var(--heading);font-size:20px;font-weight:300;color:rgba(255,255,255,0.9);flex:1;letter-spacing:-0.01em}
+.featured-title-bar{font-family:var(--heading);font-size:28px;font-weight:300;color:rgba(255,255,255,0.95);flex:1;letter-spacing:-0.01em}
 .featured-cta{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);text-decoration:none;white-space:nowrap;flex-shrink:0;padding-bottom:2px;border-bottom:1px solid rgba(255,255,255,0.4)}
 
 /* YWN SECTION */
@@ -317,22 +317,15 @@ footer{background:#080808;padding:56px 60px 36px}
 </head>
 <body>
 
-<!-- NAV — FIX 3+4: Blog dropdown added -->
+<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Arnie Rose</a>
   <div class="nav-right">
-    <a href="#ywn" class="nav-link">The Series</a>
-    <div class="nav-dropdown">
-      <a href="#" class="nav-link">Sites <span class="nav-dropdown-arrow">▾</span></a>
-      <div class="nav-dropdown-menu">
-        <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener">You Were Never Series</a>
-        <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
-        <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
-      </div>
-    </div>
-    <a href="#tools" class="nav-link">Tools</a>
+    <a href="books.html" class="nav-link">Books</a>
+    <a href="https://supplychain.arniefelicilda.com" class="nav-link" target="_blank" rel="noopener">Supply Chain</a>
+    <a href="https://projectmanagement.arniefelicilda.com" class="nav-link" target="_blank" rel="noopener">Project Management</a>
     <a href="#about" class="nav-link">About</a>
-    <a href="https://arfelicilda.kit.com" class="nav-cta" target="_blank" rel="noopener">Free Resources</a>
+    <a href="https://app.kit.com/forms/9328965/subscriptions" class="nav-cta" target="_blank" rel="noopener">Free Chapter</a>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -340,31 +333,24 @@ footer{background:#080808;padding:56px 60px 36px}
 </nav>
 
 <div class="nav-mobile" id="nav-mobile">
-  <a href="#ywn">The Series</a>
-  <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener">You Were Never Series</a>
+  <a href="books.html">Books</a>
   <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
   <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
-  <a href="#tools">Tools</a>
   <a href="#about">About</a>
-  <a href="https://arfelicilda.kit.com" target="_blank" rel="noopener">Free Resources</a>
+  <a href="https://app.kit.com/forms/9328965/subscriptions" target="_blank" rel="noopener">Free Chapter</a>
   <a href="https://www.facebook.com/groups/901922149570968" target="_blank" rel="noopener">Reader Community</a>
 </div>
 
-<!-- HERO — FIX 1+2 -->
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-left">
-    <p class="hero-eyebrow">Author · Educator · Keystone Books</p>
+    <p class="hero-eyebrow">Author · Keystone Books</p>
     <h1 class="hero-name">Arnie<br>Rose</h1>
     <div class="hero-rule"></div>
     <p class="hero-statement">She wrote the books that tell you what was actually wrong. Not your effort. Not your timing. The structure you were never given.</p>
-    <div class="hero-creds">
-      <div class="hero-cred">6 books in the You Were Never Series + 1 Project Management book</div>
-      <div class="hero-cred">10+ years in Supply Chain and Project Management, Philippines and China</div>
-    </div>
-    <!-- FIX 2: Primary CTA is dark/filled, secondary is outline -->
     <div class="hero-actions">
-      <a href="#ywn" class="btn-fill dark">The Book Series</a>
-      <a href="#tools" class="btn-outline">SCM & PM Tools</a>
+      <a href="#ywn" class="btn-fill dark">Read the Series</a>
+      <a href="https://app.kit.com/forms/9328965/subscriptions" class="btn-outline">Free Chapter 1</a>
     </div>
   </div>
   <div class="hero-right">
@@ -476,7 +462,7 @@ footer{background:#080808;padding:56px 60px 36px}
       <h2>The Accidental Project Manager.<br>And the operations manager running supply chain without a system.</h2>
       <p>These tools exist for the operations manager handed a project, the team lead who inherited a supply chain, and the business owner managing logistics between everything else. No PMP. No MBA. Just systems that work.</p>
     </div>
-    <div class="tools-cat reveal">Project Management</div>
+    <div class="tools-cat reveal" style="color:var(--blue);border-bottom-color:var(--blue);opacity:0.7">Project Management</div>
     <a href="https://arfelicilda.gumroad.com/l/accidentalprojectmanager" class="pm-featured-card reveal" target="_blank" rel="noopener">
       <img src="ACCIDENTAL_PM.png" alt="The Accidental Project Manager" class="pm-cover" loading="lazy">
       <div class="pm-body">
@@ -504,7 +490,7 @@ footer{background:#080808;padding:56px 60px 36px}
       </div>
       <div class="tool-card" style="background:transparent;border:none"></div>
     </div>
-    <div class="tools-cat reveal">Supply Chain Management</div>
+    <div class="tools-cat reveal" style="color:var(--terra);border-bottom-color:var(--terra);opacity:0.7">Supply Chain Management</div>
     <div class="tools-grid reveal">
       <div class="tool-card">
         <p class="tool-tag">SCM · 01</p>
@@ -529,8 +515,8 @@ footer{background:#080808;padding:56px 60px 36px}
       </div>
     </div>
     <div style="margin-top:48px;display:flex;gap:12px;flex-wrap:wrap" class="reveal">
-      <a href="https://supplychain.arniefelicilda.com" class="btn-fill dark" target="_blank" rel="noopener">Supply Chain Tools</a>
-      <a href="https://projectmanagement.arniefelicilda.com" class="btn-outline" target="_blank" rel="noopener">Project Management Tools</a>
+      <a href="https://supplychain.arniefelicilda.com" class="btn-fill terra" target="_blank" rel="noopener">Supply Chain Tools</a>
+      <a href="https://projectmanagement.arniefelicilda.com" class="btn-fill dark" target="_blank" rel="noopener" style="background:var(--blue)">Project Management Tools</a>
     </div>
   </div>
 </section>
