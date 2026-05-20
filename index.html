@@ -186,7 +186,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .email-mid{padding:56px 60px;background:var(--ink);text-align:center}
 .email-mid-inner{max-width:520px;margin:0 auto}
 .email-mid p.label{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:12px}
-.email-mid h3{font-family:var(--heading);font-size:clamp(26px,3vw,38px);font-weight:300;color:var(--white);margin-bottom:10px;letter-spacing:-0.01em}
+.email-mid h3{font-family:var(--heading);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--white);margin-bottom:10px;letter-spacing:-0.01em}
 .email-mid p.sub{font-family:var(--body);font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);margin-bottom:28px;line-height:1.7}
 .email-form{display:flex;gap:0;max-width:420px;margin:0 auto}
 .email-form input{flex:1;padding:12px 16px;font-family:var(--body);font-size:13px;font-weight:300;border:none;color:var(--ink);background:var(--white);outline:none;min-width:0}
@@ -333,7 +333,7 @@ footer{background:#080808;padding:56px 60px 36px}
     <a href="https://supplychain.arniefelicilda.com" class="nav-link" target="_blank" rel="noopener">Supply Chain</a>
     <a href="https://projectmanagement.arniefelicilda.com" class="nav-link" target="_blank" rel="noopener">Project Management</a>
     <a href="about.html" class="nav-link">About</a>
-    <a href="https://app.kit.com/forms/9328965/subscriptions" class="nav-cta" target="_blank" rel="noopener">Free Chapter</a>
+    <a href="#email-capture" class="nav-cta">Free Chapter</a>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -345,7 +345,7 @@ footer{background:#080808;padding:56px 60px 36px}
   <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
   <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
   <a href="about.html">About</a>
-  <a href="https://app.kit.com/forms/9328965/subscriptions" target="_blank" rel="noopener">Free Chapter</a>
+  <a href="#email-capture">Free Chapter</a>
   <a href="https://www.facebook.com/groups/901922149570968" target="_blank" rel="noopener">Reader Community</a>
 </div>
 
@@ -450,9 +450,8 @@ footer{background:#080808;padding:56px 60px 36px}
 <!-- EMAIL MID -->
 <div class="email-mid">
   <div class="email-mid-inner reveal">
-    <p class="label">Free: Chapter 1 of You Were Never Behind</p>
-    <h3>Read the first chapter before you decide.</h3>
-    <p class="sub">No pitch. No upsell. Just the chapter that tells you what the book is about.</p>
+    <h3 id="email-capture">Free: Chapter 1 of You Were Never Behind</h3>
+    <p class="sub">Read the opening chapter before deciding whether the series belongs on your shelf. No pitch. Just the book.</p>
     <form action="https://app.kit.com/forms/9328965/subscriptions" method="post" class="email-form">
       <input name="email_address" type="email" placeholder="Your email address" required>
       <button type="submit">Send Me Chapter 1</button>
@@ -470,7 +469,7 @@ footer{background:#080808;padding:56px 60px 36px}
       <p>These resources were built for the operations manager handed a project, the team lead who inherited a supply chain, and the business owner managing logistics between everything else. Practical systems for procurement, operations, project coordination, and workflow management — built from over a decade of operational leadership across procurement, logistics, and industrial supply chains.</p>
     </div>
     <div class="tools-cat reveal" style="color:var(--blue);border-bottom-color:var(--blue);opacity:0.7">Project Management</div>
-    <a href="https://arfelicilda.gumroad.com/l/accidentalprojectmanager" class="pm-featured-card reveal" target="_blank" rel="noopener">
+    <a href="https://arfelicilda.gumroad.com/l/ProjectManagementExecutionToolkitPro" class="pm-featured-card reveal" target="_blank" rel="noopener">
       <img src="ACCIDENTAL_PM.png" alt="The Accidental Project Manager" class="pm-cover" loading="lazy">
       <div class="pm-body">
         <p class="pm-tag">PM · 01</p>
@@ -598,7 +597,7 @@ footer{background:#080808;padding:56px 60px 36px}
 <!-- EMAIL BOTTOM -->
 <section class="email-section">
   <div class="email-inner reveal">
-    <h3>Get the first chapter free.</h3>
+    <h3>Free: Chapter 1 of You Were Never Behind</h3>
     <p>You Were Never Behind. Chapter 1 delivered to your inbox. Plus frameworks, book updates, and SCM tools when they drop.</p>
     <form action="https://app.kit.com/forms/9328965/subscriptions" method="post" class="email-form">
       <input name="email_address" type="email" placeholder="Your email address" required>
@@ -626,7 +625,7 @@ footer{background:#080808;padding:56px 60px 36px}
       <h4>Free Tools</h4>
       <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain Tools</a>
       <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management Tools</a>
-      <a href="https://arfelicilda.gumroad.com/l/accidentalprojectmanager" target="_blank" rel="noopener">Accidental PM Book</a>
+      <a href="https://arfelicilda.gumroad.com/l/ProjectManagementExecutionToolkitPro" target="_blank" rel="noopener">Accidental PM Book</a>
       <a href="https://arfelicilda.kit.com" target="_blank" rel="noopener">Newsletter</a>
     </div>
     <div class="footer-col">
