@@ -55,7 +55,7 @@ html{scroll-behavior:smooth}
 body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.7;overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--faint)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:19px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--faint)}
 .nav-logo{font-family:var(--heading);font-size:21px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:0.01em}
 .nav-right{display:flex;gap:40px;align-items:center}
 .nav-link{font-family:var(--body);font-size:11px;font-weight:400;color:var(--ink-soft);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase}
@@ -96,17 +96,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 64px;display:fl
 .text-link{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--terra);text-decoration:none;border-bottom:1px solid var(--terra);padding-bottom:2px}
 
 /* HERO — no photo, books-led, generous space */
-.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding:130px 64px 90px;background:var(--white)}
+.hero{display:flex;flex-direction:column;justify-content:center;padding:120px 64px 50px;background:var(--white)}
 .hero-inner{max-width:780px;margin:0 auto;width:100%}
 .hero-eyebrow{font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra);margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.1s forwards}
 .hero-name{font-family:var(--heading);font-size:clamp(56px,8vw,104px);font-weight:300;line-height:0.95;letter-spacing:-0.02em;color:var(--ink);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards}
 .hero-role{font-family:var(--heading);font-size:clamp(22px,2.4vw,30px);font-weight:400;color:var(--ink-soft);margin-bottom:24px;letter-spacing:-0.005em;opacity:0;animation:fadeUp 0.8s ease 0.3s forwards}
-.hero-statement{font-family:var(--body);font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.85;max-width:480px;margin-bottom:36px;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards}
+.hero-statement{font-family:var(--body);font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.85;max-width:560px;margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards}
 .hero-belief{font-family:var(--heading);font-size:clamp(19px,2vw,24px);font-style:italic;font-weight:400;color:var(--ink);max-width:520px;margin-bottom:48px;line-height:1.4;opacity:0;animation:fadeUp 0.8s ease 0.5s forwards}
 .hero-actions{opacity:0;animation:fadeUp 0.8s ease 0.6s forwards}
 
 /* BOOKS — primary visual asset, ~40% page weight */
-.books-section{padding:115px 0 122px;background:var(--white)}
+.books-section{padding:75px 0 60px;background:var(--white)}
 .books-header{margin-bottom:56px}
 
 .start-here{display:grid;grid-template-columns:140px 1fr;gap:32px;align-items:center;padding:32px 0;border-top:1px solid var(--faint);border-bottom:1px solid var(--faint);margin-bottom:68px}
@@ -119,24 +119,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 64px;display:fl
 
 .books-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:28px}
 .book-item{text-decoration:none;color:inherit;display:block}
-.book-item img{width:100%;display:block;box-shadow:0 14px 36px rgba(0,0,0,0.10);transition:transform 0.4s ease,box-shadow 0.4s ease}
+.book-item img{width:100%;aspect-ratio:2/3;object-fit:cover;object-position:right center;display:block;box-shadow:0 14px 36px rgba(0,0,0,0.10);transition:transform 0.4s ease,box-shadow 0.4s ease}
 .book-item:hover img{transform:translateY(-8px);box-shadow:0 20px 48px rgba(0,0,0,0.16)}
 .book-num{font-family:var(--body);font-size:9px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-top:16px}
-.book-title{font-family:var(--body);font-size:11px;font-weight:300;color:var(--ink-soft);margin-top:3px;line-height:1.3}
+.book-title{font-family:var(--heading);font-size:15px;font-weight:400;color:var(--ink);margin-top:14px;line-height:1.3;letter-spacing:-0.005em}
 
-.books-cta{margin-top:64px}
+.books-cta{margin-top:32px}
 
 /* ABOUT — one photo at the bottom, 60 words */
-.about-section{padding:115px 0;background:var(--white)}
-.about-text{max-width:640px;margin-bottom:64px}
+.about-section{padding:65px 0 60px;background:var(--white)}
+.about-text{max-width:640px;margin-bottom:24px}
 .about-text p{font-family:var(--body);font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.9}
 .about-photo-row{display:flex;align-items:center;gap:28px}
-.about-photo-row img{width:84px;height:84px;border-radius:50%;object-fit:cover;display:block;filter:grayscale(6%)}
+.about-photo-row img{width:90px;height:108px;border-radius:0;object-fit:cover;object-position:top center;display:block;filter:grayscale(6%)}
 .about-photo-name{font-family:var(--heading);font-size:17px;color:var(--ink);margin-bottom:3px}
 .about-photo-title{font-family:var(--body);font-size:11px;color:var(--mid);letter-spacing:0.04em}
 
 /* WRITING — minimal teaser */
-.writing-section{padding:106px 0;background:var(--white)}
+.writing-section{padding:58px 0 100px;background:var(--white)}
 .writing-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:56px;flex-wrap:wrap;gap:16px}
 .writing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
 .writing-card{text-decoration:none;color:inherit}
@@ -189,7 +189,7 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   <a href="/" class="nav-logo">Arnie Rose</a>
   <div class="nav-right">
     <a href="books.html" class="nav-link">Books</a>
-    <a href="#writing" class="nav-link">Blog</a>
+    <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener" class="nav-link">Blog</a>
     <div class="nav-dropdown">
       <a href="#" class="nav-link">Resources</a>
       <div class="nav-dropdown-menu">
@@ -197,21 +197,21 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
         <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
       </div>
     </div>
-    <a href="#about" class="nav-link">About</a>
-    <a href="mailto:keystonebooks@hotmail.com" class="nav-cta">Contact</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="#newsletter" class="nav-cta">Free Chapter</a>
   </div>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile" id="nav-mobile">
   <a href="books.html">Books</a>
-  <a href="#writing">Blog</a>
+  <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener">Blog</a>
   <button class="mobile-resources-toggle" id="mobile-resources-toggle">Resources</button>
   <div class="mobile-resources-panel" id="mobile-resources-panel">
     <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
     <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
   </div>
-  <a href="#about">About</a>
-  <a href="mailto:keystonebooks@hotmail.com">Contact</a>
+  <a href="about.html">About</a>
+  <a href="#newsletter">Free Chapter</a>
 </div>
 
 <!-- HERO -->
@@ -234,46 +234,30 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
       <p class="s-sub">Six books about the labels people inherit, accept, and eventually outgrow.</p>
     </div>
 
-    <div class="start-here reveal">
-      <a href="books.html" class="start-here-img-link"><img src="behind.png" alt="You Were Never Behind" loading="lazy"></a>
-      <div>
-        <p class="start-here-label">New readers start here</p>
-        <a href="books.html" class="start-here-title-link">You Were Never Behind</a>
-        <p class="start-here-desc">A practical introduction to the series for first-time readers.</p>
-        <a href="#newsletter" class="text-link">Start with a Free Chapter</a>
-      </div>
-    </div>
-
     <div class="books-grid reveal">
       <a href="books.html" class="book-item">
         <img src="behind.png" alt="You Were Never Behind" loading="lazy">
-        <p class="book-num">01</p>
-        <p class="book-title">Behind</p>
+        <p class="book-title">You Were Never Behind</p>
       </a>
       <a href="books.html" class="book-item">
         <img src="ordinary.png" alt="You Were Never Ordinary" loading="lazy">
-        <p class="book-num">02</p>
-        <p class="book-title">Ordinary</p>
+        <p class="book-title">You Were Never Ordinary</p>
       </a>
       <a href="books.html" class="book-item">
         <img src="invisible.png" alt="You Were Never Invisible" loading="lazy">
-        <p class="book-num">03</p>
-        <p class="book-title">Invisible</p>
+        <p class="book-title">You Were Never Invisible</p>
       </a>
       <a href="books.html" class="book-item">
         <img src="dispensable.png" alt="You Were Never Dispensable" loading="lazy">
-        <p class="book-num">04</p>
-        <p class="book-title">Dispensable</p>
+        <p class="book-title">You Were Never Dispensable</p>
       </a>
       <a href="books.html" class="book-item">
         <img src="overruled.png" alt="You Were Never Overruled" loading="lazy">
-        <p class="book-num">05</p>
-        <p class="book-title">Overruled</p>
+        <p class="book-title">You Were Never Overruled</p>
       </a>
       <a href="books.html" class="book-item">
         <img src="mute.png" alt="You Were Never Mute" loading="lazy">
-        <p class="book-num">06</p>
-        <p class="book-title">Mute</p>
+        <p class="book-title">You Were Never Mute</p>
       </a>
     </div>
 
@@ -305,7 +289,7 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   <div class="s-inner">
     <div class="writing-header reveal">
       <h2 class="s-title" style="font-size:clamp(28px,3vw,38px)">Writing</h2>
-      <a href="#" class="text-link">View All →</a>
+      <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener" class="text-link">View All →</a>
     </div>
     <div class="writing-grid reveal">
       <a href="growth-is-not-always-visible.html" class="writing-card">
@@ -351,12 +335,12 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
       <div class="footer-col">
         <h4>Explore</h4>
         <a href="books.html">Books</a>
-        <a href="#writing">Blog</a>
-        <a href="#about">About</a>
-        <a href="mailto:keystonebooks@hotmail.com">Contact</a>
+        <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener">Blog</a>
+        <a href="about.html">About</a>
+        <a href="#newsletter">Free Chapter</a>
       </div>
       <div class="footer-col">
-        <h4>Follow</h4>
+        <h4>Follow on Instagram</h4>
         <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener">@writer.arnierose</a>
         <a href="https://www.instagram.com/youwereneverseries" target="_blank" rel="noopener">@youwereneverseries</a>
       </div>
