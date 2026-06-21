@@ -81,8 +81,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .book-item:hover .book-cover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,0.16)}
 .book-meta{display:flex;flex-direction:column;gap:4px;flex:1;padding-top:14px;justify-content:space-between}
 .book-title{font-family:var(--heading);font-size:22px;font-weight:300;color:var(--ink);line-height:1.25;letter-spacing:-0.01em;margin-top:18px}
-.book-cta{font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);padding:8px 0;border-top:1px solid var(--faint);margin-top:4px;display:flex;align-items:center;justify-content:space-between;transition:color 0.2s}
-.book-item:hover .book-cta{color:var(--terra)}
+.book-overlay{position:absolute;inset:0;background:rgba(13,13,13,0.5);opacity:0;transition:opacity 0.3s ease;display:flex;align-items:center;justify-content:center}
+.book-item:hover .book-overlay{opacity:1}
+.book-overlay span{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(255,255,255,0.6);padding-bottom:4px}
 
 /* EMAIL */
 .email-section{padding:80px 60px;background:var(--ink);text-align:center}
@@ -174,55 +175,55 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
       <a href="https://a.co/d/0aages6f" class="book-item" target="_blank" rel="noopener">
         <div class="book-cover-wrap">
           <img src="behind.png" alt="You Were Never Behind by Arnie Rose" class="book-cover" loading="lazy">
+          <div class="book-overlay"><span>Buy on Amazon →</span></div>
         </div>
         <div class="book-meta">
           <p class="book-title">You Were Never Behind</p>
-          <span class="book-cta">Buy on Amazon <span>→</span></span>
         </div>
       </a>
       <a href="https://a.co/d/07zv44Me" class="book-item" target="_blank" rel="noopener">
         <div class="book-cover-wrap">
           <img src="ordinary.png" alt="You Were Never Ordinary by Arnie Rose" class="book-cover" loading="lazy">
+          <div class="book-overlay"><span>Buy on Amazon →</span></div>
         </div>
         <div class="book-meta">
           <p class="book-title">You Were Never Ordinary</p>
-          <span class="book-cta">Buy on Amazon <span>→</span></span>
         </div>
       </a>
       <a href="https://a.co/d/0jkHsKWM" class="book-item" target="_blank" rel="noopener">
         <div class="book-cover-wrap">
           <img src="invisible.png" alt="You Were Never Invisible by Arnie Rose" class="book-cover" loading="lazy">
+          <div class="book-overlay"><span>Buy on Amazon →</span></div>
         </div>
         <div class="book-meta">
           <p class="book-title">You Were Never Invisible</p>
-          <span class="book-cta">Buy on Amazon <span>→</span></span>
         </div>
       </a>
       <a href="https://a.co/d/08HIhwXs" class="book-item" target="_blank" rel="noopener">
         <div class="book-cover-wrap">
           <img src="dispensable.png" alt="You Were Never Dispensable by Arnie Rose" class="book-cover" loading="lazy">
+          <div class="book-overlay"><span>Buy on Amazon →</span></div>
         </div>
         <div class="book-meta">
           <p class="book-title">You Were Never Dispensable</p>
-          <span class="book-cta">Buy on Amazon <span>→</span></span>
         </div>
       </a>
       <a href="https://a.co/d/0dICGMfl" class="book-item" target="_blank" rel="noopener">
         <div class="book-cover-wrap">
           <img src="overruled.png" alt="You Were Never Overruled by Arnie Rose" class="book-cover" loading="lazy">
+          <div class="book-overlay"><span>Buy on Amazon →</span></div>
         </div>
         <div class="book-meta">
           <p class="book-title">You Were Never Overruled</p>
-          <span class="book-cta">Buy on Amazon <span>→</span></span>
         </div>
       </a>
       <a href="https://a.co/d/056120mC" class="book-item" target="_blank" rel="noopener">
         <div class="book-cover-wrap">
           <img src="mute.png" alt="You Were Never Mute by Arnie Rose" class="book-cover" loading="lazy">
+          <div class="book-overlay"><span>Buy on Amazon →</span></div>
         </div>
         <div class="book-meta">
           <p class="book-title">You Were Never Mute</p>
-          <span class="book-cta">Buy on Amazon <span>→</span></span>
         </div>
       </a>
     </div>
