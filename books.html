@@ -41,7 +41,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .nav-link:hover,.nav-link.active{color:var(--ink)}
 .nav-dropdown{position:relative}
 .nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--faint);min-width:200px;z-index:200;box-shadow:0 12px 28px rgba(0,0,0,0.07)}
-.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-toggle{font-family:var(--body);font-size:11px;font-weight:400;color:var(--mid);background:none;border:none;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.nav-dropdown-toggle:hover{color:var(--ink)}
 .nav-dropdown-menu a{display:block;font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:14px 20px;border-bottom:1px solid var(--faint)}
 .nav-dropdown-menu a:last-child{border-bottom:none}
 .nav-dropdown-menu a:hover{color:var(--ink);background:#fafafa}
@@ -135,8 +137,8 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
     <a href="books.html" class="nav-link active">Books</a>
     <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener" class="nav-link">Blog</a>
     <div class="nav-dropdown">
-      <a href="#" class="nav-link">Resources</a>
-      <div class="nav-dropdown-menu">
+      <button class="nav-dropdown-toggle" id="resources-toggle">Resources</button>
+      <div class="nav-dropdown-menu" id="resources-menu">
         <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
         <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
       </div>
@@ -273,6 +275,13 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   var mobileNav=document.getElementById('nav-mobile');
   var resourcesToggle=document.getElementById('mobile-resources-toggle');
   var resourcesPanel=document.getElementById('mobile-resources-panel');
+  var desktopResourcesToggle=document.getElementById('resources-toggle');
+  var desktopResourcesMenu=document.getElementById('resources-menu');
+  desktopResourcesToggle.addEventListener('click',function(e){
+    e.stopPropagation();
+    desktopResourcesMenu.classList.toggle('open');
+  });
+  document.addEventListener('click',function(){desktopResourcesMenu.classList.remove('open');});
   hamburger.addEventListener('click',function(e){e.stopPropagation();mobileNav.classList.toggle('open');});
   resourcesToggle.addEventListener('click',function(e){e.stopPropagation();resourcesPanel.classList.toggle('open');});
   document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');resourcesPanel.classList.remove('open');});});

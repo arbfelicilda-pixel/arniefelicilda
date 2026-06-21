@@ -62,7 +62,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:19px 64px;display:fl
 .nav-link:hover{color:var(--ink)}
 .nav-dropdown{position:relative}
 .nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--faint);min-width:200px;z-index:200;box-shadow:0 12px 28px rgba(0,0,0,0.07)}
-.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-toggle{font-family:var(--body);font-size:11px;font-weight:400;color:var(--mid);background:none;border:none;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.nav-dropdown-toggle:hover{color:var(--ink)}
 .nav-dropdown-menu a{display:block;font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:14px 20px;border-bottom:1px solid var(--faint)}
 .nav-dropdown-menu a:last-child{border-bottom:none}
 .nav-dropdown-menu a:hover{color:var(--ink);background:#fafafa}
@@ -130,6 +132,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:19px 64px;display:fl
 .about-section{padding:65px 0 60px;background:var(--white)}
 .about-text{max-width:640px;margin-bottom:24px}
 .about-text p{font-family:var(--body);font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.9}
+.about-text p+p{margin-top:14px}
 .about-photo-row{display:flex;align-items:center;gap:28px}
 .about-photo-row img{width:90px;height:108px;border-radius:0;object-fit:cover;object-position:top center;display:block;filter:grayscale(6%)}
 .about-photo-name{font-family:var(--heading);font-size:17px;color:var(--ink);margin-bottom:3px}
@@ -191,8 +194,8 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
     <a href="books.html" class="nav-link">Books</a>
     <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener" class="nav-link">Blog</a>
     <div class="nav-dropdown">
-      <a href="#" class="nav-link">Resources</a>
-      <div class="nav-dropdown-menu">
+      <button class="nav-dropdown-toggle" id="resources-toggle">Resources</button>
+      <div class="nav-dropdown-menu" id="resources-menu">
         <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
         <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
       </div>
@@ -272,7 +275,9 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   <div class="s-inner">
     <div class="about-text reveal">
       <h2 class="s-title" style="margin-bottom:28px">About Arnie Rose</h2>
-      <p>Arnie Rose is the author of the You Were Never Series, a collection of books exploring identity, behavior, and the stories people carry about themselves. Through books, articles, and educational resources, her work helps readers think more clearly about how they see themselves, make decisions, and navigate change. She also writes about project management, supply chain management, and operational thinking.</p>
+      <p>Arnie Rose is the author of the You Were Never Series, a collection of books exploring identity, behavior, and the stories people carry about themselves.</p>
+      <p>Her work focuses on self-leadership, decision-making, and personal growth.</p>
+      <p>She also writes about project management, supply chain management, and operational thinking.</p>
     </div>
     <div class="about-photo-row reveal">
       <img src="author.jpg" alt="Arnie Rose" loading="lazy">
@@ -352,6 +357,13 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   var mobileNav=document.getElementById('nav-mobile');
   var resourcesToggle=document.getElementById('mobile-resources-toggle');
   var resourcesPanel=document.getElementById('mobile-resources-panel');
+  var desktopResourcesToggle=document.getElementById('resources-toggle');
+  var desktopResourcesMenu=document.getElementById('resources-menu');
+  desktopResourcesToggle.addEventListener('click',function(e){
+    e.stopPropagation();
+    desktopResourcesMenu.classList.toggle('open');
+  });
+  document.addEventListener('click',function(){desktopResourcesMenu.classList.remove('open');});
   hamburger.addEventListener('click',function(e){
     e.stopPropagation();
     mobileNav.classList.toggle('open');
