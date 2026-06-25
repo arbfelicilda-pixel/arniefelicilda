@@ -147,7 +147,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:19px 64px;display:fl
 .writing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
 .writing-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform 0.3s ease}
 .writing-card:hover{transform:translateY(-4px)}
-.writing-card-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;margin-bottom:16px;background:var(--ink-soft)}
+.writing-card-img{width:180px;max-width:100%;aspect-ratio:4/5;object-fit:cover;display:block;margin-bottom:16px;background:var(--ink-soft)}
 .writing-card-tag{font-family:var(--body);font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
 .writing-card-title{font-family:var(--heading);font-size:22px;font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:10px;letter-spacing:-0.01em}
 .writing-card-excerpt{font-family:var(--body);font-size:12px;font-weight:300;color:var(--ink-soft);line-height:1.7}
@@ -177,6 +177,7 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
 @media(max-width:900px){
   .books-grid{grid-template-columns:repeat(3,1fr);row-gap:40px}
   .writing-grid{grid-template-columns:1fr}
+  .writing-card-img{width:100%}
   .footer-top{grid-template-columns:1fr 1fr}
   .start-here{grid-template-columns:100px 1fr}
   .start-here img{width:100px}
