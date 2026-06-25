@@ -145,7 +145,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:19px 64px;display:fl
 .writing-section{padding:58px 0 100px;background:var(--white)}
 .writing-header{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:56px}
 .writing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
-.writing-card{text-decoration:none;color:inherit}
+.writing-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform 0.3s ease}
+.writing-card:hover{transform:translateY(-4px)}
+.writing-card-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;margin-bottom:16px;background:var(--ink-soft)}
 .writing-card-tag{font-family:var(--body);font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
 .writing-card-title{font-family:var(--heading);font-size:22px;font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:10px;letter-spacing:-0.01em}
 .writing-card-excerpt{font-family:var(--body);font-size:12px;font-weight:300;color:var(--ink-soft);line-height:1.7}
@@ -300,17 +302,20 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
       <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener" class="text-link">View All →</a>
     </div>
     <div class="writing-grid reveal">
-      <a href="https://youwereneverseries.arniefelicilda.com/growth-is-not-always-visible.html" target="_blank" rel="noopener" class="writing-card">
-        <p class="writing-card-title">Growth Is Not Always Visible</p>
-        <p class="writing-card-excerpt">The work you are doing now may not show results yet. That does not mean it isn't working.</p>
+      <a href="https://youwereneverseries.arniefelicilda.com/confidence-vs-self-worth.html" target="_blank" rel="noopener" class="writing-card">
+        <img src="https://youwereneverseries.arniefelicilda.com/confidence-vs-self-worth-pin.jpg" alt="Confidence vs Self-Worth" class="writing-card-img" loading="lazy">
+        <p class="writing-card-title">Confidence vs Self-Worth</p>
+        <p class="writing-card-excerpt">Confidence changes. Self-worth stays.</p>
       </a>
-      <a href="https://youwereneverseries.arniefelicilda.com/your-life-is-not-a-competition.html" target="_blank" rel="noopener" class="writing-card">
-        <p class="writing-card-title">Your Life Is Not a Competition</p>
-        <p class="writing-card-excerpt">You are not behind. You are simply living a different version than the one you are comparing yourself to.</p>
+      <a href="https://youwereneverseries.arniefelicilda.com/12-books-about-identity-everyone-should-read.html" target="_blank" rel="noopener" class="writing-card">
+        <img src="https://youwereneverseries.arniefelicilda.com/12-books-about-identity-everyone-should-read-pin.jpg" alt="12 Books About Identity Everyone Should Read" class="writing-card-img" loading="lazy">
+        <p class="writing-card-title">12 Books About Identity Everyone Should Read</p>
+        <p class="writing-card-excerpt">Twelve books about identity, belonging, and becoming.</p>
       </a>
-      <a href="https://youwereneverseries.arniefelicilda.com/you-are-allowed-to-grow-slowly.html" target="_blank" rel="noopener" class="writing-card">
-        <p class="writing-card-title">You Are Allowed to Grow Slowly</p>
-        <p class="writing-card-excerpt">There is no deadline that says you have to become who you are right now.</p>
+      <a href="https://youwereneverseries.arniefelicilda.com/decision-making-vs-motivation.html" target="_blank" rel="noopener" class="writing-card">
+        <img src="https://youwereneverseries.arniefelicilda.com/decision-making-vs-motivation-pin.jpg" alt="Decision Making vs Motivation" class="writing-card-img" loading="lazy">
+        <p class="writing-card-title">Decision Making vs Motivation</p>
+        <p class="writing-card-excerpt">Progress depends more on decisions than motivation.</p>
       </a>
     </div>
   </div>
