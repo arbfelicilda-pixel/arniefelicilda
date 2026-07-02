@@ -51,6 +51,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .nav-dropdown-menu a:hover{color:var(--ink);background:#fafafa}
 .nav-cta{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all 0.2s}
 .nav-cta:hover{background:var(--ink);color:var(--white)}
+.nav-cta--dark{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.nav-cta--dark:hover{background:#2a2a2a}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .nav-hamburger span{display:block;width:20px;height:1px;background:var(--ink)}
 .nav-mobile{display:none;position:fixed;top:54px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99}
@@ -138,15 +140,9 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   <div class="nav-right">
     <a href="books.html" class="nav-link">Books</a>
     <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener" class="nav-link">Blog</a>
-    <div class="nav-dropdown">
-      <button class="nav-dropdown-toggle" id="resources-toggle">Resources</button>
-      <div class="nav-dropdown-menu" id="resources-menu">
-        <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
-        <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
-      </div>
-    </div>
     <a href="about.html" class="nav-link active">About</a>
-    <a href="#newsletter" class="nav-cta">Free Chapter</a>
+    <a href="the-letters.html" class="nav-cta nav-cta--dark">Newsletter</a>
+    <a href="index.html#free-chapter" class="nav-cta">Free Chapter</a>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -156,13 +152,9 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
 <div class="nav-mobile" id="nav-mobile">
   <a href="books.html">Books</a>
   <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener">Blog</a>
-  <button class="mobile-resources-toggle" id="mobile-resources-toggle">Resources</button>
-  <div class="mobile-resources-panel" id="mobile-resources-panel">
-    <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
-    <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
-  </div>
   <a href="about.html">About</a>
-  <a href="#newsletter">Free Chapter</a>
+  <a href="the-letters.html">Newsletter</a>
+  <a href="index.html#free-chapter">Free Chapter</a>
 </div>
 
 <!-- HERO -->
@@ -175,7 +167,7 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
       <h1 class="about-hero-name">Arnie Rose</h1>
       <p class="about-hero-role">Author of the You Were Never Series</p>
       <div class="about-hero-bio">
-        <p>Arnie Rose is the author of the You Were Never Series, a collection of books about identity, behavior, and self-leadership. Her books explore how people think, decide, and change. She also develops educational resources on project management and supply chain management.</p>
+        <p>Arnie Rose is the author of the You Were Never Series, a collection of books about identity, human behavior, and inner life. Her books explore how people think, decide, and lead. She also develops educational resources on project management and supply chain management.</p>
       </div>
     </div>
   </div>
@@ -224,13 +216,15 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
       <div class="footer-brand">
         <p class="fname">Arnie Rose</p>
         <p class="frole">Author of the You Were Never Series.</p>
-        <p class="fsub">Books and writing on identity, behavior, and decision-making.</p>
+        <p class="fsub">Books about identity, human behavior, and inner life.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
         <a href="books.html">Books</a>
         <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener">Blog</a>
         <a href="about.html">About</a>
+        <a href="the-letters.html">Newsletter</a>
+        <a href="index.html#free-chapter">Free Chapter</a>
       </div>
       <div class="footer-col">
         <h4>Follow on Instagram</h4>
@@ -246,19 +240,9 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
 (function(){
   var hamburger=document.getElementById('nav-hamburger');
   var mobileNav=document.getElementById('nav-mobile');
-  var resourcesToggle=document.getElementById('mobile-resources-toggle');
-  var resourcesPanel=document.getElementById('mobile-resources-panel');
-  var desktopResourcesToggle=document.getElementById('resources-toggle');
-  var desktopResourcesMenu=document.getElementById('resources-menu');
-  desktopResourcesToggle.addEventListener('click',function(e){
-    e.stopPropagation();
-    desktopResourcesMenu.classList.toggle('open');
-  });
-  document.addEventListener('click',function(){desktopResourcesMenu.classList.remove('open');});
   hamburger.addEventListener('click',function(e){e.stopPropagation();mobileNav.classList.toggle('open');});
-  resourcesToggle.addEventListener('click',function(e){e.stopPropagation();resourcesPanel.classList.toggle('open');});
-  document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');resourcesPanel.classList.remove('open');});});
-  document.addEventListener('click',function(){mobileNav.classList.remove('open');resourcesPanel.classList.remove('open');});
+  document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');});});
+  document.addEventListener('click',function(){mobileNav.classList.remove('open');});
 })();
 </script>
 </body>
