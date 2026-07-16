@@ -96,7 +96,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 /* CARD */
 .blog-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--faint);transition:border-color 0.2s,transform 0.2s}
 .blog-card:hover{border-color:var(--terra);transform:translateY(-2px)}
-.blog-card-img{width:100%;aspect-ratio:2/3;overflow:hidden;display:block;background:var(--parchment-dark)}
+.blog-card-img{width:100%;aspect-ratio:4/5;overflow:hidden;display:block;background:var(--parchment-dark)}
 .start-grid .blog-card-img,.books-reading-grid .blog-card-img{aspect-ratio:4/5}
 .books-reading-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,220px));gap:24px;justify-content:start}
 .blog-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s}
@@ -226,7 +226,7 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
   <div class="books-reading-grid">
 
     <a href="https://youwereneverseries.arniefelicilda.com/10-books-that-will-change-how-you-see-yourself.html" class="blog-card blog-card-full">
-      <div class="blog-card-img"><img src="10-books-that-will-change-how-you-see-yourself-pin.jpg" alt="10 Books That Will Change How You See Yourself" loading="lazy"></div>
+      <div class="blog-card-img"><img src="https://youwereneverseries.arniefelicilda.com/10-books-that-will-change-how-you-see-yourself-pin.jpg" alt="10 Books That Will Change How You See Yourself" loading="lazy"></div>
       <div class="blog-card-body">
         <p class="blog-card-title">10 Books That Will Change How You See Yourself</p>
         <p class="blog-card-desc">Ten books that challenge how you see yourself.</p>
@@ -235,7 +235,7 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
     </a>
 
     <a href="https://youwereneverseries.arniefelicilda.com/12-books-about-identity-everyone-should-read.html" class="blog-card blog-card-full">
-      <div class="blog-card-img"><img src="12-books-about-identity-everyone-should-read-pin.jpg" alt="12 Books About Identity Everyone Should Read" loading="lazy"></div>
+      <div class="blog-card-img"><img src="https://youwereneverseries.arniefelicilda.com/12-books-about-identity-everyone-should-read-pin.jpg" alt="12 Books About Identity Everyone Should Read" loading="lazy"></div>
       <div class="blog-card-body">
         <p class="blog-card-title">12 Books About Identity Everyone Should Read</p>
         <p class="blog-card-desc">Twelve books about identity, belonging, and becoming.</p>
@@ -310,12 +310,19 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 </section>
 
 <div style="max-width:1200px; margin:0 auto; padding:40px 60px 64px; text-align:left; border-top:1px solid var(--faint);">
-  <a href="the-gentle-art-of-dying-upside-down.html" style="display:inline-block; padding:16px 32px; background:var(--terra); color:var(--parchment); font-family:var(--sans); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; margin-top:32px; margin-bottom:32px;">Explore The Gentle Art of Dying Upside Down</a>
-
-  <div style="max-width:340px; margin:0;">
-    <a href="the-gentle-art-of-dying-upside-down.html">
-      <img src="mockup-1-stacked.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose" style="width:100%; height:auto; display:block; box-shadow:0 8px 28px rgba(0,0,0,0.12);">
-    </a>
+  <h2 class="section-title">The New Release</h2>
+  <div style="display:flex; gap:56px; align-items:flex-start; margin-top:28px; flex-wrap:wrap;">
+    <div style="max-width:280px; flex-shrink:0;">
+      <a href="the-gentle-art-of-dying-upside-down.html">
+        <img src="mockup-1-stacked.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose" style="width:100%; height:auto; display:block; box-shadow:0 8px 28px rgba(0,0,0,0.12);">
+      </a>
+    </div>
+    <div style="flex:1; min-width:280px; padding-top:4px;">
+      <p style="font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:var(--terra); margin-bottom:14px;">Releasing August 15</p>
+      <p style="font-family:var(--playfair); font-style:italic; font-size:20px; color:var(--ink); margin-bottom:20px; line-height:1.4;">Holding On. Letting Go. Beginning Again.</p>
+      <p style="font-family:var(--body); font-size:16px; color:var(--ink-soft); line-height:1.75; margin-bottom:28px; max-width:480px;">A new book about the parts of change nobody rushes through in real life, the holding, the letting go, and the slow work of starting again on your own timeline.</p>
+      <a href="the-gentle-art-of-dying-upside-down.html" style="display:inline-block; padding:16px 32px; background:var(--terra); color:var(--parchment); font-family:var(--sans); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none;">Explore The Gentle Art of Dying Upside Down</a>
+    </div>
   </div>
 </div>
 
@@ -426,7 +433,7 @@ function monthLabel(dateStr){
 function cardHTML(post){
   var base = (typeof post.base !== 'undefined') ? post.base : BASE_URL;
   var url = base + post.slug + '.html';
-  var img = post.img ? post.img : (post.slug + '-pin.jpg');
+  var img = post.img ? post.img : (base + post.slug + '-pin.jpg');
   var readLabel = post.minRead + ' min read';
   return '<a href="' + url + '" class="blog-card">' +
     '<div class="blog-card-img"><img src="' + img + '" alt="' + post.title + '" loading="lazy"></div>' +
@@ -490,7 +497,7 @@ var featuredGrid = document.getElementById('featured-grid');
 featuredGrid.innerHTML = featuredSlugs.map(function(slug){
   var p = postBySlug[slug];
   var url = BASE_URL + p.slug + '.html';
-  var img = p.slug + '-pin.jpg';
+  var img = BASE_URL + p.slug + '-pin.jpg';
   return '<a href="' + url + '" class="blog-card blog-card-full">' +
     '<div class="blog-card-img"><img src="' + img + '" alt="' + p.title + '" loading="lazy"></div>' +
     '<div class="blog-card-body">' +
