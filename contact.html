@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · Arnie Rose</title>
+<meta name="description" content="General inquiries, reader questions, media requests, speaking invitations, and collaborations.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F9F7F2;
+  --charcoal:#1E1E1E;
+  --charcoal-soft:#4A4A46;
+  --terracotta:#C26A5E;
+  --hairline:#E5E1D8;
+  --burgundy:#5A1F2A;
+  --tan:#F4F1EA;
+  --playfair:'Playfair Display',Georgia,serif;
+  --body:'EB Garamond',Georgia,serif;
+  --sans:'Outfit',Arial,sans-serif;
+}
+body{background:var(--cream);color:var(--charcoal);font-family:var(--body);font-size:18px;line-height:1.7}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(249,247,242,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
+.nav-logo{font-family:var(--playfair);font-size:20px;color:var(--charcoal);text-decoration:none}
+.nav-right{display:flex;gap:30px;align-items:center}
+.nav-link{font-family:var(--sans);font-size:11px;color:var(--charcoal-soft);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase}
+.nav-link:hover{color:var(--terracotta)}
+.nav-cta{font-family:var(--sans);font-size:11px;font-weight:500;padding:9px 20px;background:var(--burgundy);color:var(--cream);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase}
+.nav-dropdown{position:relative}
+.nav-dropdown-trigger{background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:400;color:var(--charcoal-soft);letter-spacing:0.08em;text-transform:uppercase;padding:0}
+.nav-dropdown-trigger:hover{color:var(--terracotta)}
+.nav-dropdown-menu{display:none;position:absolute;top:28px;left:50%;transform:translateX(-50%);background:var(--cream);border:1px solid var(--hairline);box-shadow:0 8px 24px rgba(0,0,0,0.1);min-width:200px;padding:8px 0;z-index:50}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;padding:12px 20px;font-family:var(--sans);font-size:12px;letter-spacing:0.04em;text-transform:none;color:var(--charcoal-soft);text-decoration:none;transition:color 0.2s}
+.nav-dropdown-menu a:hover{color:var(--terracotta);background:var(--tan)}
+.nav-cta:hover{background:var(--terracotta)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--charcoal)}
+.nav-mobile{display:none;position:fixed;top:58px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--hairline);flex-direction:column;z-index:99}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--sans);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--charcoal-soft);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--hairline)}
+@media(max-width:900px){
+  .nav-right .nav-link{display:none}
+  .nav-hamburger{display:flex}
+}
+
+.hero{max-width:640px;margin:0 auto;padding:140px 60px 24px;text-align:center}
+.hero-eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--terracotta);margin-bottom:20px}
+.hero-title{font-family:var(--playfair);font-size:clamp(32px,5vw,48px);font-weight:700;line-height:1.2;color:var(--charcoal);margin-bottom:24px}
+.hero-intro{font-family:var(--body);font-size:18px;color:var(--charcoal-soft);max-width:520px;margin:0 auto}
+
+.editorial-note{max-width:600px;margin:48px auto;padding:32px 36px;background:var(--burgundy);text-align:center}
+.editorial-note p{font-family:var(--body);font-size:16px;color:rgba(249,247,242,0.85);margin-bottom:14px}
+.editorial-note a{display:inline-block;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(249,247,242,0.6);padding-bottom:2px}
+
+.contact-box{max-width:520px;margin:56px auto 100px;padding:56px 40px;background:var(--charcoal);text-align:center}
+.contact-box h2{font-family:var(--playfair);font-style:italic;font-size:26px;color:var(--cream);margin-bottom:16px}
+.contact-box p{font-family:var(--body);font-size:16px;color:rgba(249,247,242,0.7);margin-bottom:32px}
+.email-btn{display:inline-block;padding:16px 36px;background:var(--cream);color:var(--charcoal);font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none}
+.email-btn:hover{background:var(--terracotta);color:var(--cream)}
+
+footer{padding:40px 60px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;border-top:1px solid var(--hairline)}
+.footer-logo{font-family:var(--playfair);font-size:20px;color:var(--charcoal);text-decoration:none}
+.footer-col-label{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--charcoal-soft);margin-bottom:12px}
+.footer-col-link{display:block;font-family:var(--sans);font-size:13px;color:var(--charcoal-soft);text-decoration:none;margin-bottom:8px}
+.footer-col-link:hover{color:var(--terracotta)}
+.footer-copy{font-family:var(--sans);font-size:12px;color:var(--charcoal-soft)}
+.footer-bottom{max-width:1200px;margin:28px auto 0;padding-top:20px;border-top:1px solid var(--hairline);text-align:center}
+
+@media(max-width:640px){
+  nav{padding:14px 20px}
+  .hero{padding:96px 24px 20px}
+  .editorial-note,.contact-box{margin-left:20px;margin-right:20px;padding:32px 24px}
+  footer{padding:28px 20px;flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Arnie Rose</a>
+  <div class="nav-right">
+    <a href="/#books" class="nav-link">The Books</a>
+    <a href="the-gentle-art-of-dying-upside-down.html" class="nav-link">New Release</a>
+    <a href="archive.html" class="nav-link">Archive</a>
+    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
+    <div class="nav-dropdown">
+      <button class="nav-link nav-dropdown-trigger" id="explore-more-trigger">Explore More ▾</button>
+      <div class="nav-dropdown-menu" id="explore-more-menu">
+        <a href="about.html">About</a>
+        <a href="literary-collections.html">Literary Collection</a>
+        <a href="collaborations.html">Collaborations</a>
+      </div>
+    </div>
+    <a href="https://arniefelicilda.com/the-letters.html" class="nav-cta">Newsletter</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="/#books">The Books</a>
+  <a href="the-gentle-art-of-dying-upside-down.html">New Release</a>
+  <a href="archive.html">Archive</a>
+  <a href="editorial-services.html">Editorial Services</a>
+  <a href="about.html">About</a>
+  <a href="literary-collections.html">Literary Collection</a>
+  <a href="collaborations.html">Collaborations</a>
+  <a href="https://arniefelicilda.com/the-letters.html">Newsletter</a>
+</div>
+
+<div class="hero">
+  <p class="hero-eyebrow">Contact</p>
+  <h1 class="hero-title">Get in Touch</h1>
+  <p class="hero-intro">For reader questions, media requests, speaking invitations, collaborations, and general inquiries.</p>
+</div>
+
+<div class="editorial-note">
+  <p>For editorial services inquiry</p>
+  <!-- REPLACE: link once the Editorial Services page is built -->
+  <a href="editorial-services.html">Visit the Editorial Services Page &rarr;</a>
+</div>
+
+<div class="contact-box">
+  <h2>Say hello.</h2>
+  <p>I read everything myself.</p>
+  <a href="mailto:keystonebooks@hotmail.com" class="email-btn">Email Me</a>
+</div>
+
+<footer>
+  <div>
+    <a href="/" class="footer-logo">Arnie Rose</a>
+    <p style="font-family:var(--sans);font-size:12px;color:var(--charcoal-soft);margin-top:6px">Author of The Gentle Art of Dying Upside Down and the You Were Never series.</p>
+    <p style="font-family:var(--sans);font-size:12px;color:var(--charcoal-soft);margin-top:2px">Books about identity, human behavior, and inner life.</p>
+  </div>
+  <div style="display:flex;gap:48px;flex-wrap:wrap">
+    <div>
+      <p class="footer-col-label">Explore</p>
+      <a href="/#books" class="footer-col-link">Books</a>
+      <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="footer-col-link">You Were Never Series</a>
+      <a href="the-gentle-art-of-dying-upside-down.html" class="footer-col-link">The Gentle Art of Dying Upside Down</a>
+      <a href="https://arniefelicilda.com/the-letters.html" class="footer-col-link">Newsletter</a>
+      <a href="https://byarnierose.substack.com" target="_blank" rel="noopener" class="footer-col-link">Subscribe on Substack</a>
+    </div>
+    <div>
+      <p class="footer-col-label">Follow</p>
+      <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener" class="footer-col-link">@writer.arnierose</a>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-copy">© 2026 Arnie Rose. All rights reserved.</span>
+</div>
+
+<script>
+var exploreMoreTrigger = document.getElementById('explore-more-trigger');
+var exploreMoreMenu = document.getElementById('explore-more-menu');
+if (exploreMoreTrigger) {
+  exploreMoreTrigger.addEventListener('click', function(e){
+    e.stopPropagation();
+    exploreMoreMenu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(){
+    exploreMoreMenu.classList.remove('open');
+  });
+}
+
+document.getElementById('nav-hamburger').addEventListener('click', function(){
+  document.getElementById('nav-mobile').classList.toggle('open');
+});
+</script>
+
+</body>
+</html>

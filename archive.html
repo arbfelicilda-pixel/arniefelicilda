@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Archive | Arnie Rose</title>
+<meta name="description" content="On identity, growth, and becoming, straight to your inbox.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Arnie Rose">
+<link rel="canonical" href="https://arniefelicilda.com/archive.html">
+<meta property="og:title" content="Subscribe | Check the Latest Blog">
+<meta property="og:description" content="On identity, growth, and becoming, straight to your inbox.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arniefelicilda.com/archive.html">
+<meta property="og:image" content="https://arniefelicilda.com/archive-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://arniefelicilda.com/author-og.jpg">
+<meta name="p:domain_verify" content="ebdfbca11b480ade931b5259af8ee9cf"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1208;
+  --ink-soft:#3d3020;
+  --parchment:#f7f2e8;
+  --parchment-dark:#ede6d3;
+  --white:#ffffff;
+  --terra:#5A1F2A;
+  --terra-dark:#3d1520;
+  --mid:#8a7a6a;
+  --faint:#d4c9bb;
+  --playfair:'Playfair Display',Georgia,serif;
+  --body:'EB Garamond',Georgia,serif;
+  --sans:'Outfit',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--parchment);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.7;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(247,242,232,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--faint)}
+.nav-logo{font-family:var(--playfair);font-size:20px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:-0.01em}
+.nav-right{display:flex;gap:32px;align-items:center}
+.nav-link{font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);text-decoration:none;transition:color 0.2s;letter-spacing:0.08em;text-transform:uppercase}
+.nav-link:hover{color:var(--ink)}
+.nav-cta{font-family:var(--sans);font-size:11px;font-weight:500;padding:9px 20px;background:#5A1F2A;color:var(--parchment);text-decoration:none;transition:all 0.2s;letter-spacing:0.08em;text-transform:uppercase;border:1px solid #5A1F2A}
+.nav-cta:hover{background:var(--terra);border-color:var(--terra);color:var(--parchment)}
+@media(max-width:900px){.nav-cta{display:none}}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all 0.2s}
+.nav-mobile{display:none;position:fixed;top:56px;left:0;right:0;background:var(--parchment);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99;box-shadow:0 4px 16px rgba(0,0,0,0.06)}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--faint);transition:color 0.2s}
+.nav-mobile a:last-child{border-bottom:none}
+.nav-mobile a:hover{color:var(--terra)}
+
+/* HERO */
+.page-hero{padding:120px 60px 56px;max-width:900px;margin:0 auto;text-align:center}
+.page-eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--terra);margin-bottom:16px}
+.page-title{font-family:var(--playfair);font-size:clamp(40px,6vw,68px);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:20px;letter-spacing:-0.02em}
+.page-desc{font-family:var(--body);font-size:19px;color:var(--mid);line-height:1.6;max-width:520px;margin:0 auto}
+.page-hero-rule{max-width:900px;margin:48px auto 0;border:none;border-top:1px solid var(--faint)}
+
+/* FEATURED (rotates weekly) */
+.start-here{padding:56px 60px 24px;max-width:1200px;margin:0 auto}
+.start-here-label{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--terra);margin-bottom:10px}
+.start-here-desc{font-family:var(--body);font-size:17px;color:var(--mid);margin-bottom:32px}
+.start-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+
+/* SECTION */
+.blog-section{padding:56px 60px;max-width:1200px;margin:0 auto}
+.section-header{margin-bottom:36px;padding-bottom:18px;border-bottom:2px solid var(--terra)}
+.section-title{font-family:var(--playfair);font-size:30px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:6px}
+.section-desc{font-family:var(--body);font-size:16px;color:var(--mid);line-height:1.6}
+
+/* ARCHIVE (flat, reverse-chron, grouped by month, horizontal scroll per month) */
+.archive-section{padding:16px 60px 8px;max-width:1200px;margin:0 auto}
+.month-group{margin-bottom:48px}
+.month-heading{font-family:var(--playfair);font-size:22px;font-weight:700;color:var(--ink);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--faint)}
+
+.carousel-wrap{position:relative}
+.carousel-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track .blog-card{flex:0 0 220px;scroll-snap-align:start}
+.carousel-arrow{position:absolute;top:calc(50% - 30px);width:36px;height:36px;border-radius:50%;background:var(--white);border:1px solid var(--faint);color:var(--ink);font-family:var(--sans);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;z-index:5;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.carousel-arrow:hover{background:var(--ink);color:var(--parchment);border-color:var(--ink)}
+.carousel-arrow.prev{left:-18px}
+.carousel-arrow.next{right:-18px}
+@media(max-width:640px){
+  .carousel-arrow{display:none}
+  .carousel-track .blog-card{flex:0 0 160px}
+}
+
+/* CARD */
+.blog-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--faint);transition:border-color 0.2s,transform 0.2s}
+.blog-card:hover{border-color:var(--terra);transform:translateY(-2px)}
+.blog-card-img{width:100%;aspect-ratio:2/3;overflow:hidden;display:block;background:var(--parchment-dark)}
+.start-grid .blog-card-img,.books-reading-grid .blog-card-img{aspect-ratio:4/5}
+.books-reading-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,220px));gap:24px;justify-content:start}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s}
+.blog-card:hover .blog-card-img img{transform:scale(1.02)}
+.blog-card-body{padding:14px 14px 16px;flex:1;display:flex;flex-direction:column}
+.blog-card-title{font-family:var(--playfair);font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:10px;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.blog-card-meta{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);display:flex;align-items:center;justify-content:space-between}
+.blog-card-date{color:var(--mid);letter-spacing:0.05em}
+
+/* CARD-FULL (Featured + Books & Reading: keeps description) */
+.blog-card-full .blog-card-body{padding:16px 16px 18px}
+.blog-card-full .blog-card-title{font-size:16px;flex:none;margin-bottom:8px}
+.blog-card-full .blog-card-desc{font-family:var(--body);font-size:13px;color:var(--mid);line-height:1.5;flex:1;margin-bottom:12px}
+.blog-card-full .blog-card-meta{justify-content:space-between}
+
+/* DIVIDER */
+.section-divider{border:none;border-top:1px solid var(--faint);margin:0 60px}
+
+/* EMAIL */
+.email-strip{padding:56px 60px;background:var(--terra);text-align:center}
+.email-strip h3{font-family:var(--playfair);font-size:36px;font-weight:400;color:var(--parchment);margin-bottom:12px}
+.email-strip p{font-family:var(--body);font-size:16px;color:rgba(247,242,232,0.7);margin-bottom:24px}
+.email-strip form{display:flex;gap:0;justify-content:center;flex-wrap:wrap;max-width:500px;margin:0 auto}
+.email-strip input{padding:14px 18px;font-family:var(--sans);font-size:14px;border:none;min-width:260px;color:#1a1208;background:var(--parchment);outline:none;flex:1}
+.email-strip button{padding:14px 28px;background:var(--ink);color:var(--parchment);font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap}
+.email-strip button:hover{background:#333}
+.email-privacy{font-family:var(--sans)!important;font-size:12px!important;color:rgba(247,242,232,0.35)!important;margin-top:14px!important;margin-bottom:0!important}
+
+/* BOOKS SECTION */
+.books-section{padding:56px 60px;max-width:1200px;margin:0 auto}
+.books-section .section-header{border-bottom:none;padding-bottom:0}
+.books-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px;margin-top:32px}
+.book-item{text-align:left}
+.book-item img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;margin-bottom:14px;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.book-item h4{font-family:var(--playfair);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.3;min-height:2.6em}
+.book-item p{font-family:var(--body);font-size:13px;color:var(--mid);line-height:1.5}
+
+/* FOOTER */
+footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:var(--playfair);font-size:16px;color:var(--ink);text-decoration:none}
+.footer-logo span{color:var(--terra)}
+.footer-copy{font-family:var(--sans);font-size:12px;color:var(--mid)}
+.footer-link{font-family:var(--sans);font-size:12px;color:var(--mid);text-decoration:none}
+.footer-link:hover{color:var(--terra)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .books-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:960px){
+  nav{padding:16px 32px}
+  .nav-right .nav-link{display:none}
+  .nav-hamburger{display:flex}
+  .blog-section,.start-here,.books-section,.archive-section{padding-left:32px;padding-right:32px}
+  .page-hero{padding:100px 32px 48px}
+  .section-divider{margin:0 32px}
+}
+@media(max-width:640px){
+  nav{padding:14px 20px}
+  .start-grid{grid-template-columns:repeat(2,1fr)}
+  .books-grid{grid-template-columns:repeat(2,1fr)}
+  .blog-section,.start-here,.books-section,.archive-section{padding-left:20px;padding-right:20px}
+  .page-hero{padding:96px 20px 40px}
+  .section-divider{margin:0 20px}
+  .email-strip{padding:48px 20px}
+  footer{padding:32px 20px;flex-direction:column;align-items:flex-start;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Arnie Rose</a>
+  <div class="nav-right">
+    <a href="/#books" class="nav-link">The Books</a>
+    <a href="literary-collections.html" class="nav-link">Literary Collection</a>
+    <a href="collaborations.html" class="nav-link">Collaborations</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
+    <a href="https://arniefelicilda.com/the-letters.html" class="nav-cta">Newsletter</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="/">Home</a>
+  <a href="/#books">The Books</a>
+  <a href="literary-collections.html">Literary Collection</a>
+  <a href="collaborations.html">Collaborations</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="editorial-services.html">Editorial Services</a>
+  <a href="https://arniefelicilda.com/the-letters.html">Newsletter</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <h1 class="page-title">The Archive</h1>
+  <p class="page-desc">A collection of essays on identity, self-worth, growth, and becoming.</p>
+</div>
+<hr class="page-hero-rule">
+
+<!-- FEATURED (rotates weekly, pulled from an evergreen pool) -->
+<div class="start-here">
+  <p class="start-here-label">Essential Reading</p>
+  <div class="start-grid" id="featured-grid"></div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ARCHIVE -->
+<section class="archive-section">
+  <div id="archive-list"></div>
+</section>
+
+<hr class="section-divider">
+
+<!-- BOOKS & READING -->
+<section class="blog-section">
+  <div class="section-header">
+    <h2 class="section-title">Books &amp; Reading</h2>
+    <p class="section-desc">Reading lists and book recommendations.</p>
+  </div>
+  <div class="books-reading-grid">
+
+    <a href="https://youwereneverseries.arniefelicilda.com/10-books-that-will-change-how-you-see-yourself.html" class="blog-card blog-card-full">
+      <div class="blog-card-img"><img src="10-books-that-will-change-how-you-see-yourself-pin.jpg" alt="10 Books That Will Change How You See Yourself" loading="lazy"></div>
+      <div class="blog-card-body">
+        <p class="blog-card-title">10 Books That Will Change How You See Yourself</p>
+        <p class="blog-card-desc">Ten books that challenge how you see yourself.</p>
+        <div class="blog-card-meta"><span>10 min read</span><span>Read →</span></div>
+      </div>
+    </a>
+
+    <a href="https://youwereneverseries.arniefelicilda.com/12-books-about-identity-everyone-should-read.html" class="blog-card blog-card-full">
+      <div class="blog-card-img"><img src="12-books-about-identity-everyone-should-read-pin.jpg" alt="12 Books About Identity Everyone Should Read" loading="lazy"></div>
+      <div class="blog-card-body">
+        <p class="blog-card-title">12 Books About Identity Everyone Should Read</p>
+        <p class="blog-card-desc">Twelve books about identity, belonging, and becoming.</p>
+        <div class="blog-card-meta"><span>10 min read</span><span>Read →</span></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- EMAIL -->
+<div class="email-strip" id="email-strip">
+  <h3>Beyond the Page</h3>
+  <p>Join the weekly newsletter. Early access on original writing: The Blind Spot Series, Ode to Home: Letters of the Living, and Beyond the Page.</p>
+  <form action="https://assets.mailerlite.com/jsonp/2484784/forms/191860425663448888/subscribe" method="post">
+    <input name="fields[email]" type="email" placeholder="Your email address" required>
+    <input type="hidden" name="ml-submit" value="1">
+    <input type="hidden" name="anticsrf" value="true">
+    <button type="submit">Join The Letters</button>
+  </form>
+  <p class="email-privacy">No spam. Unsubscribe anytime.</p>
+</div>
+
+<!-- THE BOOKS -->
+<section class="books-section">
+  <div class="section-header">
+    <h2 class="section-title">The Books</h2>
+    <div style="padding:16px 0 20px;">
+      <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" style="display:inline-block; padding:16px 32px; background:var(--terra); color:var(--parchment); font-family:var(--sans); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none;">Explore the You Were Never Series</a>
+    </div>
+    <p class="section-desc">Six books exploring identity, self-worth, visibility, belonging, and personal growth.</p>
+  </div>
+  <div class="books-grid">
+
+    <div class="book-item">
+      <img src="ywn-behind-cover-mockup.jpg" alt="You Were Never Behind">
+      <h4>You Were Never<br>Behind</h4>
+      <p>Stop Measuring Your Life Against a Timeline That Was Never Yours</p>
+    </div>
+
+    <div class="book-item">
+      <img src="ywn-ordinary-cover-mockup.jpg" alt="You Were Never Ordinary">
+      <h4>You Were Never<br>Ordinary</h4>
+      <p>The Hidden Advantage You Already Have and How to Finally Use It</p>
+    </div>
+
+    <div class="book-item">
+      <img src="ywn-invisible-cover-mockup.jpg" alt="You Were Never Invisible">
+      <h4>You Were Never<br>Invisible</h4>
+      <p>How to Get Recognized Without Chasing Attention</p>
+    </div>
+
+    <div class="book-item">
+      <img src="ywn-dispensable-cover-mockup.jpg" alt="You Were Never Dispensable">
+      <h4>You Were Never<br>Dispensable</h4>
+      <p>Stop Performing Your Worth and Start Building the Version That Holds Under Pressure</p>
+    </div>
+
+    <div class="book-item">
+      <img src="ywn-overruled-cover-mockup.jpg" alt="You Were Never Overruled">
+      <h4>You Were Never<br>Overruled</h4>
+      <p>The Art of Holding Your Ground When Rooms, People, and Systems Push Back</p>
+    </div>
+
+    <div class="book-item">
+      <img src="ywn-mute-cover-mockup.jpg" alt="You Were Never Mute">
+      <h4>You Were Never<br>Mute</h4>
+      <p>What to Say, When to Say It, and How to Make Every Conversation Work for You</p>
+    </div>
+
+  </div>
+</section>
+
+<div style="max-width:1200px; margin:0 auto; padding:40px 60px 64px; text-align:left; border-top:1px solid var(--faint);">
+  <a href="the-gentle-art-of-dying-upside-down.html" style="display:inline-block; padding:16px 32px; background:var(--terra); color:var(--parchment); font-family:var(--sans); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; margin-top:32px; margin-bottom:32px;">Explore The Gentle Art of Dying Upside Down</a>
+
+  <div style="max-width:340px; margin:0;">
+    <a href="the-gentle-art-of-dying-upside-down.html">
+      <img src="mockup-1-stacked.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose" style="width:100%; height:auto; display:block; box-shadow:0 8px 28px rgba(0,0,0,0.12);">
+    </a>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;width:100%;max-width:1200px;margin:0 auto">
+    <div>
+      <a href="/" class="footer-logo">Arnie Rose</a>
+      <p style="font-family:var(--sans);font-size:12px;color:var(--mid);margin-top:6px;">Author of The Gentle Art of Dying Upside Down and the You Were Never series.</p>
+      <p style="font-family:var(--sans);font-size:12px;color:var(--mid);margin-top:2px;">Books about identity, human behavior, and inner life.</p>
+    </div>
+    <div style="display:flex;gap:48px;flex-wrap:wrap">
+      <div>
+        <p style="font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:12px">Explore</p>
+        <a href="/#books" style="display:block;font-family:var(--sans);font-size:13px;color:var(--ink-soft);text-decoration:none;margin-bottom:8px">Books</a>
+        <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" style="display:block;font-family:var(--sans);font-size:13px;color:var(--ink-soft);text-decoration:none;margin-bottom:8px">You Were Never Series</a>
+        <a href="the-gentle-art-of-dying-upside-down.html" style="display:block;font-family:var(--sans);font-size:13px;color:var(--ink-soft);text-decoration:none;margin-bottom:8px">The Gentle Art of Dying Upside Down</a>
+        <a href="https://arniefelicilda.com/the-letters.html" style="display:block;font-family:var(--sans);font-size:13px;color:var(--ink-soft);text-decoration:none;margin-bottom:8px">Newsletter</a>
+        <a href="https://byarnierose.substack.com" target="_blank" rel="noopener" style="display:block;font-family:var(--sans);font-size:13px;color:var(--ink-soft);text-decoration:none">Subscribe on Substack</a>
+      </div>
+      <div>
+        <p style="font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:12px">Follow</p>
+        <a href="https://www.instagram.com/youwereneverseries" target="_blank" rel="noopener" style="display:block;font-family:var(--sans);font-size:13px;color:var(--ink-soft);text-decoration:none;margin-bottom:8px">@youwereneverseries</a>
+        <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener" style="display:block;font-family:var(--sans);font-size:13px;color:var(--ink-soft);text-decoration:none">@writer.arnierose</a>
+      </div>
+    </div>
+  </div>
+  <div style="width:100%;max-width:1200px;margin:28px auto 0;padding-top:20px;border-top:1px solid var(--faint)">
+    <span class="footer-copy">© 2026 Arnie Rose. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+var hamburger = document.getElementById('nav-hamburger');
+var mobileNav = document.getElementById('nav-mobile');
+hamburger.addEventListener('click', function(){
+  mobileNav.classList.toggle('open');
+});
+document.querySelectorAll('.nav-mobile a').forEach(function(a){
+  a.addEventListener('click', function(){
+    mobileNav.classList.remove('open');
+  });
+});
+
+/* ---------- ARCHIVE DATA (newest first) ----------
+   minRead is computed from actual post word counts where the post file
+   was available to check. Marked (est.) where the file wasn't available
+   to verify — confirm actual length before final publish. */
+var BASE_URL = 'https://youwereneverseries.arniefelicilda.com/';
+var posts = [
+  {slug:'why-starting-over-is-hard-but-worth-it', title:'Why Starting Over Is Hard, and Why It Is Still Worth It', date:'2026-07-16', minRead:7, base:'', img:'courage-to-start-over-2x3.jpg'},
+  {slug:'the-gentle-art-of-letting-go-without-losing-yourself', title:'The Gentle Art of Letting Go Without Losing Yourself', date:'2026-07-14', minRead:7, base:'', img:'gentle-art-of-letting-go-2x3.jpg'},
+  {slug:'confidence-vs-self-worth', title:'Confidence vs Self-Worth', date:'2026-06-28', minRead:7},
+  {slug:'12-books-about-identity-everyone-should-read', title:'12 Books About Identity Everyone Should Read', date:'2026-06-25', minRead:10},
+  {slug:'decision-making-vs-motivation', title:'Decision Making vs Motivation', date:'2026-06-22', minRead:9},
+  {slug:'stop-seeking-permission', title:'Stop Seeking Permission', date:'2026-06-19', minRead:7},
+  {slug:'self-worth-and-achievement', title:'Self-Worth and Achievement', date:'2026-06-16', minRead:8},
+  {slug:'why-hardworking-people-feel-invisible', title:'Why Hardworking People Feel Invisible', date:'2026-06-13', minRead:9},
+  {slug:'how-labels-shape-self-image', title:'How Labels Shape Self-Image', date:'2026-06-10', minRead:8},
+  {slug:'psychology-of-comparing-yourself-to-others', title:'Psychology of Comparing Yourself to Others', date:'2026-06-07', minRead:9},
+  {slug:'10-books-that-will-change-how-you-see-yourself', title:'10 Books That Will Change How You See Yourself', date:'2026-06-04', minRead:10},
+  {slug:'why-do-people-feel-behind-in-life', title:'Why Do People Feel Behind in Life', date:'2026-06-01', minRead:10},
+  {slug:'you-were-never-waiting-for-permission', title:'You Were Never Waiting for Permission', date:'2026-05-28', minRead:9},
+  {slug:'you-were-never-replaceable', title:'You Were Never Replaceable', date:'2026-05-25', minRead:8},
+  {slug:'you-do-not-need-to-shrink-to-be-accepted', title:'You Do Not Need to Shrink to Be Accepted', date:'2026-05-22', minRead:8},
+  {slug:'what-you-keep-not-saying-is-costing-you-more-than-you-think', title:'What You Keep Not Saying Is Costing You More Than You Think', date:'2026-05-19', minRead:8},
+  {slug:'the-one-habit-that-is-quietly-costing-you-everything', title:'The One Habit That Is Quietly Costing You Everything', date:'2026-05-16', minRead:8},
+  {slug:'how-to-build-confidence-without-performing-it', title:'How to Build Confidence Without Performing It', date:'2026-05-13', minRead:8},
+  {slug:'consistency-is-not-motivation-it-is-identity', title:'Consistency Is Not Motivation. It Is Identity.', date:'2026-05-10', minRead:8},
+  {slug:'7-signs-you-are-growing-even-when-it-does-not-feel-like-it', title:'7 Signs You Are Growing Even When It Does Not Feel Like It', date:'2026-05-07', minRead:8},
+  {slug:'6-shifts-that-change-how-you-see-yourself', title:'6 Shifts That Change How You See Yourself', date:'2026-05-04', minRead:9},
+  {slug:'6-questions-that-will-tell-you-who-you-actually-are', title:'6 Questions That Will Tell You Who You Actually Are', date:'2026-05-01', minRead:9},
+  {slug:'becoming-takes-longer-than-people-admit', title:'Becoming Takes Longer Than People Admit', date:'2026-04-28', minRead:10},
+  {slug:'some-journeys-take-the-long-way-home', title:'Some Journeys Take the Long Way Home', date:'2026-04-25', minRead:8},
+  {slug:'your-life-is-not-a-competition', title:'Your Life Is Not a Competition', date:'2026-04-22', minRead:8},
+  {slug:'healing-is-not-proof-that-you-failed', title:'Healing Is Not Proof That You Failed', date:'2026-04-19', minRead:9},
+  {slug:'not-everyone-blooms-in-the-same-season', title:'Not Everyone Blooms in the Same Season', date:'2026-04-16', minRead:8},
+  {slug:'you-are-still-becoming', title:'You Are Still Becoming', date:'2026-04-13', minRead:8},
+  {slug:'you-are-allowed-to-grow-slowly', title:'You Are Allowed to Grow Slowly', date:'2026-04-10', minRead:8},
+  {slug:'growth-is-not-always-visible', title:'Growth Is Not Always Visible', date:'2026-04-07', minRead:8},
+  {slug:'you-are-not-running-out-of-time', title:'You Are Not Running Out of Time', date:'2026-04-04', minRead:7},
+  {slug:'your-timeline-was-never-wrong', title:'Your Timeline Was Never Wrong', date:'2026-04-01', minRead:8}
+];
+
+/* Evergreen pool eligible for weekly featured rotation
+   (excludes the two book-list posts, which are read-once, not re-featured) */
+var evergreenSlugs = [
+  'your-timeline-was-never-wrong','you-were-never-replaceable','growth-is-not-always-visible',
+  'you-were-never-waiting-for-permission','you-are-not-running-out-of-time','your-life-is-not-a-competition',
+  'you-do-not-need-to-shrink-to-be-accepted','you-are-allowed-to-grow-slowly','you-are-still-becoming',
+  'not-everyone-blooms-in-the-same-season','healing-is-not-proof-that-you-failed','some-journeys-take-the-long-way-home',
+  'becoming-takes-longer-than-people-admit','why-do-people-feel-behind-in-life','stop-seeking-permission',
+  'consistency-is-not-motivation-it-is-identity'
+];
+
+var MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function monthKey(dateStr){
+  var d = new Date(dateStr + 'T00:00:00');
+  return d.getFullYear() + '-' + d.getMonth();
+}
+function monthLabel(dateStr){
+  var d = new Date(dateStr + 'T00:00:00');
+  return MONTH_NAMES[d.getMonth()] + ' ' + d.getFullYear();
+}
+
+function cardHTML(post){
+  var base = (typeof post.base !== 'undefined') ? post.base : BASE_URL;
+  var url = base + post.slug + '.html';
+  var img = post.img ? post.img : (post.slug + '-pin.jpg');
+  var readLabel = post.minRead + ' min read';
+  return '<a href="' + url + '" class="blog-card">' +
+    '<div class="blog-card-img"><img src="' + img + '" alt="' + post.title + '" loading="lazy"></div>' +
+    '<div class="blog-card-body">' +
+      '<p class="blog-card-title">' + post.title + '</p>' +
+      '<div class="blog-card-meta"><span>' + readLabel + '</span><span>Read →</span></div>' +
+    '</div></a>';
+}
+
+/* Group posts by month, newest month first, each post newest-first within its month */
+var months = [];
+var monthMap = {};
+posts.forEach(function(p){
+  var key = monthKey(p.date);
+  if(!monthMap[key]){
+    monthMap[key] = {label: monthLabel(p.date), items: []};
+    months.push(monthMap[key]);
+  }
+  monthMap[key].items.push(p);
+});
+
+var listEl = document.getElementById('archive-list');
+months.forEach(function(m, idx){
+  var wrap = document.createElement('div');
+  wrap.className = 'month-group';
+  var trackId = 'track-' + idx;
+  wrap.innerHTML =
+    '<h3 class="month-heading">' + m.label + '</h3>' +
+    '<div class="carousel-wrap">' +
+      '<button class="carousel-arrow prev" data-target="' + trackId + '" data-dir="-1" aria-label="Scroll left">‹</button>' +
+      '<div class="carousel-track" id="' + trackId + '">' + m.items.map(cardHTML).join('') + '</div>' +
+      '<button class="carousel-arrow next" data-target="' + trackId + '" data-dir="1" aria-label="Scroll right">›</button>' +
+    '</div>';
+  listEl.appendChild(wrap);
+});
+
+document.querySelectorAll('.carousel-arrow').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var track = document.getElementById(btn.getAttribute('data-target'));
+    var dir = parseInt(btn.getAttribute('data-dir'), 10);
+    track.scrollBy({left: dir * (240 + 20) * 2, behavior: 'smooth'});
+  });
+});
+
+/* ---------- FEATURED: rotates automatically every week ---------- */
+function seededShuffle(arr, seed){
+  var a = arr.slice(), m = a.length, t, i, s = seed;
+  while(m){
+    s = (s * 9301 + 49297) % 233280;
+    i = Math.floor((s / 233280) * m--);
+    t = a[m]; a[m] = a[i]; a[i] = t;
+  }
+  return a;
+}
+var weekNumber = Math.floor(Date.now() / 604800000);
+var featuredSlugs = seededShuffle(evergreenSlugs, weekNumber).slice(0, 4);
+var postBySlug = {};
+posts.forEach(function(p){ postBySlug[p.slug] = p; });
+
+var featuredGrid = document.getElementById('featured-grid');
+featuredGrid.innerHTML = featuredSlugs.map(function(slug){
+  var p = postBySlug[slug];
+  var url = BASE_URL + p.slug + '.html';
+  var img = p.slug + '-pin.jpg';
+  return '<a href="' + url + '" class="blog-card blog-card-full">' +
+    '<div class="blog-card-img"><img src="' + img + '" alt="' + p.title + '" loading="lazy"></div>' +
+    '<div class="blog-card-body">' +
+      '<p class="blog-card-title">' + p.title + '</p>' +
+      '<div class="blog-card-meta"><span>' + p.minRead + ' min read</span><span>Read →</span></div>' +
+    '</div></a>';
+}).join('');
+</script>
+</body>
+</html>

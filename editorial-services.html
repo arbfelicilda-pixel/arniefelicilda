@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editorial Services · Arnie Rose</title>
+<meta name="description" content="Editorial assessment, manuscript development, and book positioning for nonfiction and literary projects.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F9F7F2;
+  --charcoal:#1E1E1E;
+  --charcoal-soft:#4A4A46;
+  --terracotta:#C26A5E;
+  --hairline:#E5E1D8;
+  --tan:#F4F1EA;
+  --burgundy:#5A1F2A;
+  --burgundy-soft:#7A2F3D;
+  --playfair:'Playfair Display',Georgia,serif;
+  --body:'EB Garamond',Georgia,serif;
+  --sans:'Outfit',Arial,sans-serif;
+}
+body{background:var(--cream);color:var(--charcoal);font-family:var(--body);font-size:18px;line-height:1.7}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(249,247,242,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
+.nav-logo{font-family:var(--playfair);font-size:20px;color:var(--charcoal);text-decoration:none}
+.nav-right{display:flex;gap:30px;align-items:center}
+.nav-link{font-family:var(--sans);font-size:11px;color:var(--charcoal-soft);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase}
+.nav-link:hover{color:var(--terracotta)}
+.nav-cta{font-family:var(--sans);font-size:11px;font-weight:500;padding:9px 20px;background:var(--burgundy);color:var(--cream);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase}
+.nav-dropdown{position:relative}
+.nav-dropdown-trigger{background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:400;color:var(--charcoal-soft);letter-spacing:0.08em;text-transform:uppercase;padding:0}
+.nav-dropdown-trigger:hover{color:var(--terracotta)}
+.nav-dropdown-menu{display:none;position:absolute;top:28px;left:50%;transform:translateX(-50%);background:var(--cream);border:1px solid var(--hairline);box-shadow:0 8px 24px rgba(0,0,0,0.1);min-width:200px;padding:8px 0;z-index:50}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;padding:12px 20px;font-family:var(--sans);font-size:12px;letter-spacing:0.04em;text-transform:none;color:var(--charcoal-soft);text-decoration:none;transition:color 0.2s}
+.nav-dropdown-menu a:hover{color:var(--terracotta)}
+.nav-cta:hover{background:var(--burgundy-soft)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--charcoal)}
+.nav-mobile{display:none;position:fixed;top:58px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--hairline);flex-direction:column;z-index:99}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--sans);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--charcoal-soft);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--hairline)}
+@media(max-width:900px){
+  .nav-right .nav-link{display:none}
+  .nav-hamburger{display:flex}
+}
+
+.hero{max-width:720px;margin:0 auto;padding:150px 60px 40px;text-align:center}
+.hero-eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--terracotta);margin-bottom:24px}
+.hero-title{font-family:var(--playfair);font-size:clamp(32px,4.5vw,46px);font-weight:700;line-height:1.25;color:var(--charcoal);margin-bottom:24px}
+.hero-sub{font-family:var(--body);font-size:19px;color:var(--charcoal-soft);max-width:560px;margin:0 auto 20px}
+.hero-note{font-family:var(--sans);font-size:12px;letter-spacing:0.05em;color:var(--charcoal-soft);margin-bottom:36px}
+.hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-block;padding:16px 32px;background:var(--burgundy);color:var(--cream);font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--burgundy-soft)}
+.btn-text{display:inline-block;padding:16px 8px;color:var(--charcoal-soft);font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--charcoal-soft)}
+
+.section{max-width:900px;margin:0 auto;padding:64px 60px;border-top:1px solid var(--hairline)}
+.section-label{font-family:var(--sans);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:20px;text-align:center}
+.section-title{font-family:var(--playfair);font-size:clamp(24px,3vw,30px);font-weight:700;color:var(--charcoal);text-align:center;margin-bottom:24px}
+.section p{font-family:var(--body);font-size:17px;color:var(--charcoal-soft);max-width:640px;margin:0 auto 18px;text-align:center}
+.genre-list{max-width:520px;margin:32px auto;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.genre-list div{font-family:var(--body);font-size:16px;color:var(--charcoal-soft);padding-left:16px;position:relative}
+.genre-list div::before{content:"—";position:absolute;left:0;color:var(--terracotta)}
+.exclusion{font-family:var(--sans);font-size:13px;color:var(--charcoal-soft);text-align:center;max-width:600px;margin:24px auto 0;font-style:italic}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2A2A2A;margin-top:40px;border:1px solid #2A2A2A}
+.service-card{background:var(--charcoal);padding:48px 36px;display:flex;flex-direction:column}
+.service-card p.service-num{font-family:var(--sans);font-size:11px;letter-spacing:0.1em;color:var(--terracotta);margin-bottom:20px;text-align:left;max-width:none}
+.service-title{font-family:var(--playfair);font-size:24px;font-weight:700;color:var(--cream);margin-bottom:16px;line-height:1.3}
+.service-for{font-family:var(--body);font-size:15px;color:rgba(249,247,242,0.65);font-style:italic;margin-bottom:28px;text-align:left}
+.service-includes{list-style:none;margin-bottom:auto;padding-bottom:32px}
+.service-includes li{font-family:var(--body);font-size:14.5px;color:rgba(249,247,242,0.7);margin-bottom:12px;padding-left:16px;position:relative;line-height:1.5}
+.service-includes li::before{content:"·";position:absolute;left:0;color:var(--terracotta)}
+.section#services{max-width:1100px}
+.service-card p.service-for{font-family:var(--body);font-size:15px;color:rgba(249,247,242,0.65);font-style:italic;margin-bottom:28px;text-align:left;max-width:none}
+.service-card p.service-best{display:none}
+
+.service-meta{margin-top:20px; padding-top:20px; border-top:1px solid #3A3A3A}
+.service-meta p{font-family:var(--sans); font-size:13px; color:rgba(249,247,242,0.8); text-align:left; margin-bottom:8px}
+.service-meta p strong{color:var(--terracotta); font-weight:500; text-transform:uppercase; font-size:11px; letter-spacing:0.05em; display:inline-block; min-width:100px}
+
+.availability-box{max-width:480px; margin:32px auto 0; border:1px solid var(--hairline)}
+.availability-row{display:flex; justify-content:space-between; align-items:center; padding:18px 24px; border-bottom:1px solid var(--hairline)}
+.availability-row:last-child{border-bottom:none}
+.availability-month{font-family:var(--playfair); font-size:16px; color:var(--charcoal)}
+.availability-status{font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; padding:6px 14px}
+.availability-status.full{background:var(--tan); color:var(--charcoal-soft)}
+.availability-status.limited{background:var(--burgundy); color:var(--cream)}
+.availability-status.open{background:var(--terracotta); color:var(--cream)}
+
+.pricing-table{width:100%; max-width:640px; margin:32px auto 0; border-collapse:collapse}
+.pricing-table th{font-family:var(--sans); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--charcoal-soft); text-align:left; padding:12px 16px; border-bottom:2px solid var(--charcoal)}
+.pricing-table td{font-family:var(--body); font-size:15px; color:var(--charcoal-soft); padding:14px 16px; border-bottom:1px solid var(--hairline)}
+.pricing-table tr:first-child td{color:var(--charcoal); font-weight:500}
+
+.process-list{max-width:640px;margin:40px auto 0}
+.process-step{display:flex;gap:24px;padding:28px 0;border-top:1px solid var(--hairline)}
+.process-step:last-child{border-bottom:1px solid var(--hairline)}
+.process-num{font-family:var(--playfair);font-size:24px;font-style:italic;color:var(--terracotta);flex-shrink:0;width:44px}
+.process-text h4{font-family:var(--playfair);font-size:18px;font-weight:700;color:var(--charcoal);margin-bottom:6px}
+.process-text p{font-family:var(--body);font-size:15px;color:var(--charcoal-soft);text-align:left;margin:0}
+
+.acceptance-box{max-width:640px;margin:40px auto 0;padding:32px 36px;background:var(--burgundy)}
+.acceptance-box p{text-align:left;font-size:15px;margin-bottom:14px;color:rgba(249,247,242,0.85)}
+.acceptance-box p:last-child{margin-bottom:0}
+.acceptance-box strong{color:var(--cream)}
+
+/* FORM */
+.form-section{max-width:680px;margin:0 auto;padding:64px 60px;border-top:1px solid var(--hairline)}
+.form-group{margin-bottom:28px}
+.form-row{display:flex;gap:20px}
+.form-row .form-group{flex:1}
+.form-label{display:block;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.05em;color:var(--charcoal);margin-bottom:10px;text-transform:uppercase}
+.form-label span{color:var(--charcoal-soft);text-transform:none;font-weight:400;letter-spacing:0}
+.form-input,.form-textarea,.form-select{width:100%;padding:13px 16px;background:var(--cream);border:1px solid var(--hairline);font-family:var(--body);font-size:16px;color:var(--charcoal)}
+.form-input:focus,.form-textarea:focus,.form-select:focus{outline:none;border-color:var(--burgundy)}
+.form-textarea{resize:vertical;min-height:100px}
+.checkbox-group{display:flex;flex-direction:column;gap:10px}
+.checkbox-item{display:flex;align-items:center;gap:10px}
+.checkbox-item input{width:16px;height:16px;accent-color:var(--burgundy)}
+.checkbox-item label{font-family:var(--body);font-size:15px;color:var(--charcoal-soft)}
+.form-hint{font-family:var(--sans);font-size:12px;color:var(--charcoal-soft);margin-top:8px;font-style:italic}
+.form-submit-wrap{text-align:center;margin-top:44px}
+
+footer{padding:40px 60px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;border-top:1px solid var(--hairline)}
+.footer-logo{font-family:var(--playfair);font-size:20px;color:var(--charcoal);text-decoration:none}
+.footer-col-label{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--charcoal-soft);margin-bottom:12px}
+.footer-col-link{display:block;font-family:var(--sans);font-size:13px;color:var(--charcoal-soft);text-decoration:none;margin-bottom:8px}
+.footer-col-link:hover{color:var(--terracotta)}
+.footer-copy{font-family:var(--sans);font-size:12px;color:var(--charcoal-soft)}
+.footer-bottom{max-width:1200px;margin:28px auto 0;padding-top:20px;border-top:1px solid var(--hairline);text-align:center}
+
+@media(max-width:800px){
+  .services-grid{grid-template-columns:1fr}
+  .genre-list{grid-template-columns:1fr}
+  .form-row{flex-direction:column;gap:0}
+}
+@media(max-width:640px){
+  nav{padding:14px 20px}
+  .hero{padding:96px 24px 32px}
+  .section,.form-section{padding:48px 24px}
+  footer{padding:28px 20px;flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Arnie Rose</a>
+  <div class="nav-right">
+    <a href="/#books" class="nav-link">The Books</a>
+    <a href="the-gentle-art-of-dying-upside-down.html" class="nav-link">New Release</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="archive.html" class="nav-link">Archive</a>
+    <a href="literary-collections.html" class="nav-link">Literary Collection</a>
+    <div class="nav-dropdown">
+      <button class="nav-link nav-dropdown-trigger" id="explore-more-trigger">Explore More ▾</button>
+      <div class="nav-dropdown-menu" id="explore-more-menu">
+        <a href="about.html">About</a>
+        <a href="collaborations.html">Collaborations</a>
+      </div>
+    </div>
+    <a href="https://arniefelicilda.com/the-letters.html" class="nav-cta">Newsletter</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="/#books">The Books</a>
+  <a href="the-gentle-art-of-dying-upside-down.html">New Release</a>
+  <a href="contact.html">Contact</a>
+  <a href="archive.html">Archive</a>
+  <a href="literary-collections.html">Literary Collection</a>
+  <a href="about.html">About</a>
+  <a href="collaborations.html">Collaborations</a>
+  <a href="https://arniefelicilda.com/the-letters.html">Newsletter</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">The Keystone House Editorial</p>
+  <h1 class="hero-title">Editorial Services for Books That Need More Than Surface-Level Feedback</h1>
+  <p class="hero-sub">Thoughtful editorial assessment, manuscript development, and book positioning for nonfiction and literary projects.</p>
+  <p class="hero-note">We accept a limited number of projects each month.</p>
+  <div class="hero-actions">
+    <a href="#submit" class="btn-primary">Apply for Editorial Review</a>
+    <a href="#services" class="btn-text">View Services</a>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="section">
+  <p class="section-label">Editorial Principles</p>
+  <p>Most editorial feedback is rushed, a manuscript read once and returned with surface notes. A book deserves more careful attention than that, which is why we accept a limited number of projects each month and evaluate every manuscript against five principles.</p>
+  <div class="genre-list" style="grid-template-columns:1fr; max-width:400px;">
+    <div>Clarity</div>
+    <div>Structure</div>
+    <div>Reader Experience</div>
+    <div>Originality</div>
+    <div>Long-Term Readability</div>
+  </div>
+</div>
+
+<!-- WHO ITS FOR -->
+<div class="section">
+  <p class="section-label">Who This Is For</p>
+  <p>We work with authors who have a clear book idea, a serious manuscript, and the willingness to revise.</p>
+  <div class="genre-list">
+    <div>Literary nonfiction</div>
+    <div>Self-help</div>
+    <div>Personal development</div>
+    <div>Reflective nonfiction</div>
+    <div>Business and leadership books</div>
+    <div>Memoir with a clear central theme</div>
+  </div>
+  <p class="exclusion">We do not currently accept academic theses, children's books, poetry-only manuscripts, or projects requiring ghostwriting.</p>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+  <p class="section-label">Services</p>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <p class="service-num">01</p>
+      <h3 class="service-title">Manuscript Development Review</h3>
+      <p class="service-for">For authors who are still building or restructuring the book.</p>
+      <ul class="service-includes">
+        <li>Book concept and central promise</li>
+        <li>Table of contents review</li>
+        <li>Chapter structure</li>
+        <li>Missing or unnecessary sections</li>
+        <li>Repetition and pacing</li>
+        <li>Reader journey</li>
+        <li>Development recommendations</li>
+      </ul>
+      <div class="service-meta">
+        <p><strong>Turnaround</strong> 3–5 business days</p>
+        <p><strong>Suitable for</strong> incomplete or early manuscripts</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <p class="service-num">02</p>
+      <h3 class="service-title">Comprehensive Manuscript Review</h3>
+      <p class="service-for">For authors with a completed draft who need an in-depth editorial assessment.</p>
+      <ul class="service-includes">
+        <li>Full manuscript assessment</li>
+        <li>Chapter-by-chapter notes</li>
+        <li>Structure and flow</li>
+        <li>Voice and clarity</li>
+        <li>Reader engagement</li>
+        <li>Editorial scorecard</li>
+        <li>Priority revision plan</li>
+      </ul>
+      <div class="service-meta">
+        <p><strong>Turnaround</strong> 5–10 business days</p>
+        <p><strong>Suitable for</strong> completed manuscripts</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <p class="service-num">03</p>
+      <h3 class="service-title">Cover-to-Cover Review</h3>
+      <p class="service-for">For authors preparing to publish or relaunch a book.</p>
+      <ul class="service-includes">
+        <li>Title and subtitle testing</li>
+        <li>Cover assessment</li>
+        <li>Book description and back cover copy</li>
+        <li>Author biography</li>
+        <li>Interior sample pages</li>
+        <li>Reader positioning</li>
+      </ul>
+      <div class="service-meta">
+        <p><strong>Turnaround</strong> 3–5 business days</p>
+        <p><strong>Suitable for</strong> pre-publication or relaunch</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- AVAILABILITY -->
+<div class="section">
+  <p class="section-label">Current Availability</p>
+  <div class="availability-box">
+    <div class="availability-row">
+      <span class="availability-month">July 2026</span>
+      <span class="availability-status full">Fully Booked</span>
+    </div>
+    <div class="availability-row">
+      <span class="availability-month">August 2026</span>
+      <span class="availability-status limited">Accepting 3 Projects</span>
+    </div>
+    <div class="availability-row">
+      <span class="availability-month">September 2026</span>
+      <span class="availability-status open">Open</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="section">
+  <p class="section-label">Our Editorial Process</p>
+  <div class="process-list">
+    <div class="process-step">
+      <span class="process-num">01</span>
+      <div class="process-text">
+        <h4>Submit Your Project</h4>
+        <p>Complete the inquiry form below. Your email opens automatically, pre-filled and ready to send.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="process-num">02</span>
+      <div class="process-text">
+        <h4>Editorial Fit Review</h4>
+        <p>Every project is reviewed for editorial fit, manuscript readiness, genre alignment, scope, and availability.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="process-num">03</span>
+      <div class="process-text">
+        <h4>Invitation and Recommendation</h4>
+        <p>Accepted projects receive a private invitation with the recommended service, scope, timeline, and price.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="process-num">04</span>
+      <div class="process-text">
+        <h4>Booking and Submission</h4>
+        <p>Once accepted, the manuscript is submitted in full and the project is officially booked.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="process-num">05</span>
+      <div class="process-text">
+        <h4>Editorial Review and Delivery</h4>
+        <p>The completed editorial report and recommendations are delivered by the agreed date.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="acceptance-box">
+    <p><strong>Project Acceptance.</strong> To maintain the quality and depth of our editorial work, we accept a limited number of projects. Submitting an inquiry does not guarantee acceptance.</p>
+    <p>Projects are selected based on editorial fit, manuscript readiness, scope, genre, timeline, and current availability. If we believe another service, editor, or stage of development would better serve the project, we will say so directly.</p>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="form-section" id="submit">
+  <p class="section-label">Apply for Editorial Review</p>
+  <h2 class="section-title">Tell Us About Your Project</h2>
+  <p style="text-align:center; color:var(--charcoal-soft); font-size:15px; margin-bottom:44px;">Complete the form below. Clicking "Apply for Editorial Review" opens your email program with everything pre-filled, ready for you to review and send.</p>
+
+  <form id="inquiryForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-input" id="full_name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" id="email" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Working Title</label>
+      <input type="text" class="form-input" id="title" required>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Genre</label>
+        <input type="text" class="form-input" id="genre" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Approximate Word Count</label>
+        <input type="text" class="form-input" id="word_count">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Current Stage</label>
+      <div class="checkbox-group">
+        <div class="checkbox-item"><input type="radio" name="stage" id="stage_outline" value="Outline"><label for="stage_outline">Outline</label></div>
+        <div class="checkbox-item"><input type="radio" name="stage" id="stage_first" value="First Draft"><label for="stage_first">First Draft</label></div>
+        <div class="checkbox-item"><input type="radio" name="stage" id="stage_revised" value="Revised Draft"><label for="stage_revised">Revised Draft</label></div>
+        <div class="checkbox-item"><input type="radio" name="stage" id="stage_final" value="Final Draft"><label for="stage_final">Final Draft</label></div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Service Requested</label>
+      <div class="checkbox-group">
+        <div class="checkbox-item"><input type="radio" name="service" id="svc_dev" value="Manuscript Development Review"><label for="svc_dev">Manuscript Development Review</label></div>
+        <div class="checkbox-item"><input type="radio" name="service" id="svc_comp" value="Comprehensive Manuscript Review"><label for="svc_comp">Comprehensive Manuscript Review</label></div>
+        <div class="checkbox-item"><input type="radio" name="service" id="svc_cover" value="Cover-to-Cover Review"><label for="svc_cover">Cover-to-Cover Review</label></div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Book Synopsis</label>
+      <textarea class="form-textarea" id="synopsis" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">What Would You Like Feedback On? <span>(structure, clarity, flow, title, reader engagement, overall manuscript)</span></label>
+      <textarea class="form-textarea" id="feedback" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Publication Goal</label>
+      <div class="checkbox-group">
+        <div class="checkbox-item"><input type="radio" name="pubgoal" id="pub_self" value="Self-Publishing"><label for="pub_self">Self-Publishing</label></div>
+        <div class="checkbox-item"><input type="radio" name="pubgoal" id="pub_trad" value="Traditional Publishing"><label for="pub_trad">Traditional Publishing</label></div>
+        <div class="checkbox-item"><input type="radio" name="pubgoal" id="pub_undecided" value="Still Deciding"><label for="pub_undecided">Still Deciding</label></div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Target Publication Date <span>(optional)</span></label>
+      <input type="text" class="form-input" id="pub_date">
+    </div>
+
+    <div class="form-submit-wrap">
+      <button type="submit" class="btn-primary">Apply for Editorial Review</button>
+    </div>
+  </form>
+</div>
+
+<footer>
+  <div>
+    <a href="/" class="footer-logo">Arnie Rose</a>
+    <p style="font-family:var(--sans);font-size:12px;color:var(--charcoal-soft);margin-top:6px">Author of The Gentle Art of Dying Upside Down and the You Were Never series.</p>
+    <p style="font-family:var(--sans);font-size:12px;color:var(--charcoal-soft);margin-top:2px">Books about identity, human behavior, and inner life.</p>
+  </div>
+  <div style="display:flex;gap:48px;flex-wrap:wrap">
+    <div>
+      <p class="footer-col-label">Explore</p>
+      <a href="/#books" class="footer-col-link">Books</a>
+      <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="footer-col-link">You Were Never Series</a>
+      <a href="the-gentle-art-of-dying-upside-down.html" class="footer-col-link">The Gentle Art of Dying Upside Down</a>
+      <a href="https://arniefelicilda.com/the-letters.html" class="footer-col-link">Newsletter</a>
+      <a href="https://byarnierose.substack.com" target="_blank" rel="noopener" class="footer-col-link">Subscribe on Substack</a>
+    </div>
+    <div>
+      <p class="footer-col-label">Follow</p>
+      <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener" class="footer-col-link">@writer.arnierose</a>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-copy">© 2026 Arnie Rose. All rights reserved.</span>
+</div>
+
+<script>
+var exploreMoreTrigger = document.getElementById('explore-more-trigger');
+var exploreMoreMenu = document.getElementById('explore-more-menu');
+if (exploreMoreTrigger) {
+  exploreMoreTrigger.addEventListener('click', function(e){
+    e.stopPropagation();
+    exploreMoreMenu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(){
+    exploreMoreMenu.classList.remove('open');
+  });
+}
+
+document.getElementById('nav-hamburger').addEventListener('click', function(){
+  document.getElementById('nav-mobile').classList.toggle('open');
+});
+
+document.getElementById('inquiryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  var name = document.getElementById('full_name').value;
+  var email = document.getElementById('email').value;
+  var title = document.getElementById('title').value;
+  var genre = document.getElementById('genre').value;
+  var wordCount = document.getElementById('word_count').value;
+  var stage = document.querySelector('input[name="stage"]:checked');
+  stage = stage ? stage.value : '';
+  var service = document.querySelector('input[name="service"]:checked');
+  service = service ? service.value : '';
+  var synopsis = document.getElementById('synopsis').value;
+  var feedback = document.getElementById('feedback').value;
+  var pubGoal = document.querySelector('input[name="pubgoal"]:checked');
+  pubGoal = pubGoal ? pubGoal.value : '';
+  var pubDate = document.getElementById('pub_date').value;
+
+  var subject = 'Editorial Inquiry' + (service ? ' - ' + service : '');
+  var body = 'Name: ' + name + '\n\n' +
+             'Email: ' + email + '\n\n' +
+             'Book Title: ' + title + '\n\n' +
+             'Genre: ' + genre + '\n\n' +
+             'Word Count: ' + wordCount + '\n\n' +
+             'Current Stage: ' + stage + '\n\n' +
+             'Requested Service: ' + service + '\n\n' +
+             'Publication Goal: ' + pubGoal + '\n\n' +
+             'Target Publication Date: ' + pubDate + '\n\n' +
+             'Book Synopsis:\n' + synopsis + '\n\n' +
+             'Areas I Would Like Feedback On:\n' + feedback;
+
+  var mailtoLink = 'mailto:keystonebooks@hotmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.location.href = mailtoLink;
+});
+</script>
+
+</body>
+</html>
