@@ -48,6 +48,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .nav-cta{font-family:var(--sans);font-size:11px;font-weight:500;padding:9px 20px;background:#5A1F2A;color:var(--parchment);text-decoration:none;transition:all 0.2s;letter-spacing:0.08em;text-transform:uppercase;border:1px solid #5A1F2A}
 .nav-cta:hover{background:var(--terra);border-color:var(--terra);color:var(--parchment)}
 @media(max-width:900px){.nav-cta{display:none}}
+.nav-dropdown{position:relative}
+.nav-dropdown-trigger{background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);letter-spacing:0.08em;text-transform:uppercase;padding:0}
+.nav-dropdown-trigger:hover{color:var(--ink)}
+.nav-dropdown-menu{display:none;position:absolute;top:28px;left:50%;transform:translateX(-50%);background:var(--white,#fff);border:1px solid var(--faint);box-shadow:0 8px 24px rgba(0,0,0,0.1);min-width:200px;padding:8px 0;z-index:50}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;padding:12px 20px;font-family:var(--body);font-size:12px;letter-spacing:0.02em;text-transform:none;color:var(--ink-soft);text-decoration:none;transition:color 0.2s}
+.nav-dropdown-menu a:hover{color:var(--terra);background:var(--cream-dark)}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all 0.2s}
 .nav-mobile{display:none;position:fixed;top:56px;left:0;right:0;background:var(--parchment);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99;box-shadow:0 4px 16px rgba(0,0,0,0.06)}
@@ -171,12 +178,18 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 <nav>
   <a href="/" class="nav-logo">Arnie Rose</a>
   <div class="nav-right">
-    <a href="/#books" class="nav-link">The Books</a>
+    <a href="/#books" class="nav-link">Books</a>
     <a href="literary-collections.html" class="nav-link">Literary Collection</a>
-    <a href="collaborations.html" class="nav-link">Collaborations</a>
-    <a href="about.html" class="nav-link">About</a>
+    <a href="the-gentle-art-of-dying-upside-down.html" class="nav-link">New Release</a>
+    <div class="nav-dropdown">
+      <button class="nav-link nav-dropdown-trigger" id="explore-more-trigger">Explore More &#9662;</button>
+      <div class="nav-dropdown-menu" id="explore-more-menu">
+        <a href="about.html">About</a>
+        <a href="collaborations.html">Collaborations</a>
+        <a href="editorial-services.html">Editorial Services</a>
+      </div>
+    </div>
     <a href="contact.html" class="nav-link">Contact</a>
-    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
     <a href="https://arniefelicilda.com/the-letters.html" class="nav-cta">Newsletter</a>
   </div>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
@@ -186,12 +199,13 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 
 <div class="nav-mobile" id="nav-mobile">
   <a href="/">Home</a>
-  <a href="/#books">The Books</a>
+  <a href="/#books">Books</a>
   <a href="literary-collections.html">Literary Collection</a>
-  <a href="collaborations.html">Collaborations</a>
+  <a href="the-gentle-art-of-dying-upside-down.html">New Release</a>
   <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+  <a href="collaborations.html">Collaborations</a>
   <a href="editorial-services.html">Editorial Services</a>
+  <a href="contact.html">Contact</a>
   <a href="https://arniefelicilda.com/the-letters.html">Newsletter</a>
 </div>
 
@@ -311,17 +325,18 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 
 <div style="max-width:1200px; margin:0 auto; padding:40px 60px 64px; text-align:left; border-top:1px solid var(--faint);">
   <h2 class="section-title">The New Release</h2>
-  <div style="display:flex; gap:56px; align-items:flex-start; margin-top:28px; flex-wrap:wrap;">
-    <div style="max-width:280px; flex-shrink:0;">
+  <div style="display:flex; gap:56px; align-items:center; margin-top:28px; flex-wrap:wrap;">
+    <div style="width:290px; flex-shrink:0;">
       <a href="the-gentle-art-of-dying-upside-down.html">
-        <img src="mockup-1-stacked.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose" style="width:100%; height:auto; display:block; box-shadow:0 8px 28px rgba(0,0,0,0.12);">
+        <img src="mockup-2-stacked.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose" style="width:100%; height:auto; display:block; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
       </a>
     </div>
-    <div style="flex:1; min-width:280px; padding-top:4px;">
-      <p style="font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:var(--terra); margin-bottom:14px;">Releasing August 15</p>
-      <p style="font-family:var(--playfair); font-style:italic; font-size:20px; color:var(--ink); margin-bottom:20px; line-height:1.4;">Holding On. Letting Go. Beginning Again.</p>
-      <p style="font-family:var(--body); font-size:16px; color:var(--ink-soft); line-height:1.75; margin-bottom:28px; max-width:480px;">A new book about the parts of change nobody rushes through in real life, the holding, the letting go, and the slow work of starting again on your own timeline.</p>
-      <a href="the-gentle-art-of-dying-upside-down.html" style="display:inline-block; padding:16px 32px; background:var(--terra); color:var(--parchment); font-family:var(--sans); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none;">Explore The Gentle Art of Dying Upside Down</a>
+    <div style="flex:1; min-width:260px;">
+      <p style="font-family:var(--sans); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--terra); font-weight:700; margin:0 0 14px;">Releasing August 15</p>
+      <p style="font-family:var(--playfair); font-weight:700; font-size:30px; color:var(--ink); margin:0 0 6px; line-height:1.25;">The Gentle Art of Dying Upside Down</p>
+      <p style="font-family:var(--playfair); font-style:italic; font-size:19px; color:var(--terra); margin:0 0 18px; line-height:1.4;">Holding On. Letting Go. Beginning Again.</p>
+      <p style="font-family:var(--body); font-size:17px; color:var(--ink-soft); line-height:1.7; margin:0 0 28px; max-width:420px;">How do we begin again, when what once felt like belonging starts to feel like endurance? A book about grief, identity, and the quiet courage of starting over.</p>
+      <a href="the-gentle-art-of-dying-upside-down.html" style="display:inline-block; padding:16px 32px; background:var(--terra); color:var(--parchment); font-family:var(--sans); font-size:12px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none;">EXPLORE MORE</a>
     </div>
   </div>
 </div>
@@ -357,6 +372,18 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 </footer>
 
 <script>
+var exploreMoreTrigger = document.getElementById('explore-more-trigger');
+var exploreMoreMenu = document.getElementById('explore-more-menu');
+if (exploreMoreTrigger) {
+  exploreMoreTrigger.addEventListener('click', function(e){
+    e.stopPropagation();
+    exploreMoreMenu.classList.toggle('open');
+  });
+  document.addEventListener('click', function(){
+    exploreMoreMenu.classList.remove('open');
+  });
+}
+
 var hamburger = document.getElementById('nav-hamburger');
 var mobileNav = document.getElementById('nav-mobile');
 hamburger.addEventListener('click', function(){
