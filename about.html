@@ -32,6 +32,7 @@
   --faint:#E2DED8;
   --terra:#C2714F;
   --blue:#1D6FA4;
+  --burgundy:#5A1F2A;
   --heading:'Cormorant Garamond',Georgia,serif;
   --body:'IBM Plex Mono',monospace;
 }
@@ -44,18 +45,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .nav-right{display:flex;gap:36px;align-items:center}
 .nav-link{font-family:var(--body);font-size:11px;font-weight:400;color:var(--mid);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
 .nav-link:hover,.nav-link.active{color:var(--ink)}
-.nav-dropdown{position:relative}
-.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--faint);min-width:200px;z-index:200;box-shadow:0 12px 28px rgba(0,0,0,0.07)}
-.nav-dropdown-menu.open{display:block}
-.nav-dropdown-toggle{font-family:var(--body);font-size:11px;font-weight:400;color:var(--mid);background:none;border:none;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
-.nav-dropdown-toggle:hover{color:var(--ink)}
-.nav-dropdown-menu a{display:block;font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:14px 20px;border-bottom:1px solid var(--faint)}
-.nav-dropdown-menu a:last-child{border-bottom:none}
-.nav-dropdown-menu a:hover{color:var(--ink);background:#fafafa}
+
 .nav-cta{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all 0.2s}
 .nav-cta:hover{background:var(--ink);color:var(--white)}
-.nav-cta--dark{background:var(--ink);color:var(--white);border-color:var(--ink)}
-.nav-cta--dark:hover{background:#2a2a2a}
+.nav-cta--dark{background:var(--burgundy);color:var(--white);border-color:var(--burgundy)}
+.nav-cta--dark:hover{background:#4A1922}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
 .nav-hamburger span{display:block;width:20px;height:1px;background:var(--ink)}
 .nav-mobile{display:none;position:fixed;top:54px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99}
@@ -104,8 +98,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .email-section p{font-family:var(--body);font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);margin-bottom:30px;line-height:1.7}
 .email-form{display:flex;gap:0;max-width:420px;margin:0 auto}
 .email-form input{flex:1;padding:13px 16px;font-family:var(--body);font-size:13px;border:none;outline:none;color:var(--ink)}
-.email-form button{padding:13px 22px;background:var(--terra);color:var(--white);font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap}
-.email-form button:hover{background:#a85e3e}
+.email-form button{padding:13px 22px;background:var(--burgundy);color:var(--white);font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap}
+.email-form button:hover{background:#4A1922}
 
 /* FOOTER — matches homepage/books.html */
 footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(--faint)}
@@ -142,10 +136,13 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   <a href="index.html" class="nav-logo">Arnie Rose</a>
   <div class="nav-right">
     <a href="books.html" class="nav-link">Books</a>
+    <a href="literary-collections.html" class="nav-link">Literary Collection</a>
     <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener" class="nav-link">Blog</a>
-    <a href="about.html" class="nav-link active">About</a>
+    <a href="collaborations.html" class="nav-link">Collaborations</a>
+    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
+    <a href="the-gentle-art-of-dying-upside-down.html" class="nav-link">New Release</a>
+    <a href="contact.html" class="nav-link">Contact</a>
     <a href="the-letters.html" class="nav-cta nav-cta--dark">Newsletter</a>
-    <a href="index.html#free-chapter" class="nav-cta">Free Chapter</a>
   </div>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -154,10 +151,13 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
 
 <div class="nav-mobile" id="nav-mobile">
   <a href="books.html">Books</a>
+  <a href="literary-collections.html">Literary Collection</a>
   <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener">Blog</a>
-  <a href="about.html">About</a>
+  <a href="collaborations.html">Collaborations</a>
+  <a href="editorial-services.html">Editorial Services</a>
+  <a href="the-gentle-art-of-dying-upside-down.html">New Release</a>
+  <a href="contact.html">Contact</a>
   <a href="the-letters.html">Newsletter</a>
-  <a href="index.html#free-chapter">Free Chapter</a>
 </div>
 
 <!-- HERO -->
@@ -168,9 +168,10 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
     </div>
     <div>
       <h1 class="about-hero-name">Arnie Rose</h1>
-      <p class="about-hero-role">Author of the You Were Never Series</p>
       <div class="about-hero-bio">
-        <p>Arnie Rose is the author of the You Were Never Series, a collection of books about identity, human behavior, and inner life. Her books explore how people think, decide, and lead. She also develops educational resources on project management and supply chain management.</p>
+        <p>Arnie Rose is a nonfiction author whose work explores identity, human behavior, and the quiet complexities of everyday life. She holds a master&rsquo;s degree in Literacy Education from Arizona State University and is the author of <a href="the-gentle-art-of-dying-upside-down.html" style="color:var(--burgundy);text-decoration:none;border-bottom:1px solid var(--burgundy);">The Gentle Art of Dying Upside Down</a> and <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" style="color:var(--burgundy);text-decoration:none;border-bottom:1px solid var(--burgundy);">the You Were Never series</a>.</p>
+        <p>Her writing extends beyond books through a growing body of <a href="literary-collections.html" style="color:var(--ink-soft);text-decoration:underline;">literary projects</a>. Her collection includes <em>Ode to Home: Letters of the Living</em>, <em>The Good Minute</em>, <em>The Blind Spot Series</em> on Substack, and <em>I Hate Being Human</em>, forthcoming in October 2026. Across these works, she writes about grief, belonging, change, and the ordinary moments that quietly shape a life.</p>
+        <p>Alongside her literary work, she develops educational resources in project management and supply chain management.</p>
       </div>
     </div>
   </div>
@@ -179,7 +180,7 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
 <!-- BOOKS AND RESOURCES -->
 <section class="cards-section">
   <div class="s-inner">
-    <h2 class="s-title">Books and Resources</h2>
+    <h2 class="s-title">Other Resources</h2>
   </div>
   <div class="s-inner">
     <div class="cards-grid">
@@ -203,11 +204,13 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
 <!-- NEWSLETTER -->
 <section class="email-section" id="newsletter">
   <div class="email-inner">
-    <h3>Get the first chapter free.</h3>
-    <p>You Were Never Behind. Chapter 1 delivered to your inbox.</p>
-    <form action="https://app.kit.com/forms/9328965/subscriptions" method="post" class="email-form">
-      <input name="email_address" type="email" placeholder="Your email address" required>
-      <button type="submit">Send the Chapter</button>
+    <h3>Beyond the Pages</h3>
+    <p>Join the weekly newsletter. Early access on original writing: The Blind Spot Series, Ode to Home: Letters of the Living, and Beyond the Page.</p>
+    <form action="https://assets.mailerlite.com/jsonp/2484784/forms/191860425663448888/subscribe" method="post" class="email-form">
+      <input name="fields[email]" type="email" placeholder="Your email address" required>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      <button type="submit">Join The Letters</button>
     </form>
   </div>
 </section>
@@ -218,21 +221,21 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
     <div class="footer-top">
       <div class="footer-brand">
         <p class="fname">Arnie Rose</p>
-        <p class="frole">Author of the You Were Never Series.</p>
+        <p class="frole">Author of The Gentle Art of Dying Upside Down and the You Were Never series.</p>
         <p class="fsub">Books about identity, human behavior, and inner life.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
-        <a href="books.html">Books</a>
-        <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener">Blog</a>
-        <a href="about.html">About</a>
-        <a href="the-letters.html">Newsletter</a>
-        <a href="index.html#free-chapter">Free Chapter</a>
+        <a href="/#books">Books</a>
+        <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener">You Were Never Series</a>
+        <a href="the-gentle-art-of-dying-upside-down.html">The Gentle Art of Dying Upside Down</a>
+        <a href="https://arniefelicilda.com/the-letters.html">Newsletter</a>
+        <a href="https://byarnierose.substack.com" target="_blank" rel="noopener">Subscribe on Substack</a>
       </div>
       <div class="footer-col">
-        <h4>Follow on Instagram</h4>
-        <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener">@writer.arnierose</a>
+        <h4>Follow</h4>
         <a href="https://www.instagram.com/youwereneverseries" target="_blank" rel="noopener">@youwereneverseries</a>
+        <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener">@writer.arnierose</a>
       </div>
     </div>
     <div class="footer-bottom">© 2026 Arnie Rose. All rights reserved.</div>
