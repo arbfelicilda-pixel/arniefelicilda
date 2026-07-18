@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gentle Art of Dying Upside Down — Arnie Rose</title>
+<meta name="description" content="The Gentle Art of Dying Upside Down by Arnie Rose. A literary reflection on grief, identity, change, and the courage to begin again. Releasing August 15.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arniefelicilda.com/the-gentle-art-of-dying-upside-down.html">
+<meta property="og:title" content="The Gentle Art of Dying Upside Down — Arnie Rose">
+<meta property="og:description" content="There are moments that quietly divide a life into before and after. A literary reflection on grief, identity, and the courage to begin again.">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://arniefelicilda.com/the-gentle-art-of-dying-upside-down.html">
+<meta property="og:image" content="https://arniefelicilda.com/mockup-1-landscape.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1208;
+  --ink-soft:#3d3020;
+  --parchment:#f7f2e8;
+  --parchment-dark:#ede6d3;
+  --white:#ffffff;
+  --blush:#e8c4c9;
+  --terra:#5A1F2A;
+  --terra-dark:#3d1520;
+  --mid:#8a7a6a;
+  --faint:#d4c9bb;
+  --playfair:'Playfair Display',Georgia,serif;
+  --body:'EB Garamond',Georgia,serif;
+  --sans:'Outfit',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--parchment);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(247,242,232,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--faint)}
+.nav-logo{font-family:var(--playfair);font-size:20px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:-0.01em}
+.nav-right{display:flex;gap:32px;align-items:center}
+.nav-link{font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.nav-link:hover{color:var(--terra)}
+.nav-cta{font-family:var(--sans);font-size:11px;font-weight:500;padding:9px 20px;background:var(--terra);color:var(--parchment);text-decoration:none;transition:all 0.2s;letter-spacing:0.08em;text-transform:uppercase;border:1px solid var(--terra)}
+.nav-cta:hover{background:var(--terra-dark);border-color:var(--terra-dark)}
+@media(max-width:900px){.nav-cta{display:none}}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all 0.2s}
+.nav-mobile{display:none;position:fixed;top:56px;left:0;right:0;background:var(--parchment);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99;box-shadow:0 4px 16px rgba(0,0,0,0.06)}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--faint);transition:color 0.2s}
+.nav-mobile a:hover{color:var(--terra)}
+
+/* HERO */
+.hero{padding:160px 60px 90px;max-width:1180px;margin:0 auto}
+.hero-grid{display:flex;gap:80px;align-items:center;flex-wrap:wrap}
+.hero-cover{width:360px;flex-shrink:0}
+.hero-cover img{box-shadow:0 30px 70px rgba(26,18,8,0.2)}
+.hero-text{flex:1;min-width:320px}
+.hero-eyebrow{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);margin-bottom:20px}
+.hero-title{font-family:var(--playfair);font-size:clamp(38px,5vw,60px);font-weight:700;line-height:1.08;color:var(--ink);margin-bottom:14px}
+.hero-subtitle{font-family:var(--playfair);font-style:italic;font-size:22px;color:var(--terra);margin-bottom:28px}
+.hero-desc{font-family:var(--body);font-size:19px;color:var(--ink-soft);line-height:1.8;max-width:480px;margin-bottom:36px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn-fill{display:inline-block;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:16px 32px;background:var(--terra);color:var(--parchment)}
+.btn-fill:hover{background:var(--terra-dark)}
+.btn-line{display:inline-block;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:15px 28px;border:1px solid var(--ink);color:var(--ink)}
+.btn-line:hover{border-color:var(--terra);color:var(--terra)}
+.hero-facts{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
+.hero-fact-num{font-family:var(--playfair);font-size:22px;color:var(--ink)}
+.hero-fact-label{font-family:var(--sans);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-top:4px}
+
+/* SECTION COMMON */
+.section{padding:80px 60px;max-width:1080px;margin:0 auto}
+.section-label{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);margin-bottom:20px;text-align:center}
+.section-title{font-family:var(--playfair);font-size:clamp(30px,3.4vw,42px);font-weight:700;color:var(--ink);text-align:center;margin-bottom:56px;line-height:1.15}
+
+/* ABOUT THE BOOK */
+.about-book{background:var(--white)}
+.about-grid{display:flex;gap:64px;align-items:center;flex-wrap:wrap}
+.about-img{flex:1;min-width:320px}
+.about-img img{box-shadow:0 20px 50px rgba(26,18,8,0.14)}
+.about-copy{flex:1;min-width:320px}
+.about-copy p{font-family:var(--body);font-size:18px;color:var(--ink-soft);line-height:1.85;margin-bottom:20px}
+.about-copy p:last-child{margin-bottom:0}
+
+/* PULL QUOTES */
+.quotes-section{background:var(--parchment-dark)}
+.quotes-grid{display:flex;gap:28px;flex-wrap:wrap;justify-content:center}
+.quote-card{background:var(--terra);color:var(--parchment);padding:44px 32px;flex:1;min-width:260px;max-width:340px;text-align:center}
+.quote-card p{font-family:var(--playfair);font-style:italic;font-size:21px;line-height:1.5}
+
+/* FROM THE JOURNAL */
+.journal-grid{display:flex;gap:36px;flex-wrap:wrap;max-width:720px;margin:0 auto}
+.journal-card{flex:1;min-width:260px;text-decoration:none;display:block}
+.journal-card img{aspect-ratio:2/3;object-fit:cover;width:100%;margin-bottom:18px;box-shadow:0 10px 24px rgba(26,18,8,0.1)}
+.journal-card-title{font-family:var(--playfair);font-size:20px;color:var(--ink);margin-bottom:8px;line-height:1.3}
+.journal-card-excerpt{font-family:var(--body);font-size:15px;color:var(--mid);line-height:1.6}
+
+/* ABOUT THE AUTHOR */
+.author-section{background:var(--white)}
+.author-row{display:flex;gap:44px;align-items:center;max-width:760px;margin:0 auto;flex-wrap:wrap}
+.author-row img{width:140px;height:140px;object-fit:cover;border-radius:50%;flex-shrink:0}
+.author-row p{font-family:var(--body);font-size:17px;color:var(--ink-soft);line-height:1.8}
+.author-link{font-family:var(--sans);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--terra);text-decoration:none;border-bottom:1px solid var(--terra);display:inline-block;margin-top:14px}
+
+/* NEWSLETTER */
+.newsletter-section{padding:90px 60px;background:var(--ink);text-align:center}
+.newsletter-inner{max-width:480px;margin:0 auto}
+.newsletter-section h3{font-family:var(--playfair);font-size:clamp(28px,3.6vw,40px);font-weight:400;color:var(--parchment);margin-bottom:12px}
+.newsletter-section p{font-family:var(--body);font-size:15px;color:rgba(247,242,232,0.6);margin-bottom:30px;line-height:1.7}
+.email-form{display:flex;gap:0;max-width:420px;margin:0 auto}
+.email-form input{flex:1;padding:14px 18px;font-family:var(--body);font-size:15px;border:none;outline:none;color:var(--ink)}
+.email-form button{padding:14px 24px;background:var(--terra);color:var(--parchment);font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap}
+.email-form button:hover{background:var(--terra-dark)}
+
+/* FOOTER */
+footer{padding:70px 60px 36px;border-top:1px solid var(--faint)}
+.footer-inner{max-width:1080px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;padding-bottom:40px}
+.footer-logo{font-family:var(--playfair);font-size:20px;color:var(--ink);text-decoration:none;display:block;margin-bottom:8px}
+.footer-brand p{font-family:var(--sans);font-size:13px;color:var(--mid);line-height:1.6}
+.footer-col h4{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
+.footer-col a{display:block;font-family:var(--body);font-size:14px;color:var(--ink-soft);text-decoration:none;margin-bottom:10px}
+.footer-col a:hover{color:var(--terra)}
+.footer-bottom{padding-top:24px;border-top:1px solid var(--faint);font-family:var(--sans);font-size:12px;color:var(--mid)}
+
+@media(max-width:900px){
+  nav{padding:16px 32px}
+  .nav-right .nav-link{display:none}
+  .nav-hamburger{display:flex}
+  .hero{padding:120px 32px 60px}
+  .hero-grid{gap:44px}
+  .hero-cover{width:100%;max-width:280px;margin:0 auto}
+  .section{padding:60px 32px}
+  .about-grid{gap:36px}
+  .footer-top{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Arnie Rose</a>
+  <div class="nav-right">
+    <a href="books.html" class="nav-link">Books</a>
+    <a href="literary-collections.html" class="nav-link">Literary Collection</a>
+    <a href="new-release.html" class="nav-link">New Release</a>
+    <a href="archive.html" class="nav-link">Blog</a>
+    <a href="collaborations.html" class="nav-link">Collaborations</a>
+    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="the-letters.html" class="nav-cta">Newsletter</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="/">Home</a>
+  <a href="books.html">Books</a>
+  <a href="literary-collections.html">Literary Collection</a>
+  <a href="new-release.html">New Release</a>
+  <a href="archive.html">Blog</a>
+  <a href="collaborations.html">Collaborations</a>
+  <a href="editorial-services.html">Editorial Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="the-letters.html">Newsletter</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-cover">
+      <img src="mockup-1-stacked.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose">
+    </div>
+    <div class="hero-text">
+      <p class="hero-eyebrow">Book 7 &middot; Releasing August 15</p>
+      <h1 class="hero-title">The Gentle Art<br>of Dying Upside Down</h1>
+      <p class="hero-subtitle">Holding On. Letting Go. Beginning Again.</p>
+      <p class="hero-desc">There are moments that quietly divide a life into before and after. The Gentle Art of Dying Upside Down is a literary reflection on grief, identity, change, and the unexpected grace of beginning again.</p>
+      <div class="hero-actions">
+        <a href="the-letters.html" class="btn-fill">Join <em>The Letters</em></a>
+        <a href="new-release.html" class="btn-line">Full Details</a>
+      </div>
+      <div class="hero-facts">
+        <div><p class="hero-fact-num">Aug 15</p><p class="hero-fact-label">Release Date</p></div>
+        <div><p class="hero-fact-num">~280</p><p class="hero-fact-label">Pages</p></div>
+        <div><p class="hero-fact-num">7th</p><p class="hero-fact-label">Book</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT THE BOOK -->
+<section class="section about-book">
+  <p class="section-label">About the Book</p>
+  <div class="about-grid">
+    <div class="about-img">
+      <img src="gentle-art-open-page-16x9.jpg" alt="Inside The Gentle Art of Dying Upside Down">
+    </div>
+    <div class="about-copy">
+      <p>There comes a moment when what once felt like belonging begins to feel like endurance. Sooner or later, every life asks: how do we begin again?</p>
+      <p>The Gentle Art of Dying Upside Down is for anyone who has outgrown a life they once believed would last forever. It is about grief, identity, change, resilience, healing, and the quiet courage of beginning again. It asks what it means to let go without losing yourself, and to move forward without forgetting who you have been.</p>
+      <p>This is not a book of quick answers or easy advice. It is written for the moments when life changes, when loss leaves questions behind, and when starting over feels both necessary and uncertain. If you are learning to let go, find yourself again, or begin a new chapter, this book will sit beside you along the way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTES -->
+<section class="section quotes-section">
+  <p class="section-label">A Few Lines to Carry With You</p>
+  <div class="quotes-grid">
+    <div class="quote-card"><p>&ldquo;For those who mistook endurance for belonging.&rdquo;</p></div>
+    <div class="quote-card"><p>&ldquo;At some point she stopped waiting for something to change and started watching what was already there.&rdquo;</p></div>
+    <div class="quote-card"><p>&ldquo;What if letting go was never an ending, but a return?&rdquo;</p></div>
+  </div>
+</section>
+
+<!-- FROM THE JOURNAL -->
+<section class="section">
+  <p class="section-label">From the Journal</p>
+  <div class="journal-grid">
+    <a href="the-gentle-art-of-letting-go-without-losing-yourself.html" class="journal-card">
+      <img src="gentle-art-of-letting-go-2x3.jpg" alt="The Gentle Art of Letting Go Without Losing Yourself">
+      <p class="journal-card-title">The Gentle Art of Letting Go Without Losing Yourself</p>
+      <p class="journal-card-excerpt">A reflection on outgrowing places, people, and versions of ourselves.</p>
+    </a>
+    <a href="why-starting-over-is-hard-but-worth-it.html" class="journal-card">
+      <img src="courage-to-start-over-2x3.jpg" alt="Why Starting Over Is Hard, and Why It Is Still Worth It">
+      <p class="journal-card-title">The Quiet Courage to Begin Again</p>
+      <p class="journal-card-excerpt">Starting over is not failure. It is the art of trusting life one more time.</p>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT THE AUTHOR -->
+<section class="section author-section">
+  <p class="section-label">About the Author</p>
+  <div class="author-row">
+    <img src="author.jpg" alt="Arnie Rose">
+    <div>
+      <p>Arnie Rose is a nonfiction author whose work explores identity, human behavior, and the quiet complexities of everyday life. She is the author of <em>The Gentle Art of Dying Upside Down</em> and <em>the You Were Never series</em>.</p>
+      <a href="about.html" class="author-link">More About Arnie &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND THE PAGES -->
+<section class="newsletter-section" id="newsletter">
+  <div class="newsletter-inner">
+    <h3>Beyond the Pages</h3>
+    <p>Join the weekly newsletter. Early access on original writing: The Blind Spot Series, Ode to Home: Letters of the Living, and Beyond the Page.</p>
+    <form action="https://assets.mailerlite.com/jsonp/2484784/forms/191860425663448888/subscribe" method="post" class="email-form">
+      <input name="fields[email]" type="email" placeholder="Your email address" required>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      <button type="submit">Join The Letters</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Arnie Rose</a>
+        <p>Author of The Gentle Art of Dying Upside Down and the You Were Never series.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="books.html">Books</a>
+        <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener">You Were Never Series</a>
+        <a href="new-release.html">The Gentle Art of Dying Upside Down</a>
+        <a href="the-letters.html">Newsletter</a>
+        <a href="https://byarnierose.substack.com" target="_blank" rel="noopener">Subscribe on Substack</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <a href="https://www.instagram.com/youwereneverseries" target="_blank" rel="noopener">@youwereneverseries</a>
+        <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener">@writer.arnierose</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Arnie Rose. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hamburger=document.getElementById('nav-hamburger');
+  var mobileNav=document.getElementById('nav-mobile');
+  hamburger.addEventListener('click',function(e){
+    e.stopPropagation();
+    mobileNav.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-mobile a').forEach(function(a){
+    a.addEventListener('click',function(){mobileNav.classList.remove('open');});
+  });
+  document.addEventListener('click',function(){mobileNav.classList.remove('open');});
+})();
+</script>
+</body>
+</html>
