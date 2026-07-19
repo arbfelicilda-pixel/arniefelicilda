@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Arnie Rose</title>
-<meta name="description" content="Arnie Rose is the author of the You Were Never Series, a collection of books about identity, behavior, and self-leadership.">
+<meta name="description" content="Arnie Rose is the author of The Gentle Art of Dying Upside Down and the You Were Never series, books about identity, behavior, and inner life.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://arniefelicilda.com/about.html">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-ar-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-ar-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-ar-180.png">
-<meta property="og:title" content="Arnie Rose — Author of The Gentle Art of Dying Upside Down and the You Were Never Series">
-<meta property="og:description" content="Author of The Gentle Art of Dying Upside Down and the You Were Never series. Books about identity, human behavior, and inner life.">
+<meta property="og:title" content="Arnie Rose — Author of The Gentle Art of Dying Upside Down">
+<meta property="og:description" content="Books and essays exploring identity, change, and the quiet questions that shape a life.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://arniefelicilda.com/about.html">
 <meta property="og:image" content="https://arniefelicilda.com/author-og.jpg">
@@ -20,142 +20,163 @@
 <meta name="twitter:image" content="https://arniefelicilda.com/author-og.jpg">
 <meta property="og:site_name" content="Arnie Rose">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --white:#FFFFFF;
-  --cream:#F9F7F2;
-  --ink:#0D0D0D;
-  --ink-soft:#4A4A4A;
-  --mid:#999999;
-  --faint:#E2DED8;
-  --terra:#C2714F;
-  --blue:#1D6FA4;
-  --burgundy:#5A1F2A;
-  --heading:'Cormorant Garamond',Georgia,serif;
-  --body:'IBM Plex Mono',monospace;
+  --ink:#1a1208;
+  --ink-soft:#3d3020;
+  --white:#ffffff;
+  --terra:#5A1F2A;
+  --terra-dark:#3d1520;
+  --mid:#8a7a6a;
+  --faint:#d4c9bb;
+  --playfair:'Playfair Display',Georgia,serif;
+  --body:'EB Garamond',Georgia,serif;
+  --sans:'Outfit',sans-serif;
 }
 html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.7;overflow-x:hidden}
+body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--faint)}
-.nav-logo{font-family:var(--heading);font-size:22px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:0.01em}
-.nav-right{display:flex;gap:36px;align-items:center}
-.nav-link{font-family:var(--body);font-size:11px;font-weight:400;color:var(--mid);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
-.nav-link:hover,.nav-link.active{color:var(--ink)}
-
-.nav-cta{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all 0.2s}
-.nav-cta:hover{background:var(--ink);color:var(--white)}
-.nav-cta--dark{background:var(--burgundy);color:var(--white);border-color:var(--burgundy)}
-.nav-cta--dark:hover{background:#4A1922}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--faint)}
+.nav-logo{font-family:var(--playfair);font-size:20px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:-0.01em}
+.nav-right{display:flex;gap:30px;align-items:center}
+.nav-link{font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.nav-link:hover{color:var(--terra)}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);background:none;border:none;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase}
+.nav-dropdown-toggle:hover{color:var(--terra)}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--faint);min-width:220px;z-index:200;box-shadow:0 12px 28px rgba(0,0,0,0.08)}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:13px 20px;border-bottom:1px solid var(--faint)}
+.nav-dropdown-menu a:hover{color:var(--terra);background:#fafafa}
+.nav-dropdown-sub{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);padding:12px 20px 6px;border-top:1px solid var(--faint)}
+.nav-cta{font-family:var(--sans);font-size:11px;font-weight:500;padding:9px 20px;background:var(--terra);color:#fff;text-decoration:none;transition:all 0.2s;letter-spacing:0.08em;text-transform:uppercase;border:1px solid var(--terra)}
+.nav-cta:hover{background:var(--terra-dark);border-color:var(--terra-dark)}
+@media(max-width:900px){.nav-cta{display:none}}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.nav-hamburger span{display:block;width:20px;height:1px;background:var(--ink)}
-.nav-mobile{display:none;position:fixed;top:54px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+.nav-mobile{display:none;position:fixed;top:56px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99;box-shadow:0 4px 16px rgba(0,0,0,0.06);max-height:80vh;overflow-y:auto}
 .nav-mobile.open{display:flex}
-.nav-mobile a{font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--faint)}
-.mobile-resources-toggle{display:block;width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);padding:14px 24px;border-bottom:1px solid var(--faint)}
-.mobile-resources-panel{display:none;background:#fafafa}
-.mobile-resources-panel.open{display:block}
-.mobile-resources-panel a{padding-left:40px}
+.nav-mobile a{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--faint)}
+.mobile-explore-toggle{display:block;width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);padding:14px 24px;border-bottom:1px solid var(--faint)}
+.mobile-explore-panel{display:none;background:#fafafa}
+.mobile-explore-panel.open{display:block}
+.mobile-explore-panel a{padding-left:40px}
+.mobile-explore-sub{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);padding:10px 24px 4px 40px}
 
-/* HERO — photo, name, role, short bio */
-.about-hero{padding:120px 64px 80px;background:var(--white)}
+/* HERO */
+.about-hero{padding:150px 60px 70px;background:var(--white)}
 .about-hero-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:start}
-.about-hero-photo img{width:100%;display:block;filter:grayscale(6%)}
-.about-hero-name{font-family:var(--heading);font-size:clamp(44px,5.5vw,72px);font-weight:300;line-height:0.98;letter-spacing:-0.02em;color:var(--ink);margin-bottom:14px}
-.about-hero-role{font-family:var(--heading);font-size:clamp(19px,2vw,24px);font-weight:400;color:var(--ink-soft);margin-bottom:24px}
-.about-hero-bio p{font-family:var(--body);font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.9;max-width:560px}
-.about-hero-bio p+p{margin-top:16px}
+.about-hero-photo img{width:100%;display:block;filter:grayscale(6%);margin-bottom:14px}
+.about-hero-caption{font-family:var(--sans);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--mid);text-align:center}
+.about-hero-name{font-family:var(--playfair);font-size:clamp(44px,5.5vw,64px);font-weight:400;line-height:1;letter-spacing:-0.01em;color:var(--ink);margin-bottom:16px}
+.about-hero-bio p{font-family:var(--body);font-size:17px;color:var(--ink-soft);line-height:1.85;max-width:560px}
+.about-hero-bio p+p{margin-top:18px}
+.about-hero-bio a{color:var(--terra);text-decoration:underline}
+.works-title{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin:28px 0 14px}
+.works-list{list-style:none;max-width:560px}
+.works-list li{font-family:var(--body);font-size:16px;color:var(--ink-soft);padding:9px 0;border-top:1px solid var(--faint)}
+.works-list li:last-child{border-bottom:1px solid var(--faint)}
+.works-list em{font-style:italic}
+.works-list .soon{color:var(--mid);font-size:13px;font-family:var(--sans);text-transform:uppercase;letter-spacing:0.06em;margin-left:8px}
 
 /* SECTION COMMON */
-.s-inner{max-width:1080px;margin:0 auto;padding:0 64px}
-.s-title{font-family:var(--heading);font-size:clamp(30px,3.6vw,44px);font-weight:300;color:var(--ink);line-height:1.1;letter-spacing:-0.01em;margin-bottom:48px}
+.s-inner{max-width:1080px;margin:0 auto;padding:0 60px}
+.s-title{font-family:var(--playfair);font-size:clamp(28px,3.4vw,38px);font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-0.01em;margin-bottom:44px}
 
-/* BOOKS AND RESOURCES — two cards */
-.cards-section{padding:72px 0 88px;background:var(--white)}
-.card{background:var(--white);padding:40px 36px 40px 0}
+/* CARDS */
+.cards-section{padding:70px 0 90px;background:var(--white)}
+.card{background:var(--white);padding:0 36px 0 0}
 .card+.card{padding-left:48px;border-left:1px solid var(--faint)}
-.cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;background:var(--white)}
-.card-eyebrow{font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:18px}
-.card-eyebrow.terra{color:var(--terra)}
-.card-eyebrow.blue{color:var(--blue)}
-.card-title{font-family:var(--heading);font-size:30px;font-weight:400;color:var(--ink);margin-bottom:14px;letter-spacing:-0.01em;line-height:1.15}
-.card-desc{font-family:var(--body);font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.8;margin-bottom:24px}
-.card-link{display:inline-block;font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none}
-.card-link.terra{color:var(--terra);border-bottom:1px solid var(--terra)}
-.card-link.blue{color:var(--blue);border-bottom:1px solid var(--blue)}
+.cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.card-eyebrow{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra);margin-bottom:16px}
+.card-title{font-family:var(--playfair);font-size:26px;font-weight:400;color:var(--ink);margin-bottom:14px;letter-spacing:-0.01em;line-height:1.2}
+.card-desc{font-family:var(--body);font-size:15px;color:var(--ink-soft);line-height:1.8;margin-bottom:22px}
+.card-link{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--terra);border-bottom:1px solid var(--terra)}
 
-/* BUTTONS */
-.btn-fill{display:inline-block;font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;padding:13px 28px;border:none;cursor:pointer;background:var(--ink);color:var(--white)}
-.btn-outline{display:inline-block;font-family:var(--body);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;padding:12px 24px;border:1px solid var(--ink);color:var(--ink)}
+/* FROM THE AUTHOR */
+.author-note{padding:80px 60px;background:var(--white);text-align:center;border-top:1px solid var(--faint)}
+.author-note-inner{max-width:600px;margin:0 auto}
+.author-note-label{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra);margin-bottom:22px}
+.author-note p{font-family:var(--playfair);font-style:italic;font-size:clamp(19px,2.2vw,24px);color:var(--ink-soft);line-height:1.6}
 
 /* NEWSLETTER */
 .email-section{padding:90px 60px;background:var(--ink);text-align:center}
 .email-inner{max-width:480px;margin:0 auto}
-.email-section h3{font-family:var(--heading);font-size:clamp(30px,4vw,46px);font-weight:300;color:var(--white);margin-bottom:10px;letter-spacing:-0.01em}
-.email-section p{font-family:var(--body);font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);margin-bottom:30px;line-height:1.7}
+.email-section h3{font-family:var(--playfair);font-size:clamp(34px,4.6vw,50px);font-weight:400;color:#f7f2e8;margin-bottom:16px}
+.email-section p{font-family:var(--body);font-size:17px;color:rgba(247,242,232,0.75);margin-bottom:34px;line-height:1.7}
 .email-form{display:flex;gap:0;max-width:420px;margin:0 auto}
-.email-form input{flex:1;padding:13px 16px;font-family:var(--body);font-size:13px;border:none;outline:none;color:var(--ink)}
-.email-form button{padding:13px 22px;background:var(--burgundy);color:var(--white);font-family:var(--body);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap}
-.email-form button:hover{background:#4A1922}
+.email-form input{flex:1;padding:13px 16px;font-family:var(--sans);font-size:13px;border:none;outline:none;color:var(--ink)}
+.email-form button{padding:13px 22px;background:var(--terra);color:#fff;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap}
+.email-form button:hover{background:var(--terra-dark)}
 
-/* FOOTER — matches homepage/books.html */
-footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(--faint)}
+/* FOOTER */
+footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(--faint)}
 .footer-inner{max-width:1080px;margin:0 auto}
-.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;padding-bottom:48px}
-.footer-brand p.fname{font-family:var(--heading);font-size:22px;color:var(--ink);margin-bottom:8px}
-.footer-brand p.frole{font-family:var(--body);font-size:13px;color:var(--ink-soft);margin-bottom:6px}
-.footer-brand p.fsub{font-family:var(--body);font-size:13px;color:var(--mid);line-height:1.7}
-.footer-col h4{font-family:var(--body);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:18px}
-.footer-col a{display:block;font-family:var(--body);font-size:13px;color:var(--ink-soft);text-decoration:none;margin-bottom:12px}
-.footer-col a:hover{color:var(--ink)}
-.footer-bottom{padding-top:28px;border-top:1px solid var(--faint);font-family:var(--body);font-size:10px;color:var(--mid)}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;padding-bottom:44px}
+.footer-brand p.fname{font-family:var(--playfair);font-size:22px;color:var(--ink);margin-bottom:8px}
+.footer-brand p.frole{font-family:var(--body);font-size:13px;color:var(--ink-soft)}
+.footer-col h4{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
+.footer-col a{display:block;font-family:var(--body);font-size:13px;color:var(--ink-soft);text-decoration:none;margin-bottom:11px}
+.footer-col a:hover{color:var(--terra)}
+.footer-bottom{padding-top:26px;border-top:1px solid var(--faint);font-family:var(--sans);font-size:10px;color:var(--mid)}
 
 @media(max-width:900px){
-  .about-hero-inner{grid-template-columns:1fr;gap:32px}
-  .about-hero-photo{max-width:220px}
-  .cards-grid{grid-template-columns:1fr}
-  .footer-top{grid-template-columns:1fr 1fr}
-  nav .nav-right{display:none}
+  nav{padding:16px 28px}
+  .nav-right .nav-link,.nav-right .nav-dropdown{display:none}
   .nav-hamburger{display:flex}
-}
-@media(max-width:600px){
-  .about-hero,.s-inner,.email-section{padding-left:24px;padding-right:24px}
-  footer{padding:60px 24px 30px}
-  .footer-top{grid-template-columns:1fr}
-  nav{padding:14px 24px}
+  .about-hero{padding:120px 28px 50px}
+  .about-hero-inner{grid-template-columns:1fr;gap:32px}
+  .about-hero-photo{max-width:220px;margin:0 auto}
+  .s-inner{padding:0 28px}
+  .cards-grid{grid-template-columns:1fr}
+  .card+.card{padding-left:0;border-left:none;margin-top:36px;padding-top:36px;border-top:1px solid var(--faint)}
+  .author-note{padding:60px 28px}
+  .email-section{padding:70px 28px}
+  .email-form{flex-direction:column;gap:10px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">Arnie Rose</a>
   <div class="nav-right">
     <a href="books.html" class="nav-link">Books</a>
     <a href="literary-collections.html" class="nav-link">Literary Collection</a>
-    <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener" class="nav-link">Blog</a>
-    <a href="collaborations.html" class="nav-link">Collaborations</a>
     <a href="editorial-services.html" class="nav-link">Editorial Services</a>
-    <a href="new-release.html" class="nav-link">New Release</a>
+    <a href="archive.html" class="nav-link">Blog</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle" id="explore-toggle">Explore More</button>
+      <div class="nav-dropdown-menu" id="explore-menu">
+        <a href="collaborations.html">Collaborations</a>
+        <div class="nav-dropdown-sub">Other Resources</div>
+        <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
+        <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
+      </div>
+    </div>
     <a href="contact.html" class="nav-link">Contact</a>
-    <a href="the-letters.html" class="nav-cta nav-cta--dark">Newsletter</a>
+    <a href="the-letters.html" class="nav-cta">Newsletter</a>
   </div>
-  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-
 <div class="nav-mobile" id="nav-mobile">
   <a href="books.html">Books</a>
   <a href="literary-collections.html">Literary Collection</a>
-  <a href="https://youwereneverseries.arniefelicilda.com/blog.html" target="_blank" rel="noopener">Blog</a>
-  <a href="collaborations.html">Collaborations</a>
   <a href="editorial-services.html">Editorial Services</a>
-  <a href="new-release.html">New Release</a>
+  <a href="archive.html">Blog</a>
+  <button class="mobile-explore-toggle" id="mobile-explore-toggle">Explore More</button>
+  <div class="mobile-explore-panel" id="mobile-explore-panel">
+    <a href="collaborations.html">Collaborations</a>
+    <div class="mobile-explore-sub">Other Resources</div>
+    <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
+    <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
+  </div>
   <a href="contact.html">Contact</a>
   <a href="the-letters.html">Newsletter</a>
 </div>
@@ -165,39 +186,56 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   <div class="about-hero-inner">
     <div class="about-hero-photo">
       <img src="author.jpg" alt="Arnie Rose" loading="eager">
+      <p class="about-hero-caption">Identity. Change. Becoming.</p>
     </div>
     <div>
       <h1 class="about-hero-name">Arnie Rose</h1>
       <div class="about-hero-bio">
-        <p>Arnie Rose is a nonfiction author whose work explores identity, human behavior, and the quiet complexities of everyday life. She holds a master&rsquo;s degree in Literacy Education from Arizona State University and is the author of <a href="the-gentle-art-of-dying-upside-down.html" style="color:var(--burgundy);text-decoration:none;border-bottom:1px solid var(--burgundy);">The Gentle Art of Dying Upside Down</a> and <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" style="color:var(--burgundy);text-decoration:none;border-bottom:1px solid var(--burgundy);">the You Were Never series</a>.</p>
-        <p>Her writing extends beyond books through a growing body of <a href="literary-collections.html" style="color:var(--ink-soft);text-decoration:underline;">literary projects</a>. Her collection includes <em>Ode to Home: Letters of the Living</em>, <em>The Good Minute</em>, <em>The Blind Spot Series</em> on Substack, and <em>I Hate Being Human</em>, forthcoming in October 2026. Across these works, she writes about grief, belonging, change, and the ordinary moments that quietly shape a life.</p>
-        <p>Alongside her literary work, she develops educational resources in project management and supply chain management.</p>
+        <p>Author of <a href="the-gentle-art-of-dying-upside-down.html"><em>The Gentle Art of Dying Upside Down</em></a> and <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener"><em>the You Were Never series</em></a>, writing about identity, change, and the quiet questions that shape a life. She holds a master's degree in Literacy Education from Arizona State University.</p>
+        <p>Beyond her literary work, she also develops educational resources for professionals in operations and project management.</p>
+      </div>
+      <p class="works-title">Current Works</p>
+      <ul class="works-list">
+        <li><em>The Gentle Art of Dying Upside Down</em></li>
+        <li><em>The You Were Never series</em></li>
+        <li><em>Ode to Home: Letters of the Living</em></li>
+        <li><em>The Good Minute</em></li>
+        <li><em>The Blind Spot Series</em> on Substack</li>
+        <li><em>I Hate Being Human</em><span class="soon">Forthcoming</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE MORE -->
+<section class="cards-section">
+  <div class="s-inner">
+    <h2 class="s-title">Explore More</h2>
+  </div>
+  <div class="s-inner">
+    <div class="cards-grid">
+      <div class="card">
+        <p class="card-eyebrow">The You Were Never Series</p>
+        <p class="card-title">Six books about identity, behavior, and self-leadership.</p>
+        <p class="card-desc">A collection exploring the labels people inherit, accept, and eventually outgrow.</p>
+        <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="card-link">Explore the Series &rarr;</a>
+      </div>
+      <div class="card">
+        <p class="card-eyebrow">Project Management &amp; Supply Chain</p>
+        <p class="card-title">Practical resources for operations and project environments.</p>
+        <p class="card-desc">Articles, tools, and resources for professionals working in operations and project environments.</p>
+        <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener" class="card-link">Project Management &rarr;</a><br><br>
+        <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener" class="card-link">Supply Chain &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BOOKS AND RESOURCES -->
-<section class="cards-section">
-  <div class="s-inner">
-    <h2 class="s-title">Other Resources</h2>
-  </div>
-  <div class="s-inner">
-    <div class="cards-grid">
-      <div class="card">
-        <p class="card-eyebrow terra">The You Were Never Series</p>
-        <p class="card-title">Six books about identity, behavior, and self-leadership.</p>
-        <p class="card-desc">A collection exploring the labels people inherit, accept, and eventually outgrow.</p>
-        <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="card-link terra">Explore the Series →</a>
-      </div>
-      <div class="card">
-        <p class="card-eyebrow blue">Project Management &amp; Supply Chain</p>
-        <p class="card-title">Practical resources for operations and project environments.</p>
-        <p class="card-desc">Articles, tools, and resources for professionals working in operations and project environments.</p>
-        <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener" class="card-link blue">Project Management →</a>
-        <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener" class="card-link blue" style="margin-top:10px">Supply Chain →</a>
-      </div>
-    </div>
+<!-- FROM THE AUTHOR -->
+<section class="author-note">
+  <div class="author-note-inner">
+    <p class="author-note-label">From the Author</p>
+    <p>&ldquo;What fascinates me most is how people make sense of their lives. My work explores how beliefs are formed, how identity evolves, and how people find meaning through change, loss, hope, and the quiet moments in between.&rdquo;</p>
   </div>
 </section>
 
@@ -215,21 +253,19 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
         <p class="fname">Arnie Rose</p>
-        <p class="frole">Author of The Gentle Art of Dying Upside Down and the You Were Never series.</p>
-        <p class="fsub">Books about identity, human behavior, and inner life.</p>
+        <p class="frole">Author of The Gentle Art of Dying Upside Down and the You Were Never series. Books about identity, human behavior, and inner life.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
         <a href="books.html">Books</a>
         <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener">You Were Never Series</a>
         <a href="the-gentle-art-of-dying-upside-down.html">The Gentle Art of Dying Upside Down</a>
-        <a href="https://arniefelicilda.com/the-letters.html">Newsletter</a>
+        <a href="the-letters.html">Newsletter</a>
         <a href="https://byarnierose.substack.com" target="_blank" rel="noopener">Subscribe on Substack</a>
       </div>
       <div class="footer-col">
@@ -238,7 +274,7 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
         <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener">@writer.arnierose</a>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Arnie Rose. All rights reserved.</div>
+    <div class="footer-bottom">&copy; 2026 Arnie Rose. All rights reserved.</div>
   </div>
 </footer>
 
@@ -246,9 +282,26 @@ footer{background:var(--white);padding:80px 64px 36px;border-top:1px solid var(-
 (function(){
   var hamburger=document.getElementById('nav-hamburger');
   var mobileNav=document.getElementById('nav-mobile');
-  hamburger.addEventListener('click',function(e){e.stopPropagation();mobileNav.classList.toggle('open');});
-  document.querySelectorAll('.nav-mobile a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');});});
+  hamburger.addEventListener('click',function(e){
+    e.stopPropagation();
+    mobileNav.classList.toggle('open');
+  });
   document.addEventListener('click',function(){mobileNav.classList.remove('open');});
+
+  var exploreToggle=document.getElementById('explore-toggle');
+  var exploreMenu=document.getElementById('explore-menu');
+  exploreToggle.addEventListener('click',function(e){
+    e.stopPropagation();
+    exploreMenu.classList.toggle('open');
+  });
+  document.addEventListener('click',function(){exploreMenu.classList.remove('open');});
+
+  var mobileExploreToggle=document.getElementById('mobile-explore-toggle');
+  var mobileExplorePanel=document.getElementById('mobile-explore-panel');
+  mobileExploreToggle.addEventListener('click',function(e){
+    e.stopPropagation();
+    mobileExplorePanel.classList.toggle('open');
+  });
 })();
 </script>
 </body>
