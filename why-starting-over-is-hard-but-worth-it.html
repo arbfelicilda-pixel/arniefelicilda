@@ -209,14 +209,22 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 <nav>
   <a href="/" class="nav-logo">Arnie <span>Rose</span></a>
   <div class="nav-right">
-    <a href="/#books" class="nav-link">The Books</a>
+    <a href="books.html" class="nav-link">Books</a>
     <a href="literary-collections.html" class="nav-link">Literary Collection</a>
+    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
     <a href="archive.html" class="nav-link">Blog</a>
-    <a href="collaborations.html" class="nav-link">Collaborations</a>
+    <div class="nav-dropdown" style="position:relative">
+      <button class="nav-link" id="explore-more-trigger" style="background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);letter-spacing:0.08em;text-transform:uppercase">Explore More &#9662;</button>
+      <div class="nav-dropdown-menu" id="explore-more-menu" style="display:none;position:absolute;top:28px;left:50%;transform:translateX(-50%);background:var(--parchment);border:1px solid var(--faint);box-shadow:0 8px 24px rgba(0,0,0,0.1);min-width:200px;padding:8px 0;z-index:50">
+        <a href="collaborations.html" style="display:block;padding:12px 20px;font-family:var(--sans);font-size:12px;color:var(--ink-soft);text-decoration:none">Collaborations</a>
+        <div style="font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);padding:12px 20px 4px;border-top:1px solid var(--faint);margin-top:4px">Other Resources</div>
+        <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener" style="display:block;padding:8px 20px;font-family:var(--sans);font-size:12px;color:var(--ink-soft);text-decoration:none">Supply Chain</a>
+        <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener" style="display:block;padding:8px 20px 12px;font-family:var(--sans);font-size:12px;color:var(--ink-soft);text-decoration:none">Project Management</a>
+      </div>
+    </div>
     <a href="about.html" class="nav-link">About</a>
     <a href="contact.html" class="nav-link">Contact</a>
-    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
-    <a href="https://arniefelicilda.com/the-letters.html" class="nav-cta">Newsletter</a>
+    <a href="the-letters.html" class="nav-cta">Newsletter</a>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -225,14 +233,16 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 
 <div class="nav-mobile" id="nav-mobile">
   <a href="/">Home</a>
-  <a href="/#books">The Books</a>
+  <a href="books.html">Books</a>
   <a href="literary-collections.html">Literary Collection</a>
+  <a href="editorial-services.html">Editorial Services</a>
   <a href="archive.html">Blog</a>
   <a href="collaborations.html">Collaborations</a>
+  <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
+  <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-  <a href="editorial-services.html">Editorial Services</a>
-  <a href="https://arniefelicilda.com/the-letters.html">Newsletter</a>
+  <a href="the-letters.html">Newsletter</a>
 </div>
 
 <div class="post-hero">
@@ -471,6 +481,17 @@ Every ending asks us who we're willing to leave behind. Every beginning asks us 
 </footer>
 
 <script>
+var exploreTrigger = document.getElementById('explore-more-trigger');
+var exploreMenu = document.getElementById('explore-more-menu');
+if (exploreTrigger) {
+  exploreTrigger.addEventListener('click', function(e){
+    e.stopPropagation();
+    exploreMenu.style.display = exploreMenu.style.display === 'block' ? 'none' : 'block';
+  });
+  document.addEventListener('click', function(){
+    exploreMenu.style.display = 'none';
+  });
+}
 var hamburger = document.getElementById('nav-hamburger');
 var mobileNav = document.getElementById('nav-mobile');
 if (hamburger) {
