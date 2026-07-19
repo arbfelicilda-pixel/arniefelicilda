@@ -163,7 +163,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .post-nav-item.prev{text-align:left;align-items:flex-start}
 .post-nav-label{font-family:var(--body);font-size:14px;font-weight:500;letter-spacing:0.04em;color:var(--ink);margin-bottom:0}
 .post-nav-item:hover .post-nav-label{color:var(--terra)}
-.mid-cta{padding:48px 60px;background:var(--parchment-dark);text-align:center}
+.mid-cta{padding:48px 60px;background:var(--parchment);border:1px solid var(--faint);margin:44px 0;text-align:center}
 .mid-cta h3{font-family:var(--playfair);font-size:28px;font-weight:700;color:var(--ink);margin-bottom:8px}
 .mid-cta p{font-family:var(--body);font-size:14px;color:var(--ink-soft);margin-bottom:20px;line-height:1.6}
 .mid-cta form{display:flex;gap:0;justify-content:center;flex-wrap:wrap;max-width:440px;margin:0 auto}
@@ -209,22 +209,14 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 <nav>
   <a href="/" class="nav-logo">Arnie <span>Rose</span></a>
   <div class="nav-right">
-    <a href="books.html" class="nav-link">Books</a>
+    <a href="/#books" class="nav-link">The Books</a>
     <a href="literary-collections.html" class="nav-link">Literary Collection</a>
-    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
     <a href="archive.html" class="nav-link">Blog</a>
-    <div class="nav-dropdown" style="position:relative">
-      <button class="nav-link" id="explore-more-trigger" style="background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);letter-spacing:0.08em;text-transform:uppercase">Explore More &#9662;</button>
-      <div class="nav-dropdown-menu" id="explore-more-menu" style="display:none;position:absolute;top:28px;left:50%;transform:translateX(-50%);background:var(--parchment);border:1px solid var(--faint);box-shadow:0 8px 24px rgba(0,0,0,0.1);min-width:200px;padding:8px 0;z-index:50">
-        <a href="collaborations.html" style="display:block;padding:12px 20px;font-family:var(--sans);font-size:12px;color:var(--ink-soft);text-decoration:none">Collaborations</a>
-        <div style="font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);padding:12px 20px 4px;border-top:1px solid var(--faint);margin-top:4px">Other Resources</div>
-        <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener" style="display:block;padding:8px 20px;font-family:var(--sans);font-size:12px;color:var(--ink-soft);text-decoration:none">Supply Chain</a>
-        <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener" style="display:block;padding:8px 20px 12px;font-family:var(--sans);font-size:12px;color:var(--ink-soft);text-decoration:none">Project Management</a>
-      </div>
-    </div>
+    <a href="collaborations.html" class="nav-link">Collaborations</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="contact.html" class="nav-link">Contact</a>
-    <a href="the-letters.html" class="nav-cta">Newsletter</a>
+    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
+    <a href="https://arniefelicilda.com/the-letters.html" class="nav-cta">Newsletter</a>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -233,16 +225,14 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 
 <div class="nav-mobile" id="nav-mobile">
   <a href="/">Home</a>
-  <a href="books.html">Books</a>
+  <a href="/#books">The Books</a>
   <a href="literary-collections.html">Literary Collection</a>
-  <a href="editorial-services.html">Editorial Services</a>
   <a href="archive.html">Blog</a>
   <a href="collaborations.html">Collaborations</a>
-  <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
-  <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-  <a href="the-letters.html">Newsletter</a>
+  <a href="editorial-services.html">Editorial Services</a>
+  <a href="https://arniefelicilda.com/the-letters.html">Newsletter</a>
 </div>
 
 <div class="post-hero">
@@ -308,8 +298,7 @@ footer{padding:40px 60px;border-top:1px solid var(--faint);display:flex;justify-
 <div class="mid-cta">
   <div class="mid-cta-flex">
     <div class="mid-cta-cover">
-      <!-- REPLACE: confirm hosted URL once uploaded to the repo -->
-      <img src="mockup-1-stacked.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose">
+      <img src="book7-cover-final.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose">
     </div>
     <div class="mid-cta-text">
       <span class="coming-soon-badge">Coming August 15</span>
@@ -366,17 +355,6 @@ Every ending asks us who we're willing to leave behind. Every beginning asks us 
 
 </div>
 
-<div class="book-callout">
-<div class="book-callout-cover">
-  <!-- REPLACE: confirm hosted URL once uploaded to the repo -->
-  <img src="mockup-2-stacked.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose">
-</div>
-<div class="book-callout-text">
-<p><a href="the-gentle-art-of-dying-upside-down.html"><strong>The Gentle Art of Dying Upside Down</strong></a>, releasing August 15, sits inside this exact question. If starting over is something you are standing at the edge of right now, the book was written for that particular room.</p>
-<p><a href="the-gentle-art-of-dying-upside-down.html">Learn more about the book →</a></p>
-</div>
-</div>
-
 </div>
 
 <div class="mid-cta" style="background:var(--ink);">
@@ -411,34 +389,26 @@ Every ending asks us who we're willing to leave behind. Every beginning asks us 
 <p class="essential-label">Essential Reading</p>
 <div class="essential-scroll">
   <a href="https://youwereneverseries.arniefelicilda.com/why-hardworking-people-feel-invisible.html" class="essential-item">
-    <img src="why-hardworking-people-feel-invisible-thumb.jpg" alt="Why Hardworking People Feel Invisible">
+    <img src="https://youwereneverseries.arniefelicilda.com/why-hardworking-people-feel-invisible-thumb.jpg" alt="Why Hardworking People Feel Invisible">
     <p>Why Hardworking People Feel Invisible</p>
   </a>
   <a href="https://youwereneverseries.arniefelicilda.com/self-worth-and-achievement.html" class="essential-item">
-    <img src="self-worth-and-achievement-thumb.jpg" alt="Self Worth and Achievement">
+    <img src="https://youwereneverseries.arniefelicilda.com/self-worth-and-achievement-thumb.jpg" alt="Self Worth and Achievement">
     <p>Self Worth and Achievement</p>
   </a>
   <a href="https://youwereneverseries.arniefelicilda.com/you-are-still-becoming.html" class="essential-item">
-    <img src="you-are-still-becoming-thumb.jpg" alt="You Are Still Becoming">
+    <img src="https://youwereneverseries.arniefelicilda.com/you-are-still-becoming-thumb.jpg" alt="You Are Still Becoming">
     <p>You Are Still Becoming</p>
   </a>
   <a href="https://youwereneverseries.arniefelicilda.com/you-are-not-running-out-of-time.html" class="essential-item">
-    <img src="you-are-not-running-out-of-time-thumb.jpg" alt="You Are Not Running Out of Time">
+    <img src="https://youwereneverseries.arniefelicilda.com/you-are-not-running-out-of-time-thumb.jpg" alt="You Are Not Running Out of Time">
     <p>You Are Not Running Out of Time</p>
   </a>
   <a href="https://youwereneverseries.arniefelicilda.com/your-timeline-was-never-wrong.html" class="essential-item">
-    <img src="your-timeline-was-never-wrong-thumb.jpg" alt="Your Timeline Was Never Wrong">
+    <img src="https://youwereneverseries.arniefelicilda.com/your-timeline-was-never-wrong-thumb.jpg" alt="Your Timeline Was Never Wrong">
     <p>Your Timeline Was Never Wrong</p>
   </a>
 </div>
-</div>
-
-<div class="email-strip">
-  <!-- REPLACE: confirm hosted URL once uploaded to the repo -->
-  <img src="author.jpg" alt="Arnie Rose" style="width:64px; height:64px; border-radius:50%; object-fit:cover; object-position:top center; display:block; margin:0 auto 16px; border:2px solid rgba(247,242,232,0.5);">
-  <h3>On Substack</h3>
-  <p>Collections of essays on identity, change, and the decisions that quietly shape a life.</p>
-  <a href="https://byarnierose.substack.com" target="_blank" rel="noopener" style="display:inline-block; padding:12px 28px; background:var(--ink); color:var(--parchment); font-family:Outfit,sans-serif; font-size:11px; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; text-decoration:none;">Subscribe on Substack</a>
 </div>
 
 <div class="share-section">
@@ -481,17 +451,6 @@ Every ending asks us who we're willing to leave behind. Every beginning asks us 
 </footer>
 
 <script>
-var exploreTrigger = document.getElementById('explore-more-trigger');
-var exploreMenu = document.getElementById('explore-more-menu');
-if (exploreTrigger) {
-  exploreTrigger.addEventListener('click', function(e){
-    e.stopPropagation();
-    exploreMenu.style.display = exploreMenu.style.display === 'block' ? 'none' : 'block';
-  });
-  document.addEventListener('click', function(){
-    exploreMenu.style.display = 'none';
-  });
-}
 var hamburger = document.getElementById('nav-hamburger');
 var mobileNav = document.getElementById('nav-mobile');
 if (hamburger) {
