@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Literary Collection &middot; Arnie Rose</title>
+<meta name="description" content="The Gentle Art of Dying Upside Down, Ode to Home, and The Good Minute, a literary collection about identity, memory, and the quiet moments that shape a life.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arniefelicilda.com/literary-collections.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-ar-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-ar-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-ar-180.png">
+<meta property="og:title" content="Literary Collection &middot; Arnie Rose">
+<meta property="og:description" content="Books, letters, and reflections on identity, memory, and the quiet moments that shape a life.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arniefelicilda.com/literary-collections.html">
+<meta property="og:image" content="https://arniefelicilda.com/mockup-1-landscape.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://arniefelicilda.com/mockup-1-landscape.jpg">
+<meta property="og:site_name" content="Arnie Rose">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1208;
+  --ink-soft:#3d3020;
+  --white:#ffffff;
+  --terra:#5A1F2A;
+  --terra-dark:#3d1520;
+  --mid:#8a7a6a;
+  --faint:#d4c9bb;
+  --playfair:'Playfair Display',Georgia,serif;
+  --body:'EB Garamond',Georgia,serif;
+  --sans:'Outfit',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--faint)}
+.nav-logo{font-family:var(--playfair);font-size:20px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:-0.01em}
+.nav-right{display:flex;gap:30px;align-items:center}
+.nav-link{font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.nav-link:hover{color:var(--terra)}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink-soft);background:none;border:none;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase}
+.nav-dropdown-toggle:hover{color:var(--terra)}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--faint);min-width:220px;z-index:200;box-shadow:0 12px 28px rgba(0,0,0,0.08)}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:13px 20px;border-bottom:1px solid var(--faint)}
+.nav-dropdown-menu a:hover{color:var(--terra);background:#fafafa}
+.nav-dropdown-sub{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);padding:12px 20px 6px;border-top:1px solid var(--faint)}
+.nav-cta{font-family:var(--sans);font-size:11px;font-weight:500;padding:9px 20px;background:var(--terra);color:var(--white);text-decoration:none;transition:all 0.2s;letter-spacing:0.08em;text-transform:uppercase;border:1px solid var(--terra)}
+.nav-cta:hover{background:var(--terra-dark);border-color:var(--terra-dark)}
+@media(max-width:900px){.nav-cta{display:none}}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+.nav-mobile{display:none;position:fixed;top:56px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--faint);flex-direction:column;z-index:99;box-shadow:0 4px 16px rgba(0,0,0,0.06);max-height:80vh;overflow-y:auto}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;padding:14px 24px;border-bottom:1px solid var(--faint)}
+.mobile-explore-toggle{display:block;width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);padding:14px 24px;border-bottom:1px solid var(--faint)}
+.mobile-explore-panel{display:none;background:#fafafa}
+.mobile-explore-panel.open{display:block}
+.mobile-explore-panel a{padding-left:40px}
+.mobile-explore-sub{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);padding:10px 24px 4px 40px}
+
+/* PAGE HEADER */
+.page-header{padding:150px 60px 30px;max-width:1080px;margin:0 auto;text-align:center}
+.page-title{font-family:var(--playfair);font-size:clamp(38px,5vw,56px);font-weight:400;color:var(--ink);line-height:1.05;letter-spacing:-0.01em;margin-bottom:16px}
+.page-desc{font-family:var(--body);font-style:italic;font-size:18px;color:var(--mid);max-width:480px;margin:0 auto}
+
+/* FEATURED BOOK */
+.featured-section{padding:60px 60px 30px;max-width:1080px;margin:0 auto}
+.featured-badge{display:inline-block;background:var(--terra);color:var(--white);font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:10px 22px;margin-bottom:20px}
+.featured-grid{display:flex;gap:56px;align-items:center;padding:48px;background:#fafaf7;border:1px solid var(--faint)}
+.featured-cover{width:220px;flex-shrink:0}
+.featured-cover img{width:100%;box-shadow:0 20px 46px rgba(26,18,8,0.16)}
+.featured-eyebrow{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
+.featured-title{font-family:var(--playfair);font-size:clamp(26px,3vw,36px);font-weight:400;color:var(--ink);margin-bottom:8px;line-height:1.15}
+.featured-sub{font-family:var(--body);font-style:italic;font-size:16px;color:var(--mid);margin-bottom:18px}
+.featured-desc{font-family:var(--body);font-size:16px;color:var(--ink-soft);line-height:1.8;margin-bottom:26px;max-width:480px}
+
+/* SECTION COMMON */
+.s-inner{max-width:1080px;margin:0 auto;padding:0 60px}
+.s-title{font-family:var(--playfair);font-size:clamp(26px,3vw,32px);font-weight:400;color:var(--ink);line-height:1.1;letter-spacing:-0.01em;margin-bottom:12px;text-align:center}
+.s-desc{font-family:var(--body);font-size:15px;color:var(--mid);text-align:center;max-width:480px;margin:0 auto 44px}
+
+/* COMPANION BOOKS */
+.companion-section{padding:70px 0 60px}
+.companion-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.companion-card{text-align:left}
+.companion-cover{margin-bottom:20px;position:relative}
+.companion-cover img{width:100%;aspect-ratio:2/3;object-fit:cover;box-shadow:0 14px 34px rgba(26,18,8,0.14)}
+.companion-status{display:inline-block;background:var(--ink);color:var(--white);font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px;margin-bottom:14px}
+.companion-title{font-family:var(--playfair);font-size:24px;font-weight:400;color:var(--ink);margin-bottom:6px}
+.companion-sub{font-family:var(--body);font-style:italic;font-size:15px;color:var(--mid);margin-bottom:14px}
+.companion-desc{font-family:var(--body);font-size:15px;color:var(--ink-soft);line-height:1.75}
+
+/* UPCOMING */
+.upcoming-section{padding:50px 0 80px}
+.upcoming-box{max-width:640px;margin:0 auto;padding:36px 40px;border:1px solid var(--faint);text-align:center}
+.upcoming-label{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:14px}
+.upcoming-title{font-family:var(--playfair);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:8px}
+.upcoming-desc{font-family:var(--body);font-size:15px;color:var(--ink-soft);line-height:1.75}
+
+/* NEWSLETTER */
+.email-section{padding:90px 60px;background:var(--ink);text-align:center}
+.email-inner{max-width:480px;margin:0 auto}
+.email-section h3{font-family:var(--playfair);font-size:clamp(30px,4vw,42px);font-weight:400;color:#f7f2e8;margin-bottom:16px}
+.email-section p{font-family:var(--body);font-size:16px;color:rgba(247,242,232,0.75);margin-bottom:32px;line-height:1.7}
+.email-form{display:flex;gap:0;max-width:420px;margin:0 auto}
+.email-form input{flex:1;padding:13px 16px;font-family:var(--sans);font-size:13px;border:none;outline:none;color:var(--ink)}
+.email-form button{padding:13px 22px;background:var(--terra);color:var(--white);font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap}
+.email-form button:hover{background:var(--terra-dark)}
+
+.btn-fill{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;padding:13px 26px;border:none;cursor:pointer;background:var(--terra);color:var(--white)}
+.btn-fill:hover{background:var(--terra-dark)}
+
+/* FOOTER */
+footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(--faint)}
+.footer-inner{max-width:1080px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;padding-bottom:44px}
+.footer-brand p.fname{font-family:var(--playfair);font-size:22px;color:var(--ink);margin-bottom:8px}
+.footer-brand p.frole{font-family:var(--body);font-size:13px;color:var(--ink-soft)}
+.footer-col h4{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
+.footer-col a{display:block;font-family:var(--body);font-size:13px;color:var(--ink-soft);text-decoration:none;margin-bottom:11px}
+.footer-col a:hover{color:var(--terra)}
+.footer-bottom{padding-top:26px;border-top:1px solid var(--faint);font-family:var(--sans);font-size:10px;color:var(--mid)}
+
+@media(max-width:900px){
+  nav{padding:16px 28px}
+  .nav-right .nav-link,.nav-right .nav-dropdown{display:none}
+  .nav-hamburger{display:flex}
+  .page-header{padding:120px 28px 24px}
+  .featured-section{padding:44px 28px 20px}
+  .featured-grid{flex-direction:column;padding:32px 24px;gap:28px;text-align:center}
+  .featured-cover{width:180px;margin:0 auto}
+  .featured-desc{margin-left:auto;margin-right:auto}
+  .s-inner{padding:0 28px}
+  .companion-grid{grid-template-columns:1fr;gap:44px}
+  .upcoming-box{margin-left:28px;margin-right:28px;padding:28px 24px}
+  .email-section{padding:70px 28px}
+  .email-form{flex-direction:column;gap:10px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Arnie Rose</a>
+  <div class="nav-right">
+    <a href="books.html" class="nav-link">Books</a>
+    <a href="editorial-services.html" class="nav-link">Editorial Services</a>
+    <a href="archive.html" class="nav-link">Blog</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle" id="explore-toggle">Explore More</button>
+      <div class="nav-dropdown-menu" id="explore-menu">
+        <a href="collaborations.html">Collaborations</a>
+        <div class="nav-dropdown-sub">Other Resources</div>
+        <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
+        <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
+      </div>
+    </div>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="the-letters.html" class="nav-cta">Newsletter</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="books.html">Books</a>
+  <a href="editorial-services.html">Editorial Services</a>
+  <a href="archive.html">Blog</a>
+  <a href="collaborations.html">Collaborations</a>
+  <a href="https://supplychain.arniefelicilda.com" target="_blank" rel="noopener">Supply Chain</a>
+  <a href="https://projectmanagement.arniefelicilda.com" target="_blank" rel="noopener">Project Management</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="the-letters.html">Newsletter</a>
+</div>
+
+<div class="page-header">
+  <h1 class="page-title">Literary Collection</h1>
+  <p class="page-desc">Books, letters, and reflections on identity, memory, and the quiet moments that shape a life.</p>
+</div>
+
+<!-- FEATURED: BOOK 7 -->
+<section class="featured-section">
+  <div class="featured-grid">
+    <div class="featured-cover">
+      <img src="book7-cover-final.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose">
+    </div>
+    <div>
+      <span class="featured-badge">New Release</span>
+      <h2 class="featured-title">The Gentle Art of Dying Upside Down</h2>
+      <p class="featured-sub">Holding On. Letting Go. Beginning Again.</p>
+      <p class="featured-desc">A reflective exploration of grief, identity, change, and the quiet courage it takes to begin again.</p>
+      <a href="the-gentle-art-of-dying-upside-down.html" class="btn-fill">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANION BOOKS -->
+<section class="companion-section">
+  <div class="s-inner">
+    <p class="s-title">Companion Books</p>
+    <p class="s-desc">Smaller works that continue the conversation, through letters, reflections, and poems.</p>
+    <div class="companion-grid">
+      <div class="companion-card">
+        <div class="companion-cover">
+          <img src="ode-to-home-cover.jpg" alt="Ode to Home: Letters of the Living by Arnie Rose">
+        </div>
+        <span class="companion-status">Coming September 2026</span>
+        <p class="companion-title">Ode to Home</p>
+        <p class="companion-sub">Letters of the Living</p>
+        <p class="companion-desc">A collection of letters to the people, places, and quiet experiences that shape a life. Each letter is an invitation to remember, reflect, and find your way back to what matters.</p>
+      </div>
+      <div class="companion-card">
+        <div class="companion-cover">
+          <img src="good-minute-cover.jpg" alt="The Good Minute by Arnie Rose">
+        </div>
+        <span class="companion-status">Coming September 2026</span>
+        <p class="companion-title">The Good Minute</p>
+        <p class="companion-sub">Reflections &amp; Poems</p>
+        <p class="companion-desc">A collection of reflections and poems celebrating the quiet beauty of ordinary life. Written for those learning to notice, appreciate, and linger a little longer in the moments that often go unseen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="email-section" id="newsletter">
+  <div class="email-inner">
+    <h3>Be First to Know</h3>
+    <p>Join the weekly newsletter for early access as the Literary Collection releases, plus original writing: The Blind Spot Series, Ode to Home, and Beyond the Page.</p>
+    <form action="https://assets.mailerlite.com/jsonp/2484784/forms/191860425663448888/subscribe" method="post" class="email-form">
+      <input name="fields[email]" type="email" placeholder="Your email address" required>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      <button type="submit">Join The Letters</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="fname">Arnie Rose</p>
+        <p class="frole">Author of The Gentle Art of Dying Upside Down and the You Were Never series. Books about identity, human behavior, and inner life.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="books.html">Books</a>
+        <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener">You Were Never Series</a>
+        <a href="the-gentle-art-of-dying-upside-down.html">The Gentle Art of Dying Upside Down</a>
+        <a href="the-letters.html">Newsletter</a>
+        <a href="https://byarnierose.substack.com" target="_blank" rel="noopener">Subscribe on Substack</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <a href="https://www.instagram.com/youwereneverseries" target="_blank" rel="noopener">@youwereneverseries</a>
+        <a href="https://www.instagram.com/writer.arnierose" target="_blank" rel="noopener">@writer.arnierose</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Arnie Rose. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hamburger=document.getElementById('nav-hamburger');
+  var mobileNav=document.getElementById('nav-mobile');
+  hamburger.addEventListener('click',function(e){
+    e.stopPropagation();
+    mobileNav.classList.toggle('open');
+  });
+  document.addEventListener('click',function(){mobileNav.classList.remove('open');});
+
+  var exploreToggle=document.getElementById('explore-toggle');
+  var exploreMenu=document.getElementById('explore-menu');
+  exploreToggle.addEventListener('click',function(e){
+    e.stopPropagation();
+    exploreMenu.classList.toggle('open');
+  });
+  document.addEventListener('click',function(){exploreMenu.classList.remove('open');});
+})();
+</script>
+</body>
+</html>
