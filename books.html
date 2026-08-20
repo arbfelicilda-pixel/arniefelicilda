@@ -104,6 +104,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .btn-outline:hover{background:var(--ink);color:var(--white)}
 .release-pill{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--terra);border:1px solid var(--terra);padding:12px 20px}
 
+.spec-details{max-width:520px}
+.spec-details summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:7px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);padding:4px 0}
+.spec-details summary::-webkit-details-marker{display:none}
+.spec-details summary::before{content:'+';font-size:14px;line-height:1;color:var(--terra)}
+.spec-details[open] summary::before{content:'\2212'}
+.spec-details[open] summary{margin-bottom:10px}
 .spec-table{width:100%;max-width:520px;border-collapse:collapse}
 .spec-table tr{border-top:1px solid var(--faint)}
 .spec-table tr:last-child{border-bottom:1px solid var(--faint)}
@@ -210,23 +216,26 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
       <p class="book-badge">Book 7</p>
       <h2 class="book-title">The Gentle Art of Dying Upside Down</h2>
       <p class="book-subtitle">On the Dignity of Endurance</p>
-      <p class="book-desc">Look into our quiet rhythms, where mortality becomes a way of seeing. This is a reflection that follows stillness, silence, and the lives we continue to inhabit.</p>
+      <p class="book-desc">The Gentle Art of Dying Upside Down is a work of literary nonfiction about endurance, mortality, and the dignity of staying present as life continues to change. It brings the natural world into conversation with human experience.</p>
       <div class="book-actions">
-        <span class="release-pill">August 15</span>
+        <a href="https://a.co/d/0dqZ2FYL" target="_blank" rel="noopener" class="btn-fill">Buy on Amazon</a>
         <a href="the-gentle-art-of-dying-upside-down.html" class="btn-outline">Learn More</a>
       </div>
-      <table class="spec-table">
-        <tr><td>Author</td><td>Arnie Rose</td></tr>
-        <tr><td>Collection</td><td>Literary Collection</td></tr>
-        <tr><td>Category</td><td><span class="spec-category">Literary Reflective Nonfiction</span></td></tr>
-        <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Stillness</span><span class="pill">Silence</span><span class="pill">Acceptance</span><span class="pill">Endurance</span></div></td></tr>
-        <tr><td>Format</td><td>Paperback &middot; Kindle</td></tr>
-        <tr><td>Language</td><td>English</td></tr>
-        <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
-        <tr><td>Pages</td><td>Approx. 340</td></tr>
-        <tr><td>Audience</td><td>General Adult Readers</td></tr>
-        <tr><td>Availability</td><td>August 15, 2026</td></tr>
-      </table>
+      <details class="spec-details">
+        <summary>Details</summary>
+        <table class="spec-table">
+          <tr><td>Author</td><td>Arnie Rose</td></tr>
+          <tr><td>Collection</td><td>Literary Collection</td></tr>
+          <tr><td>Category</td><td><span class="spec-category">Literary Narrative Nonfiction</span></td></tr>
+          <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Stillness</span><span class="pill">Silence</span><span class="pill">Acceptance</span><span class="pill">Endurance</span></div></td></tr>
+          <tr><td>Format</td><td>Paperback &middot; Kindle</td></tr>
+          <tr><td>Language</td><td>English</td></tr>
+          <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
+          <tr><td>Pages</td><td>Approx. 340</td></tr>
+          <tr><td>Audience</td><td>General Adult Readers</td></tr>
+          <tr><td>Availability</td><td>Available Now</td></tr>
+        </table>
+      </details>
     </div>
   </div>
 
@@ -248,18 +257,21 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
         <a href="https://a.co/d/0aages6f" target="_blank" rel="noopener" class="btn-fill">Buy on Amazon</a>
         <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="btn-outline">Learn More</a>
       </div>
-      <table class="spec-table">
-        <tr><td>Author</td><td>Arnie Rose</td></tr>
-        <tr><td>Series</td><td>You Were Never Series &middot; Book 1</td></tr>
-        <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
-        <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Time Management</span><span class="pill">Productivity</span><span class="pill">Intentional Living</span></div></td></tr>
-        <tr><td>Format</td><td>Paperback &middot; Kindle</td></tr>
-        <tr><td>Language</td><td>English</td></tr>
-        <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
-        <tr><td>Pages</td><td>Approx. 260</td></tr>
-        <tr><td>Audience</td><td>Professionals &middot; Students &middot; Creators</td></tr>
-        <tr><td>Availability</td><td>Available Now</td></tr>
-      </table>
+      <details class="spec-details">
+        <summary>Details</summary>
+        <table class="spec-table">
+          <tr><td>Author</td><td>Arnie Rose</td></tr>
+          <tr><td>Series</td><td>You Were Never Series &middot; Book 1</td></tr>
+          <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
+          <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Time Management</span><span class="pill">Productivity</span><span class="pill">Intentional Living</span></div></td></tr>
+          <tr><td>Format</td><td>Paperback &middot; Hardcover</td></tr>
+          <tr><td>Language</td><td>English</td></tr>
+          <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
+          <tr><td>Pages</td><td>Approx. 260</td></tr>
+          <tr><td>Audience</td><td>Professionals &middot; Students &middot; Creators</td></tr>
+          <tr><td>Availability</td><td>Available Now</td></tr>
+        </table>
+      </details>
     </div>
   </div>
 
@@ -281,18 +293,21 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
         <a href="https://a.co/d/07zv44Me" target="_blank" rel="noopener" class="btn-fill">Buy on Amazon</a>
         <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="btn-outline">Learn More</a>
       </div>
-      <table class="spec-table">
-        <tr><td>Author</td><td>Arnie Rose</td></tr>
-        <tr><td>Series</td><td>You Were Never Series &middot; Book 2</td></tr>
-        <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
-        <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Identity</span><span class="pill">Strengths</span><span class="pill">Self-Discovery</span></div></td></tr>
-        <tr><td>Format</td><td>Paperback &middot; Kindle</td></tr>
-        <tr><td>Language</td><td>English</td></tr>
-        <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
-        <tr><td>Pages</td><td>Approx. 180</td></tr>
-        <tr><td>Audience</td><td>Professionals &middot; Students &middot; Creators</td></tr>
-        <tr><td>Availability</td><td>Available Now</td></tr>
-      </table>
+      <details class="spec-details">
+        <summary>Details</summary>
+        <table class="spec-table">
+          <tr><td>Author</td><td>Arnie Rose</td></tr>
+          <tr><td>Series</td><td>You Were Never Series &middot; Book 2</td></tr>
+          <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
+          <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Identity</span><span class="pill">Strengths</span><span class="pill">Self-Discovery</span></div></td></tr>
+          <tr><td>Format</td><td>Paperback &middot; Hardcover</td></tr>
+          <tr><td>Language</td><td>English</td></tr>
+          <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
+          <tr><td>Pages</td><td>Approx. 180</td></tr>
+          <tr><td>Audience</td><td>Professionals &middot; Students &middot; Creators</td></tr>
+          <tr><td>Availability</td><td>Available Now</td></tr>
+        </table>
+      </details>
     </div>
   </div>
 
@@ -314,18 +329,21 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
         <a href="https://a.co/d/0jkHsKWM" target="_blank" rel="noopener" class="btn-fill">Buy on Amazon</a>
         <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="btn-outline">Learn More</a>
       </div>
-      <table class="spec-table">
-        <tr><td>Author</td><td>Arnie Rose</td></tr>
-        <tr><td>Series</td><td>You Were Never Series &middot; Book 3</td></tr>
-        <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
-        <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Communication</span><span class="pill">Visibility</span><span class="pill">Personal Brand</span></div></td></tr>
-        <tr><td>Format</td><td>Paperback &middot; Kindle</td></tr>
-        <tr><td>Language</td><td>English</td></tr>
-        <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
-        <tr><td>Pages</td><td>Approx. 180</td></tr>
-        <tr><td>Audience</td><td>Professionals &middot; Entrepreneurs &middot; Creators</td></tr>
-        <tr><td>Availability</td><td>Available Now</td></tr>
-      </table>
+      <details class="spec-details">
+        <summary>Details</summary>
+        <table class="spec-table">
+          <tr><td>Author</td><td>Arnie Rose</td></tr>
+          <tr><td>Series</td><td>You Were Never Series &middot; Book 3</td></tr>
+          <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
+          <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Communication</span><span class="pill">Visibility</span><span class="pill">Personal Brand</span></div></td></tr>
+          <tr><td>Format</td><td>Paperback &middot; Hardcover</td></tr>
+          <tr><td>Language</td><td>English</td></tr>
+          <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
+          <tr><td>Pages</td><td>Approx. 180</td></tr>
+          <tr><td>Audience</td><td>Professionals &middot; Entrepreneurs &middot; Creators</td></tr>
+          <tr><td>Availability</td><td>Available Now</td></tr>
+        </table>
+      </details>
     </div>
   </div>
 
@@ -347,18 +365,21 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
         <a href="https://a.co/d/08HIhwXs" target="_blank" rel="noopener" class="btn-fill">Buy on Amazon</a>
         <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="btn-outline">Learn More</a>
       </div>
-      <table class="spec-table">
-        <tr><td>Author</td><td>Arnie Rose</td></tr>
-        <tr><td>Series</td><td>You Were Never Series &middot; Book 4</td></tr>
-        <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
-        <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Self-Worth</span><span class="pill">Confidence</span><span class="pill">Resilience</span></div></td></tr>
-        <tr><td>Format</td><td>Paperback &middot; Kindle</td></tr>
-        <tr><td>Language</td><td>English</td></tr>
-        <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
-        <tr><td>Pages</td><td>Approx. 180</td></tr>
-        <tr><td>Audience</td><td>Professionals &middot; Leaders &middot; Students</td></tr>
-        <tr><td>Availability</td><td>Available Now</td></tr>
-      </table>
+      <details class="spec-details">
+        <summary>Details</summary>
+        <table class="spec-table">
+          <tr><td>Author</td><td>Arnie Rose</td></tr>
+          <tr><td>Series</td><td>You Were Never Series &middot; Book 4</td></tr>
+          <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
+          <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Self-Worth</span><span class="pill">Confidence</span><span class="pill">Resilience</span></div></td></tr>
+          <tr><td>Format</td><td>Paperback &middot; Hardcover</td></tr>
+          <tr><td>Language</td><td>English</td></tr>
+          <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
+          <tr><td>Pages</td><td>Approx. 180</td></tr>
+          <tr><td>Audience</td><td>Professionals &middot; Leaders &middot; Students</td></tr>
+          <tr><td>Availability</td><td>Available Now</td></tr>
+        </table>
+      </details>
     </div>
   </div>
 
@@ -380,18 +401,21 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
         <a href="https://a.co/d/0dICGMfl" target="_blank" rel="noopener" class="btn-fill">Buy on Amazon</a>
         <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="btn-outline">Learn More</a>
       </div>
-      <table class="spec-table">
-        <tr><td>Author</td><td>Arnie Rose</td></tr>
-        <tr><td>Series</td><td>You Were Never Series &middot; Book 5</td></tr>
-        <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
-        <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Decision-Making</span><span class="pill">Confidence</span><span class="pill">Leadership</span></div></td></tr>
-        <tr><td>Format</td><td>Paperback &middot; Kindle</td></tr>
-        <tr><td>Language</td><td>English</td></tr>
-        <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
-        <tr><td>Pages</td><td>Approx. 180</td></tr>
-        <tr><td>Audience</td><td>Professionals &middot; Managers &middot; Entrepreneurs</td></tr>
-        <tr><td>Availability</td><td>Available Now</td></tr>
-      </table>
+      <details class="spec-details">
+        <summary>Details</summary>
+        <table class="spec-table">
+          <tr><td>Author</td><td>Arnie Rose</td></tr>
+          <tr><td>Series</td><td>You Were Never Series &middot; Book 5</td></tr>
+          <tr><td>Category</td><td><span class="spec-category">Personal Development</span></td></tr>
+          <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Decision-Making</span><span class="pill">Confidence</span><span class="pill">Leadership</span></div></td></tr>
+          <tr><td>Format</td><td>Paperback &middot; Hardcover</td></tr>
+          <tr><td>Language</td><td>English</td></tr>
+          <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
+          <tr><td>Pages</td><td>Approx. 180</td></tr>
+          <tr><td>Audience</td><td>Professionals &middot; Managers &middot; Entrepreneurs</td></tr>
+          <tr><td>Availability</td><td>Available Now</td></tr>
+        </table>
+      </details>
     </div>
   </div>
 
@@ -413,18 +437,21 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
         <a href="https://a.co/d/056120mC" target="_blank" rel="noopener" class="btn-fill">Buy on Amazon</a>
         <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener" class="btn-outline">Learn More</a>
       </div>
-      <table class="spec-table">
-        <tr><td>Author</td><td>Arnie Rose</td></tr>
-        <tr><td>Series</td><td>You Were Never Series &middot; Book 6</td></tr>
-        <tr><td>Category</td><td><span class="spec-category">Communication</span></td></tr>
-        <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Communication</span><span class="pill">Assertiveness</span><span class="pill">Difficult Conversations</span></div></td></tr>
-        <tr><td>Format</td><td>Paperback &middot; Kindle</td></tr>
-        <tr><td>Language</td><td>English</td></tr>
-        <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
-        <tr><td>Pages</td><td>Approx. 200</td></tr>
-        <tr><td>Audience</td><td>Professionals &middot; Leaders &middot; Students</td></tr>
-        <tr><td>Availability</td><td>Available Now</td></tr>
-      </table>
+      <details class="spec-details">
+        <summary>Details</summary>
+        <table class="spec-table">
+          <tr><td>Author</td><td>Arnie Rose</td></tr>
+          <tr><td>Series</td><td>You Were Never Series &middot; Book 6</td></tr>
+          <tr><td>Category</td><td><span class="spec-category">Communication</span></td></tr>
+          <tr><td>Topics</td><td><div class="spec-topics"><span class="pill">Communication</span><span class="pill">Assertiveness</span><span class="pill">Difficult Conversations</span></div></td></tr>
+          <tr><td>Format</td><td>Paperback &middot; Hardcover</td></tr>
+          <tr><td>Language</td><td>English</td></tr>
+          <tr><td>Trim Size</td><td>5.5 &times; 8.5 in</td></tr>
+          <tr><td>Pages</td><td>Approx. 200</td></tr>
+          <tr><td>Audience</td><td>Professionals &middot; Leaders &middot; Students</td></tr>
+          <tr><td>Availability</td><td>Available Now</td></tr>
+        </table>
+      </details>
     </div>
   </div>
 
