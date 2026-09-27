@@ -155,7 +155,7 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 .shelf-label{font-family:'Pinyon Script',cursive;font-size:42px;font-weight:400;color:var(--terra);margin-bottom:6px;line-height:1}
 .shelf-h1{font-family:var(--playfair);font-weight:400;font-style:italic;font-size:clamp(36px,6vw,58px);color:var(--ink);line-height:1.1;margin-bottom:10px}
 .shelf-count{font-family:var(--sans);font-size:13px;letter-spacing:0.14em;color:var(--terra);text-transform:uppercase;margin-bottom:14px}
-.shelf-search-row{max-width:520px;margin:0 auto 10px}
+.shelf-search-row{display:none}
 .shelf-search-input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--faint);font-family:var(--body);font-style:italic;font-size:20px;text-align:center;padding:8px 4px;color:var(--ink);outline:none}
 .shelf-search-input::placeholder{color:var(--mid)}
 .shelf-pills{display:flex;gap:10px;overflow-x:auto;justify-content:center;flex-wrap:wrap;margin:0 0 20px}
@@ -248,6 +248,8 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
   .flip-stage{width:66vw;flex-basis:66vw}
   .shelf-header{padding:0 28px}
   .shelf-detail{flex-direction:column;align-items:center;text-align:center}
+  .spine-face{width:31px;height:292px}
+  .spine-btn.expanded .spine-face{width:195px}
   .shelf-info{width:100%}
   .shelf-info-actions{justify-content:center}
 }
@@ -255,7 +257,6 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 </style>
 </head>
 <body>
-<div style="position:fixed;bottom:16px;left:16px;z-index:9999;background:#3a1620;color:#f7f2e8;font-family:sans-serif;font-size:12px;letter-spacing:.05em;padding:8px 14px;border-radius:99px;box-shadow:0 8px 20px rgba(0,0,0,.3);pointer-events:none;">PROTOTYPE — Option B: In-Shelf Reveal</div>
 
 <nav>
   <a href="index.html" class="nav-logo">Arnie Rose</a>
@@ -300,7 +301,7 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 <!-- BOOKSHELF -->
 <section class="shelf-section">
   <div class="shelf-header">
-    <p class="shelf-label"><span id="shelfLabelSpan"></span></p>
+    <p class="shelf-label"><span id="shelfLabelSpan">Welcome</span></p>
     <h2 class="shelf-h1" id="shelfTypedTitle" aria-label="Published Books"><span id="shelfTypedSpan"></span></h2>
     <p class="shelf-count" id="shelfCount">7 BOOKS</p>
     <div class="shelf-search-row">
