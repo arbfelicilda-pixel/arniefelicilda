@@ -150,21 +150,21 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 }
 
 /* ===== BOOKSHELF ===== */
-.shelf-section{padding:90px 0 70px;background:var(--parchment)}
+.shelf-section{padding:36px 0 70px;background:var(--parchment)}
 .shelf-header{max-width:1080px;margin:0 auto;padding:0 60px;text-align:center}
 .shelf-label{font-family:'Pinyon Script',cursive;font-size:42px;font-weight:400;color:var(--terra);margin-bottom:6px;line-height:1}
 .shelf-h1{font-family:var(--playfair);font-weight:400;font-style:italic;font-size:clamp(36px,6vw,58px);color:var(--ink);line-height:1.1;margin-bottom:10px}
-.shelf-count{font-family:var(--sans);font-size:13px;letter-spacing:0.14em;color:var(--terra);text-transform:uppercase;margin-bottom:30px}
-.shelf-search-row{max-width:520px;margin:0 auto 22px}
+.shelf-count{font-family:var(--sans);font-size:13px;letter-spacing:0.14em;color:var(--terra);text-transform:uppercase;margin-bottom:14px}
+.shelf-search-row{max-width:520px;margin:0 auto 10px}
 .shelf-search-input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--faint);font-family:var(--body);font-style:italic;font-size:20px;text-align:center;padding:8px 4px;color:var(--ink);outline:none}
 .shelf-search-input::placeholder{color:var(--mid)}
-.shelf-pills{display:flex;gap:10px;overflow-x:auto;justify-content:center;flex-wrap:wrap;margin:0 0 46px}
+.shelf-pills{display:flex;gap:10px;overflow-x:auto;justify-content:center;flex-wrap:wrap;margin:0 0 20px}
 .shelf-pill{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:9px 18px;border:1px solid var(--faint);border-radius:99px;background:transparent;color:var(--ink);cursor:pointer;white-space:nowrap;transition:all .2s}
 .shelf-pill:hover{border-color:var(--terra);color:var(--terra)}
 .shelf-pill.active{background:var(--terra);border-color:var(--terra);color:var(--parchment)}
 
-.shelf-outer{position:relative;padding:50px 0 10px;perspective:1600px;perspective-origin:50% 65%}
-.shelf-scroll{display:flex;align-items:flex-end;justify-content:center;gap:7px;overflow-x:auto;overflow-y:visible;padding:50px 8vw 20px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+.shelf-outer{position:relative;padding:20px 0 10px;perspective:1600px;perspective-origin:50% 65%}
+.shelf-scroll{display:flex;align-items:flex-end;justify-content:center;gap:7px;overflow-x:auto;overflow-y:visible;padding:20px 8vw 20px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
 .shelf-scroll::-webkit-scrollbar{display:none}
 .shelf-scroll{scrollbar-width:none}
 .shelf-edge{position:absolute;top:0;bottom:0;width:80px;pointer-events:none;z-index:5}
@@ -178,15 +178,15 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 .spine-face{display:block;width:51px;height:487px;border-radius:2px 2px 0 0;position:relative;overflow:hidden;box-shadow:2px 0 6px rgba(26,18,8,0.18), inset -3px 0 6px rgba(26,18,8,0.12), inset 3px 0 4px rgba(255,255,255,0.15);background-repeat:no-repeat;background-size:auto 100%;background-position:center}
 .spine-sheen{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0.16),transparent 35%,transparent 65%,rgba(26,18,8,0.14));pointer-events:none}
 
-.shelf-meta{position:fixed;z-index:100;width:230px;background:var(--white);border-radius:2px;padding:16px 18px;box-shadow:0 20px 44px rgba(26,18,8,0.22);pointer-events:none;opacity:0;transition:opacity .18s}
+.shelf-meta{position:fixed;z-index:100;width:170px;background:var(--white);border-radius:2px;padding:9px 11px;box-shadow:0 14px 30px rgba(26,18,8,0.2);pointer-events:none;opacity:0;transition:opacity .18s}
 .shelf-meta.show{opacity:1}
-.shelf-meta-title{font-family:var(--playfair);font-size:19px;line-height:1.2;color:var(--ink);margin-bottom:5px}
-.shelf-meta-author{font-family:var(--body);font-size:13px;color:var(--mid);margin-bottom:10px}
-.shelf-meta-genre{font-family:var(--sans);font-size:10px;letter-spacing:0.08em;color:var(--terra);text-transform:uppercase}
+.shelf-meta-title{font-family:var(--playfair);font-size:11px;line-height:1.2;color:var(--ink);margin-bottom:3px}
+.shelf-meta-author{font-family:var(--body);font-size:8px;color:var(--mid);margin-bottom:6px}
+.shelf-meta-genre{font-family:var(--sans);font-size:6px;letter-spacing:0.08em;color:var(--terra);text-transform:uppercase}
 
 .shelf-backdrop{position:fixed;inset:0;background:rgba(247,242,232,0.85);backdrop-filter:blur(20px);opacity:0;pointer-events:none;transition:opacity .5s;z-index:200}
 .shelf-backdrop.show{opacity:1;pointer-events:auto}
-.shelf-detail{position:fixed;z-index:210;left:50%;top:50%;display:flex;flex-wrap:wrap;justify-content:center;gap:32px;align-items:flex-start;transform:translate(-50%,-50%);opacity:0;pointer-events:none;width:92vw;max-width:640px;max-height:88vh;overflow-y:auto}
+.shelf-detail{position:fixed;z-index:210;left:50%;top:50%;display:flex;flex-wrap:wrap;justify-content:center;gap:32px;align-items:flex-start;transform:translate(-50%,-50%);opacity:0;pointer-events:none;width:92vw;max-width:720px;max-height:88vh;overflow-y:auto}
 .shelf-detail.show{opacity:1;pointer-events:auto}
 
 .flip-stage{flex:0 0 311px;width:311px;perspective:1800px}
@@ -212,6 +212,9 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 @media (max-width:600px){
   .flip-stage{width:66vw;flex-basis:66vw}
   .shelf-header{padding:0 28px}
+  .shelf-detail{flex-direction:column;align-items:center;text-align:center}
+  .shelf-info{width:100%}
+  .shelf-info-actions{justify-content:center}
 }
 
 </style>
@@ -515,9 +518,9 @@ function shelfShowMeta(b, btn){
     '<div class="shelf-meta-author">Arnie Rose &middot; ' + b.year + '</div>' +
     '<div class="shelf-meta-genre">' + b.genre + '</div>';
   document.body.appendChild(shelfMetaNode);
-  var left = Math.min(Math.max(rect.left + rect.width/2 - 115, 10), window.innerWidth-240);
+  var left = Math.min(Math.max(rect.left + rect.width/2 - 85, 10), window.innerWidth-180);
   shelfMetaNode.style.left = left + 'px';
-  shelfMetaNode.style.top = (rect.top - 150) + 'px';
+  shelfMetaNode.style.top = (rect.bottom + 10) + 'px';
   requestAnimationFrame(function(){ shelfMetaNode.classList.add('show'); });
 }
 function shelfHideMeta(){
