@@ -79,8 +79,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .page-desc a{color:var(--terra);text-decoration:underline}
 
 /* BOOK ENTRY */
-nav.jump-nav{position:static;top:auto;left:auto;right:auto;z-index:auto;backdrop-filter:none;background:none;max-width:1080px;margin:0 auto 10px;padding:0 60px 18px;display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;border-bottom:1px solid var(--faint);cursor:grab;user-select:none}
+.jump-nav-wrap{max-width:1080px;margin:0 auto 10px;padding:0 60px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--faint)}
+nav.jump-nav{position:static;top:auto;left:auto;right:auto;z-index:auto;backdrop-filter:none;background:none;flex:1;min-width:0;display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;cursor:grab;user-select:none}
 nav.jump-nav.dragging{cursor:grabbing}
+.jump-arrow{flex-shrink:0;width:32px;height:32px;border-radius:50%;border:1px solid var(--faint);background:var(--white);color:var(--ink-soft);font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color 0.2s,color 0.2s}
+.jump-arrow:hover{border-color:var(--terra);color:var(--terra)}
+.jump-arrow:disabled{opacity:0.3;cursor:default;border-color:var(--faint);color:var(--ink-soft)}
 .jump-nav a{flex-shrink:0;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.04em;color:var(--ink-soft);text-decoration:none;white-space:nowrap;padding:8px 16px;border:1px solid var(--faint);border-radius:99px;transition:color 0.2s,border-color 0.2s,background 0.2s}
 .jump-nav a:hover{color:var(--terra);border-color:var(--terra)}
 .jump-nav a.active{color:var(--parchment);background:var(--terra);border-color:var(--terra)}
@@ -153,7 +157,7 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
   .nav-right .nav-link,.nav-right .nav-dropdown{display:none}
   .nav-hamburger{display:flex}
   .page-header{padding:120px 28px 40px}
-  nav.jump-nav{padding:0 28px 18px}
+  .jump-nav-wrap{padding:0 28px 18px}
   .books-list{padding:10px 28px 70px}
   .book-entry{gap:28px;padding:16px 0}
   .book-gallery{width:100%;max-width:260px;margin:0 auto}
@@ -207,15 +211,19 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
   <p class="page-desc"><a href="the-gentle-art-of-dying-upside-down.html"><em>The Gentle Art of Dying Upside Down</em></a> and <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener"><em>the You Were Never series</em></a>.</p>
 </div>
 
-<nav class="jump-nav" aria-label="Choose a book" id="jumpNav">
-  <a href="#gentle-art" class="active">The Gentle Art of Dying Upside Down</a>
-  <a href="#never-behind">You Were Never Behind</a>
-  <a href="#never-ordinary">You Were Never Ordinary</a>
-  <a href="#never-invisible">You Were Never Invisible</a>
-  <a href="#never-dispensable">You Were Never Dispensable</a>
-  <a href="#never-overruled">You Were Never Overruled</a>
-  <a href="#never-mute">You Were Never Mute</a>
-</nav>
+<div class="jump-nav-wrap">
+  <button class="jump-arrow" id="jumpArrowLeft" type="button" aria-label="Previous book">&#8249;</button>
+  <nav class="jump-nav" aria-label="Choose a book" id="jumpNav">
+    <a href="#gentle-art" class="active">The Gentle Art of Dying Upside Down</a>
+    <a href="#never-behind">You Were Never Behind</a>
+    <a href="#never-ordinary">You Were Never Ordinary</a>
+    <a href="#never-invisible">You Were Never Invisible</a>
+    <a href="#never-dispensable">You Were Never Dispensable</a>
+    <a href="#never-overruled">You Were Never Overruled</a>
+    <a href="#never-mute">You Were Never Mute</a>
+  </nav>
+  <button class="jump-arrow" id="jumpArrowRight" type="button" aria-label="Next book">&#8250;</button>
+</div>
 
 <div class="books-list">
 
@@ -575,6 +583,50 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
     }
     return true;
   }
+  var bookOrder=Array.prototype.map.call(bookEntries, function(e){ return e.id; });
+  function currentBookIndex(){
+    var current=document.querySelector('.book-entry.active');
+    return current ? bookOrder.indexOf(current.id) : 0;
+  }
+  function goToRelativeBook(delta){
+    var idx=currentBookIndex() + delta;
+    if(idx < 0 || idx > bookOrder.length - 1) return;
+    var id=bookOrder[idx];
+    showBook(id, true);
+    try{ history.replaceState(null, '', '#'+id); }catch(e){}
+  }
+  var booksListEl=document.querySelector('.books-list');
+  var swipeStartX=0, swipeStartY=0, swipeTracking=false;
+  booksListEl.addEventListener('touchstart', function(e){
+    if(e.touches.length!==1) return;
+    swipeStartX=e.touches[0].clientX;
+    swipeStartY=e.touches[0].clientY;
+    swipeTracking=true;
+  }, {passive:true});
+  booksListEl.addEventListener('touchend', function(e){
+    if(!swipeTracking) return;
+    swipeTracking=false;
+    var dx=e.changedTouches[0].clientX - swipeStartX;
+    var dy=e.changedTouches[0].clientY - swipeStartY;
+    if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5){
+      goToRelativeBook(dx < 0 ? 1 : -1);
+    }
+  }, {passive:true});
+  var bookDragging=false, bookDragStartX=0, bookDragStartY=0;
+  booksListEl.addEventListener('mousedown', function(e){
+    bookDragging=true;
+    bookDragStartX=e.pageX;
+    bookDragStartY=e.pageY;
+  });
+  window.addEventListener('mouseup', function(e){
+    if(!bookDragging) return;
+    bookDragging=false;
+    var dx=e.pageX - bookDragStartX;
+    var dy=e.pageY - bookDragStartY;
+    if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5){
+      goToRelativeBook(dx < 0 ? 1 : -1);
+    }
+  });
   function nearestTabToCenter(){
     var navRect=jumpNavEl.getBoundingClientRect();
     var center=navRect.left + navRect.width/2;
@@ -621,6 +673,14 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
   jumpNavEl.addEventListener('click', function(e){
     if(dragMoved){ e.preventDefault(); e.stopPropagation(); dragMoved=false; }
   }, true);
+  var jumpArrowLeft=document.getElementById('jumpArrowLeft');
+  var jumpArrowRight=document.getElementById('jumpArrowRight');
+  jumpArrowLeft.addEventListener('click', function(){
+    jumpNavEl.scrollBy({left: -220, behavior:'smooth'});
+  });
+  jumpArrowRight.addEventListener('click', function(){
+    jumpNavEl.scrollBy({left: 220, behavior:'smooth'});
+  });
   jumpLinks.forEach(function(link){
     link.addEventListener('click',function(e){
       e.preventDefault();
