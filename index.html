@@ -249,6 +249,9 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
   .shelf-header{padding:0 28px}
   .shelf-detail{flex-direction:column;align-items:center;text-align:center}
   .spine-face{width:31px;height:292px}
+  .shelf-pills{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 20px 4px;margin-left:-20px;margin-right:-20px;scrollbar-width:none}
+  .shelf-pills::-webkit-scrollbar{display:none}
+  .shelf-pill{flex-shrink:0}
   .spine-btn.expanded .spine-face{width:195px}
   .shelf-info{width:100%}
   .shelf-info-actions{justify-content:center}
@@ -569,41 +572,50 @@ function shelfCollapseSpine(state){
   face.style.transition = prevTransition;
 
   var ghost = shelfMakeGhost(originRect, b.spineImg, b.cover, b.spineColor);
-  ghost.classList.add('landed'); // starts showing the full cover, matching what was just visible
+  ghost.classList.add('landed');
+  ghost.style.transition = 'none';
   ghost.style.transform = 'perspective(1400px) rotateY(0deg)';
-  ghost.getBoundingClientRect();
+  ghost.getBoundingClientRect(); // force reflow
 
-  requestAnimationFrame(function(){
+  // STAGE 1: lean, still at full size — a clear, deliberate tilt before anything shrinks
+  ghost.style.transition = 'transform .32s cubic-bezier(.3,.08,.18,1)';
+  ghost.getBoundingClientRect();
+  ghost.style.transform = 'perspective(1400px) rotateY(' + (sway * 40) + 'deg)';
+
+  setTimeout(function(){
+    // STAGE 2: now fly + shrink into the shelf slot while continuing to turn further
     ghost.classList.remove('landed'); // crossfades to the spine art as it turns
+    ghost.style.transition = 'left .48s cubic-bezier(.3,.08,.18,1),top .48s cubic-bezier(.3,.08,.18,1),' +
+      'width .48s cubic-bezier(.3,.08,.18,1),height .48s cubic-bezier(.3,.08,.18,1),' +
+      'border-radius .48s cubic-bezier(.3,.08,.18,1),transform .48s cubic-bezier(.3,.08,.18,1)';
+    ghost.getBoundingClientRect();
     ghost.style.left = targetRect.left + 'px';
     ghost.style.top = targetRect.top + 'px';
     ghost.style.width = targetRect.width + 'px';
     ghost.style.height = targetRect.height + 'px';
     ghost.style.borderRadius = '2px 2px 0 0';
-    // turns far enough that the cover briefly disappears edge-on, like a real book being slid back in
     ghost.style.transform = 'perspective(1400px) rotateY(' + (sway * 62) + 'deg)';
-  });
 
-  var flattened = false;
-  function flattenIntoShelf(){
-    if(flattened) return;
-    flattened = true;
-    // swings past flush slightly before settling — a real sway, not a stiff stop
-    ghost.classList.add('flatten');
-    ghost.style.transform = 'perspective(1400px) rotateY(0deg)';
-    var done = false;
-    function finish(){
-      if(done) return;
-      done = true;
-      ghost.remove();
-      face.style.visibility = '';
-      delete face.dataset.reshelving;
-    }
-    ghost.addEventListener('transitionend', function(e){ if(e.propertyName==='transform') finish(); });
-    setTimeout(finish, 380);
-  }
-  ghost.addEventListener('transitionend', function(e){ if(e.propertyName==='width') flattenIntoShelf(); });
-  setTimeout(flattenIntoShelf, 620);
+    setTimeout(function(){
+      // STAGE 3a: swing past flush to the opposite side — the visible "sway"
+      ghost.style.transition = 'transform .2s cubic-bezier(.3,0,.7,1)';
+      ghost.getBoundingClientRect();
+      ghost.style.transform = 'perspective(1400px) rotateY(' + (sway * -16) + 'deg)';
+
+      setTimeout(function(){
+        // STAGE 3b: settle flush into the shelf
+        ghost.style.transition = 'transform .18s ease-out';
+        ghost.getBoundingClientRect();
+        ghost.style.transform = 'perspective(1400px) rotateY(0deg)';
+
+        setTimeout(function(){
+          ghost.remove();
+          face.style.visibility = '';
+          delete face.dataset.reshelving;
+        }, 220);
+      }, 210);
+    }, 500);
+  }, 330);
 }
 
 function shelfExpandSpine(btn, face, b){
