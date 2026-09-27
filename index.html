@@ -212,6 +212,8 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 .spine-expand-btn.fill{background:var(--terra);border-color:var(--terra)}
 .spine-expand-btn.fill:hover{background:#c9502f}
 .spine-expand-hint{margin-top:10px;font-family:var(--sans);font-size:8px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.65)}
+.spine-expand-back{margin:8px auto 0;display:flex;align-items:center;justify-content:center;gap:4px;background:none;border:none;padding:4px 6px;cursor:pointer;font-family:var(--sans);font-size:8px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.55);transition:color .2s}
+.spine-expand-back:hover{color:rgba(255,255,255,0.95)}
 
 .shelf-meta{position:fixed;z-index:100;width:170px;background:var(--white);border-radius:2px;padding:9px 11px;box-shadow:0 14px 30px rgba(26,18,8,0.2);pointer-events:none;opacity:0;transition:opacity .18s}
 .shelf-meta.show{opacity:1}
@@ -304,7 +306,7 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 <section class="shelf-section">
   <div class="shelf-header">
     <p class="shelf-label"><span id="shelfLabelSpan">Welcome</span></p>
-    <h2 class="shelf-h1" id="shelfTypedTitle" aria-label="Published Books"><span id="shelfTypedSpan"></span></h2>
+    <h2 class="shelf-h1" id="shelfTypedTitle" aria-label="Published Books"><span id="shelfTypedSpan">Published Books</span></h2>
     <p class="shelf-count" id="shelfCount">7 BOOKS</p>
     <div class="shelf-search-row">
       <input class="shelf-search-input" id="shelfSearchInput" placeholder="What are you looking for?">
@@ -353,7 +355,7 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
       <span class="hero-badge">New Release</span>
       <h1 class="hero-title">The Gentle Art of Dying Upside Down</h1>
       <p class="hero-sub">On the Dignity of Endurance</p>
-      <p class="hero-desc">We are culturally taught that to survive, we must hold on tight. But what if holding on is just exhaustion in disguise? This book explores the concept of the &ldquo;passive grip&rdquo;&mdash;how bats hang effortlessly in the dark, only using energy when it&rsquo;s time to fly.<br><br>Through nature writing and deeply human stories&mdash;a daughter peeling an apple for her mother fading into dementia, a mother packing gifts for a daughter she will not live to see grow up&mdash;the&nbsp;book offers a comforting perspective on mortality: that endings are not failures, but arrivals. It&rsquo;s a companion for anyone navigating grief, caregiving, or a major life transition.</p>
+      <p class="hero-desc">We are culturally taught that to survive, we must hold on tight. But what if holding on is just exhaustion in disguise? This book explores the concept of the &ldquo;passive grip&rdquo;&mdash;how bats hang effortlessly in the dark, only using energy when it&rsquo;s time to fly. Through nature writing and deeply human stories&mdash;a daughter peeling an apple for her mother fading into dementia, a mother packing gifts for a daughter she will not live to see grow up&mdash;the&nbsp;book offers a comforting perspective on mortality: that endings are not failures, but arrivals. It&rsquo;s a companion for anyone navigating grief, caregiving, or a major life transition.</p>
       <p class="cover-note">Now available with an updated cover</p>
       <div class="hero-actions">
         <a href="the-gentle-art-of-dying-upside-down.html" class="btn-fill">Learn More</a>
@@ -458,21 +460,40 @@ function shelfLabelStep(){
   if(labelIndex <= LABEL_TEXT.length){
     labelSpanNode.textContent = LABEL_TEXT.slice(0, labelIndex);
     labelIndex++;
-    setTimeout(shelfLabelStep, 110);
+    shelfIntroTimer = setTimeout(shelfLabelStep, 110);
   } else {
-    setTimeout(shelfTypeStep, 200);
+    shelfIntroTimer = setTimeout(shelfTypeStep, 200);
   }
 }
 var typedSpanNode = document.getElementById('shelfTypedSpan');
 var typeIndex = 0;
+var shelfIntroTimer = null;
 function shelfTypeStep(){
   if(typeIndex <= FULL_TITLE.length){
     typedSpanNode.textContent = FULL_TITLE.slice(0, typeIndex);
     typeIndex++;
-    setTimeout(shelfTypeStep, 95);
+    shelfIntroTimer = setTimeout(shelfTypeStep, 95);
   }
 }
-shelfLabelStep();
+function shelfPlayIntro(){
+  clearTimeout(shelfIntroTimer);
+  labelIndex = 0;
+  typeIndex = 0;
+  labelSpanNode.textContent = '';
+  typedSpanNode.textContent = '';
+  shelfLabelStep();
+}
+var shelfHeaderEl = document.querySelector('.shelf-header');
+if(shelfHeaderEl && 'IntersectionObserver' in window){
+  var shelfIntroObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting) shelfPlayIntro();
+    });
+  }, {threshold: 0.4});
+  shelfIntroObserver.observe(shelfHeaderEl);
+} else {
+  shelfPlayIntro();
+}
 
 var genreList = [];
 SHELF_BOOKS.forEach(function(b){ if (genreList.indexOf(b.genre)===-1) genreList.push(b.genre); });
@@ -692,10 +713,17 @@ function shelfRender(){
 
     panel.appendChild(actions);
 
-    var hint = document.createElement('div');
-    hint.className = 'spine-expand-hint';
-    hint.textContent = 'Click cover for full details';
-    panel.appendChild(hint);
+    var backBtn = document.createElement('button');
+    backBtn.type = 'button';
+    backBtn.className = 'spine-expand-back';
+    backBtn.setAttribute('aria-label', 'Put book back on shelf');
+    backBtn.innerHTML = '<svg viewBox="0 0 20 20" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 6.5 10l6 5.5"/></svg><span>Back to shelf</span>';
+    backBtn.addEventListener('click', function(e){
+      e.stopPropagation();
+      shelfCollapseSpine(shelfExpandedState);
+      shelfExpandedState = null;
+    });
+    panel.appendChild(backBtn);
 
     face.appendChild(panel);
     inner.appendChild(face);
@@ -732,7 +760,7 @@ function shelfShowMeta(b, btn){
   var left = Math.min(Math.max(rect.left + rect.width/2 - 85, 10), window.innerWidth-180);
   shelfMetaNode.style.left = left + 'px';
   shelfMetaNode.style.top = (rect.bottom + 10) + 'px';
-  requestAnimationFrame(function(){ shelfMetaNode.classList.add('show'); });
+  requestAnimationFrame(function(){ if(shelfMetaNode) shelfMetaNode.classList.add('show'); });
 }
 function shelfHideMeta(){
   if(shelfMetaNode){ shelfMetaNode.remove(); shelfMetaNode = null; }
