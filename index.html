@@ -150,10 +150,10 @@ footer{background:var(--parchment);padding:70px 60px 32px;border-top:1px solid v
 }
 
 /* ===== BOOKSHELF ===== */
-.shelf-section{padding:36px 0 70px;background:var(--parchment)}
+.shelf-section{padding:100px 0 70px;background:var(--parchment)}
 .shelf-header{max-width:1080px;margin:0 auto;padding:0 60px;text-align:center}
-.shelf-label{font-family:'Pinyon Script',cursive;font-size:42px;font-weight:400;color:var(--terra);margin-bottom:6px;line-height:1}
-.shelf-h1{font-family:var(--playfair);font-weight:400;font-style:italic;font-size:clamp(36px,6vw,58px);color:var(--ink);line-height:1.1;margin-bottom:10px}
+.shelf-label{font-family:'Pinyon Script',cursive;font-size:52px;font-weight:400;color:var(--terra);margin-bottom:6px;line-height:1}
+.shelf-h1{font-family:var(--playfair);font-weight:400;font-style:italic;font-size:clamp(29px,4.8vw,46px);color:var(--ink);line-height:1.1;margin-bottom:10px}
 .shelf-count{font-family:var(--sans);font-size:13px;letter-spacing:0.14em;color:var(--terra);text-transform:uppercase;margin-bottom:14px}
 .shelf-search-row{display:none}
 .shelf-search-input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--faint);font-family:var(--body);font-style:italic;font-size:20px;text-align:center;padding:8px 4px;color:var(--ink);outline:none}
@@ -462,37 +462,37 @@ function shelfLabelStep(){
     labelIndex++;
     shelfIntroTimer = setTimeout(shelfLabelStep, 110);
   } else {
-    shelfIntroTimer = setTimeout(shelfTypeStep, 200);
+    labelSpanNode.textContent = LABEL_TEXT;
   }
 }
 var typedSpanNode = document.getElementById('shelfTypedSpan');
 var typeIndex = 0;
 var shelfIntroTimer = null;
+var shelfTitleTimer = null;
 function shelfTypeStep(){
   if(typeIndex <= FULL_TITLE.length){
     typedSpanNode.textContent = FULL_TITLE.slice(0, typeIndex);
     typeIndex++;
-    shelfIntroTimer = setTimeout(shelfTypeStep, 95);
+    shelfTitleTimer = setTimeout(shelfTypeStep, 95);
   }
 }
-function shelfPlayIntro(){
-  clearTimeout(shelfIntroTimer);
-  labelIndex = 0;
+function shelfPlayTitle(){
+  clearTimeout(shelfTitleTimer);
   typeIndex = 0;
-  labelSpanNode.textContent = '';
   typedSpanNode.textContent = '';
-  shelfLabelStep();
+  shelfTypeStep();
 }
+shelfLabelStep();
 var shelfHeaderEl = document.querySelector('.shelf-header');
 if(shelfHeaderEl && 'IntersectionObserver' in window){
   var shelfIntroObserver = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
-      if(entry.isIntersecting) shelfPlayIntro();
+      if(entry.isIntersecting) shelfPlayTitle();
     });
   }, {threshold: 0.4});
   shelfIntroObserver.observe(shelfHeaderEl);
 } else {
-  shelfPlayIntro();
+  shelfPlayTitle();
 }
 
 var genreList = [];
