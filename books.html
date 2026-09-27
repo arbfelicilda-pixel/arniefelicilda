@@ -79,9 +79,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 60px;display:fl
 .page-desc a{color:var(--terra);text-decoration:underline}
 
 /* BOOK ENTRY */
+nav.jump-nav{position:static;top:auto;left:auto;right:auto;z-index:auto;backdrop-filter:none;background:none;max-width:1080px;margin:0 auto 10px;padding:0 60px 18px;display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;border-bottom:1px solid var(--faint);cursor:grab;user-select:none}
+nav.jump-nav.dragging{cursor:grabbing}
+.jump-nav a{flex-shrink:0;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.04em;color:var(--ink-soft);text-decoration:none;white-space:nowrap;padding:8px 16px;border:1px solid var(--faint);border-radius:99px;transition:color 0.2s,border-color 0.2s,background 0.2s}
+.jump-nav a:hover{color:var(--terra);border-color:var(--terra)}
+.jump-nav a.active{color:var(--parchment);background:var(--terra);border-color:var(--terra)}
 .books-list{max-width:1080px;margin:0 auto;padding:20px 60px 100px}
-.book-entry{display:flex;gap:56px;padding:56px 0;border-bottom:1px solid var(--faint);flex-wrap:wrap}
-.book-entry:first-child{padding-top:0}
+.book-entry{display:none;gap:56px;padding:20px 0;flex-wrap:wrap}
+.book-entry.active{display:flex;animation:bookSlideIn 0.42s cubic-bezier(.22,1,.36,1)}
+@keyframes bookSlideIn{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:translateX(0)}}
 .book-gallery{width:300px;flex-shrink:0}
 .book-gallery-main img{width:100%;aspect-ratio:2/3;object-fit:cover;box-shadow:0 14px 34px rgba(26,18,8,0.14);margin-bottom:14px}
 .book-gallery-thumbs{display:flex;gap:10px}
@@ -147,8 +153,9 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
   .nav-right .nav-link,.nav-right .nav-dropdown{display:none}
   .nav-hamburger{display:flex}
   .page-header{padding:120px 28px 40px}
+  nav.jump-nav{padding:0 28px 18px}
   .books-list{padding:10px 28px 70px}
-  .book-entry{gap:28px;padding:40px 0}
+  .book-entry{gap:28px;padding:16px 0}
   .book-gallery{width:100%;max-width:260px;margin:0 auto}
   .email-section{padding:70px 28px}
   .email-form{flex-direction:column;gap:10px}
@@ -200,9 +207,19 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
   <p class="page-desc"><a href="the-gentle-art-of-dying-upside-down.html"><em>The Gentle Art of Dying Upside Down</em></a> and <a href="https://youwereneverseries.arniefelicilda.com" target="_blank" rel="noopener"><em>the You Were Never series</em></a>.</p>
 </div>
 
+<nav class="jump-nav" aria-label="Choose a book" id="jumpNav">
+  <a href="#gentle-art" class="active">The Gentle Art of Dying Upside Down</a>
+  <a href="#never-behind">You Were Never Behind</a>
+  <a href="#never-ordinary">You Were Never Ordinary</a>
+  <a href="#never-invisible">You Were Never Invisible</a>
+  <a href="#never-dispensable">You Were Never Dispensable</a>
+  <a href="#never-overruled">You Were Never Overruled</a>
+  <a href="#never-mute">You Were Never Mute</a>
+</nav>
+
 <div class="books-list">
 
-  <div class="book-entry">
+  <div class="book-entry active" id="gentle-art">
     <div class="book-gallery">
       <div class="book-gallery-main"><img src="book7-cover-final.jpg" alt="The Gentle Art of Dying Upside Down by Arnie Rose"></div>
       <div class="book-gallery-thumbs">
@@ -216,7 +233,7 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
       <p class="book-badge">Book 7</p>
       <h2 class="book-title">The Gentle Art of Dying Upside Down</h2>
       <p class="book-subtitle">On the Dignity of Endurance</p>
-      <p class="book-desc">The Gentle Art of Dying Upside Down is a work of literary nonfiction about endurance, mortality, and the dignity of staying present as life continues to change. It brings the natural world into conversation with human experience.</p>
+      <p class="book-desc">A work of literary nonfiction about endurance, mortality, and the dignity of staying present as life continues to change.</p>
       <div class="book-actions">
         <a href="https://a.co/d/0dqZ2FYL" target="_blank" rel="noopener" class="btn-fill">Buy on Amazon</a>
         <a href="the-gentle-art-of-dying-upside-down.html" class="btn-outline">Learn More</a>
@@ -239,7 +256,7 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
     </div>
   </div>
 
-  <div class="book-entry">
+  <div class="book-entry" id="never-behind">
     <div class="book-gallery">
       <div class="book-gallery-main"><img src="ywn-behind-cover.jpg" alt="You Were Never Behind by Arnie Rose"></div>
       <div class="book-gallery-thumbs">
@@ -275,7 +292,7 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
     </div>
   </div>
 
-  <div class="book-entry">
+  <div class="book-entry" id="never-ordinary">
     <div class="book-gallery">
       <div class="book-gallery-main"><img src="ywn-ordinary-cover.jpg" alt="You Were Never Ordinary by Arnie Rose"></div>
       <div class="book-gallery-thumbs">
@@ -311,7 +328,7 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
     </div>
   </div>
 
-  <div class="book-entry">
+  <div class="book-entry" id="never-invisible">
     <div class="book-gallery">
       <div class="book-gallery-main"><img src="ywn-invisible-cover.jpg" alt="You Were Never Invisible by Arnie Rose"></div>
       <div class="book-gallery-thumbs">
@@ -347,7 +364,7 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
     </div>
   </div>
 
-  <div class="book-entry">
+  <div class="book-entry" id="never-dispensable">
     <div class="book-gallery">
       <div class="book-gallery-main"><img src="ywn-dispensable-cover.jpg" alt="You Were Never Dispensable by Arnie Rose"></div>
       <div class="book-gallery-thumbs">
@@ -383,7 +400,7 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
     </div>
   </div>
 
-  <div class="book-entry">
+  <div class="book-entry" id="never-overruled">
     <div class="book-gallery">
       <div class="book-gallery-main"><img src="ywn-overruled-cover.jpg" alt="You Were Never Overruled by Arnie Rose"></div>
       <div class="book-gallery-thumbs">
@@ -419,7 +436,7 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
     </div>
   </div>
 
-  <div class="book-entry">
+  <div class="book-entry" id="never-mute">
     <div class="book-gallery">
       <div class="book-gallery-main"><img src="ywn-mute-cover.jpg" alt="You Were Never Mute by Arnie Rose"></div>
       <div class="book-gallery-thumbs">
@@ -531,6 +548,90 @@ footer{background:var(--white);padding:70px 60px 32px;border-top:1px solid var(-
       });
     });
   });
+
+  var jumpLinks=document.querySelectorAll('.jump-nav a');
+  var bookEntries=document.querySelectorAll('.book-entry');
+  var jumpNavEl=document.getElementById('jumpNav');
+  var suppressScrollSync=false;
+  var scrollSyncTimer=null;
+  function showBook(id, focusTab){
+    var found=false;
+    bookEntries.forEach(function(entry){
+      if(entry.id===id){ entry.classList.add('active'); found=true; }
+      else { entry.classList.remove('active'); }
+    });
+    if(!found) return false;
+    jumpLinks.forEach(function(link){
+      link.classList.toggle('active', link.getAttribute('href')==='#'+id);
+    });
+    if(focusTab){
+      var activeLink=document.querySelector('.jump-nav a[href="#'+id+'"]');
+      if(activeLink){
+        suppressScrollSync=true;
+        activeLink.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+        clearTimeout(scrollSyncTimer);
+        scrollSyncTimer=setTimeout(function(){ suppressScrollSync=false; }, 500);
+      }
+    }
+    return true;
+  }
+  function nearestTabToCenter(){
+    var navRect=jumpNavEl.getBoundingClientRect();
+    var center=navRect.left + navRect.width/2;
+    var closest=null, closestDist=Infinity;
+    jumpLinks.forEach(function(link){
+      var r=link.getBoundingClientRect();
+      var linkCenter=r.left + r.width/2;
+      var dist=Math.abs(linkCenter - center);
+      if(dist < closestDist){ closestDist=dist; closest=link; }
+    });
+    return closest;
+  }
+  jumpNavEl.addEventListener('scroll', function(){
+    if(suppressScrollSync) return;
+    clearTimeout(scrollSyncTimer);
+    scrollSyncTimer=setTimeout(function(){
+      var nearest=nearestTabToCenter();
+      if(nearest){
+        var id=nearest.getAttribute('href').slice(1);
+        showBook(id, false);
+        try{ history.replaceState(null, '', '#'+id); }catch(e){}
+      }
+    }, 130);
+  });
+  var isDragging=false, dragStartX=0, dragStartScroll=0, dragMoved=false;
+  jumpNavEl.addEventListener('mousedown', function(e){
+    isDragging=true;
+    dragMoved=false;
+    dragStartX=e.pageX;
+    dragStartScroll=jumpNavEl.scrollLeft;
+    jumpNavEl.classList.add('dragging');
+  });
+  window.addEventListener('mousemove', function(e){
+    if(!isDragging) return;
+    var delta=e.pageX - dragStartX;
+    if(Math.abs(delta) > 4) dragMoved=true;
+    jumpNavEl.scrollLeft = dragStartScroll - delta;
+  });
+  window.addEventListener('mouseup', function(){
+    if(!isDragging) return;
+    isDragging=false;
+    jumpNavEl.classList.remove('dragging');
+  });
+  jumpNavEl.addEventListener('click', function(e){
+    if(dragMoved){ e.preventDefault(); e.stopPropagation(); dragMoved=false; }
+  }, true);
+  jumpLinks.forEach(function(link){
+    link.addEventListener('click',function(e){
+      e.preventDefault();
+      var id=link.getAttribute('href').slice(1);
+      showBook(id, true);
+      try{ history.replaceState(null, '', '#'+id); }catch(e){}
+    });
+  });
+  if(window.location.hash){
+    showBook(window.location.hash.slice(1), true);
+  }
 })();
 </script>
 </body>
